@@ -1,25 +1,25 @@
-// import posts from "../data/posts.json";
+import { posts } from "../data/PostData.jsx";
 
 import Filterbar from "../components/Filterbar";
-// import FeedPost from "../components/FeedPost";
+import FeedPost from "../components/FeedPost";
 
 function Feed() {
   return (
     <div id="feed-wrapper">
       <Filterbar />
       <div id="posts-wrapper">
-        {/* {posts.map((date, title, img, artist, description) => {
+        {posts.map((post, index) => {
           return (
             <FeedPost
-              key={title}
-              title={title}
-              date={date}
-              img={img}
-              artist={artist}
-              description={description}
+              key={index}
+              title={post.title}
+              date={post.date}
+              img={post.img}
+              artist={post.artist}
+              description={post.description}
             />
           );
-        })} */}
+        })}
       </div>
     </div>
   );

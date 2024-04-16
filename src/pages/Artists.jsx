@@ -1,12 +1,12 @@
-// import roster from "../data/roster";
-// import ArtistCard from "../components/ArtistCard";
+import { roster } from "../data/RosterData.jsx";
+import ArtistCard from "../components/ArtistCard";
 
 function Artists() {
   return (
     <div id="artists-wrapper">
-      {/* {roster.map(({ name, img }) => {
-        return <ArtistCard key={name} name={name} img={img} />;
-      })} */}
+      {roster.map((artist, index) => {
+        return <ArtistCard key={index} name={artist.name} img={artist.img} />;
+      })}
     </div>
   );
 }
