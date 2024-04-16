@@ -1,0 +1,181 @@
+:root {
+  --clr-bg: #121113;
+  --clr-md: #303030;
+  --clr-md-accent: #696969;
+  --clr-li: #eee5e9;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100svh;
+  width: 100svw;
+  overflow: hidden;
+  display: flex;
+  background-color: var(--clr-bg);
+  color: var(--clr-li);
+}
+
+/* ---------------------------NAV LEFT---------------------- */
+#NAV_LEFT {
+  width: 25svw;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-md);
+  padding: 1rem;
+  border: 2px solid var(--clr-md-accent);
+  a {
+    color: var(--clr-li);
+    text-decoration: none;
+  }
+}
+
+#logo-wrapper {
+  display: grid;
+}
+
+#artist-spotlight-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+}
+
+.artist-spotlight {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--clr-md-accent);
+  img {
+    height: 200%;
+  }
+}
+
+#artist-spotlight-wrapper h3 {
+  position: absolute;
+  width: 100%;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  bottom: 0.5rem;
+  letter-spacing: 0.5rem;
+  color: red;
+  font-weight: 600;
+  font-size: 3rem;
+  overflow: hidden;
+  width: 80%;
+  backdrop-filter: blur(5px);
+}
+
+#miniplayer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-md);
+  height: 20rem;
+}
+
+#miniplayer-img-wrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 160%;
+    width: auto;
+  }
+}
+
+.miniplayer-button {
+  height: 2rem;
+  width: 2rem;
+}
+
+#miniplayer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+#controls-inner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-inline: 4rem;
+}
+
+#volume-button,
+#list-button {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+/* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
+
+#feed-wrapper,
+#artists-wrapper {
+  height: 100svh;
+  width: 75svw;
+  display: grid;
+  overflow-y: scroll;
+}
+
+/* ---------------------------FILTER BAR---------------------- */
+
+#filterbar {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+/* ------------------------------POSTS----------------------- */
+
+.post-content {
+  display: flex;
+  background-color: var(--clr-md);
+  width: fit-content;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.post-content img {
+  height: 15rem;
+  aspect-ratio: 1;
+}
+
+.post-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.play-in-miniplayer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

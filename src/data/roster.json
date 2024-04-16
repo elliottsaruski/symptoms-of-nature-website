@@ -1,0 +1,57 @@
+{
+  "roster": {
+    "Xcope": {
+      "name": "Xcope",
+      "img": "xcopeImg",
+      "title": "producer / DJ",
+      "description": "Xcope melds ambient tones and percussive electronic rhythms to create visual worlds. Xcope melds ambient tones and percussive electronic rhythms to create visual worlds. Xcope melds ambient tones and percussive electronic rhythms to create visual worlds.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/xcopemusic",
+        "bandcamp": "https://xcope.bandcamp.com",
+        "instagram": "https://www.instagram.com/xcopemusic/"
+      }
+    },
+    "Chr0meC0": {
+      "name": "Chr0meC0",
+      "img": "chr0mec0Img",
+      "title": "Organic Industrial Designer / visual artist / phd student",
+      "description": "Chr0me (b. 1997, Chicago) is a Miami based organic industrial fashion designer and social identity neuroscience PhD scholar. Their latest designs aspire to evoke manipulated liquid water input variables and a foreign state of liquid outcome such as crystallization, molds/fungi, aquarium life, and rock formations.",
+      "links": {
+        "website": "https://www.chr0mec0.com/",
+        "instagram": "https://www.instagram.com/chr0mec0/",
+        "printshop": "https://www.redbubble.com/people/chr0mec0/explore?page=1&sortOrder=recent"
+      }
+    },
+    "envi": {
+      "name": "envi",
+      "id": "3",
+      "img": "enviImg",
+      "title": "producer / DJ / 3D artist / dev",
+      "description": "Born and raised in Miami,FL, envi, 'Elliott Saruski' is an electronic music producer, multi-media nerd, and front-end dev. His sound is characterized by heavy bass, melodic synths, and unique melodies. Loves all music but is currently in a dnb phase.",
+      "links": {
+        "instagram": "https://www.instagram.com/elliottsaruski/",
+        "soundcloud": "https://soundcloud.com/envimusic"
+      }
+    },
+    "TS": {
+      "name": "TS",
+      "img": "TSImg",
+      "title": "producer / DJ / Photographer",
+      "description": "Xcope melds ambient tones and percussive electronic rhythms to create visual worlds. Xcope melds ambient tones and percussive electronic rhythms to create visual worlds. Xcope melds ambient tones and percussive electronic rhythms to create visual worlds.",
+      "links": {
+        "instagram": "https://www.instagram.com/t.sanch_/",
+        "soundcloud": "https://soundcloud.com/tristan-sanchez-1"
+      }
+    },
+    "justin scott": {
+        "name": "justin scott",
+        "img": "JustinScottImg",
+      "title": "producer / vocalist",
+      "description": "",
+      "links": {
+        "instagram": "https://www.instagram.com/justinsaruski/",
+        "soundcloud": "https://soundcloud.com/justinscott1"
+      }
+    }
+  }
+}
