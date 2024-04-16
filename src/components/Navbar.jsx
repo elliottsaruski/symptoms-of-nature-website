@@ -7,12 +7,12 @@ import { TiSocialInstagram } from "react-icons/ti";
 function Navbar() {
   return (
     <div id="NAV_LEFT">
+      <LogoHeader />
       <nav>
         <NavLink to="/feed">feed</NavLink>
         <NavLink to="/artists">artists</NavLink>
         <TiSocialInstagram />
       </nav>
-      <LogoHeader />
       <ArtistSpotlight />
       <Miniplayer />
     </div>

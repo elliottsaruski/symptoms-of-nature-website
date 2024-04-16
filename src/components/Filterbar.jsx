@@ -3,8 +3,8 @@ import { IoMdArrowDropdown } from "react-icons/io";
 function Filterbar() {
   return (
     <div id="filterbar">
-      <p>filter</p>
       <IoMdArrowDropdown />
+      <p>filter</p>
     </div>
   );
 }

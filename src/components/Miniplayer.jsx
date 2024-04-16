@@ -1,4 +1,4 @@
-import inPhaseCover from "../assets/media/photos/in phase cover.jpg";
+import inPhaseCover from "../assets/media/photos/xcope/in phase cover.jpg";
 import { IoListOutline, IoPlayCircle, IoVolumeHigh } from "react-icons/io5";
 import { CgPlayTrackNextO, CgPlayTrackPrevO } from "react-icons/cg";
 
