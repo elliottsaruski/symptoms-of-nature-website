@@ -1,17 +1,10 @@
-import PropTypes from "prop-types";
-
-function ArtistCard({ name, img }) {
+function ArtistCard() {
   return (
     <div className="artist-card">
-      <h2>{name}</h2>
-      <img src={img}></img>
+      <h2></h2>
+      <img></img>
     </div>
   );
 }
-
-ArtistCard.propTypes = {
-  name: PropTypes.string,
-  img: PropTypes.string,
-};
 
 export default ArtistCard;
