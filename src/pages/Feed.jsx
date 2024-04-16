@@ -1,8 +1,7 @@
-import posts from "../data/posts.json";
-import PropTypes from "prop-types";
+// import posts from "../data/posts.json";
 
 import Filterbar from "../components/Filterbar";
-import FeedPost from "../components/FeedPost";
+// import FeedPost from "../components/FeedPost";
 
 function Feed() {
   return (
@@ -25,13 +24,5 @@ function Feed() {
     </div>
   );
 }
-
-Feed.propTypes = {
-  date: PropTypes.string,
-  title: PropTypes.string,
-  img: PropTypes.string,
-  artist: PropTypes.string,
-  description: PropTypes.string,
-};
 
 export default Feed;
