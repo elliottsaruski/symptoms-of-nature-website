@@ -22,6 +22,25 @@
   color: var(--clr-li);
 }
 
+/* ---------------------------SCROLLBAR---------------------- */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-md) transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+}
 /* ---------------------------NAV LEFT---------------------- */
 #NAV_LEFT {
   width: 25svw;
@@ -29,15 +48,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem;
+  padding-inline: 1rem;
+  padding-block: 2rem;
   gap: 1rem;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: var(--clr-md);
-  padding: 1rem;
+  padding: 0.5rem;
   outline: 2px solid var(--clr-md-accent);
   a {
     color: var(--clr-li);
@@ -47,10 +67,22 @@ nav {
 
 #logo-wrapper {
   display: grid;
+  gap: 1rem;
   div {
-    outline: 2px solid var(--clr-md-accent);
-    background-color: var(--clr-md);
+    /* outline: 2px solid var(--clr-md-accent);
+    background-color: var(--clr-md); */
+    padding-right: 1rem;
   }
+  hr {
+    opacity: 55%;
+  }
+}
+
+#logo-wrapper h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.15rem;
+  display: flex;
+  overflow: hidden;
 }
 
 #artist-spotlight-wrapper {
@@ -76,14 +108,12 @@ nav {
   width: 100%;
   flex-wrap: nowrap;
   text-wrap: nowrap;
-  bottom: 0.5rem;
+  bottom: 0;
   letter-spacing: 0.5rem;
-  color: red;
-  font-weight: 600;
+  color: var(--clr-li);
+  font-weight: 400;
   font-size: 3rem;
-  overflow: hidden;
-  width: 80%;
-  backdrop-filter: blur(5px);
+  background-color: var(--clr-md);
 }
 
 #miniplayer {
@@ -141,6 +171,8 @@ nav {
   width: 75svw;
   display: grid;
   overflow-y: scroll;
+  padding-block: 2rem;
+  padding-inline: 4rem;
 }
 
 /* ---------------------------FILTER BAR---------------------- */
@@ -151,53 +183,89 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 2rem;
   /* font-size: 1.2rem; */
 }
 
 /* ------------------------------POSTS----------------------- */
 
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .post-content {
   display: flex;
   background-color: var(--clr-md);
-  width: 75%;
   padding: 1rem;
   gap: 2rem;
   border: 2px solid var(--clr-md-accent);
+  height: max-content;
+  width: fit-content;
+
+  /* gap between posts */
+  margin-block: 1rem;
+}
+
+.post:nth-child(even) {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
 }
 
 .post-content img {
   height: 15rem;
   aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .post-text {
   display: flex;
   flex-direction: column;
-  
+  text-wrap: pretty;
+  max-width: 25rem;
+}
+
+.post-description {
+  padding-block: 1rem;
+  flex: 1;
+}
+
+.post-artist {
+  font-weight: 300;
+  opacity: 65%;
 }
 
 .links {
   display: flex;
+  gap: 3rem;
   align-items: center;
-  gap: 2rem;
+  align-content: center;
+  /* position: absolute;
+  bottom: 1rem; */
+}
+
+.links a {
+  color: var(--clr-md-accent);
 }
 
 .play-in-miniplayer {
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+}
+
+.music-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 /* ------------------------------ARTIST CARD----------------------- */
 
 #artists-wrapper {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  padding-block: 10rem;
-  padding-inline: 1rem;
+  justify-content: center;
 }
 
 .artist-card {
@@ -214,8 +282,8 @@ nav {
   font-size: 1.2rem;
 }
 .artist-card-img {
-  height: 25rem;
-  width: 25rem;
+  height: 30rem;
+  width: 30rem;
 }
 
 .link-to-artist-icon {

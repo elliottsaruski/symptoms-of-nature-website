@@ -11,12 +11,15 @@ function Feed() {
         {posts.map((post, index) => {
           return (
             <FeedPost
+              className="feed-post"
               key={index}
               title={post.title}
               date={post.date}
               img={post.img}
               artist={post.artist}
               description={post.description}
+              postType={post.postType}
+              links={post.links}
             />
           );
         })}

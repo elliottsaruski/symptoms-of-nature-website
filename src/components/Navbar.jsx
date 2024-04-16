@@ -11,7 +11,9 @@ function Navbar() {
       <nav>
         <NavLink to="/feed">feed</NavLink>
         <NavLink to="/artists">artists</NavLink>
-        <TiSocialInstagram />
+        <a href="https://www.instagram.com/symptoms_of_nature/" target="_blank">
+          <TiSocialInstagram />
+        </a>
       </nav>
       <ArtistSpotlight />
       <Miniplayer />
