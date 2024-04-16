@@ -2,7 +2,7 @@ import { IoPlayCircle, IoLogoSoundcloud } from "react-icons/io5";
 import { FaBandcamp } from "react-icons/fa";
 import PropTypes from "prop-types";
 
-function FeedPost({ title, date, img, artist, description }) {
+function FeedPost({ title, date, img, artist, description, postType, links }) {
   return (
     <div className="post">
       <p className="post-date">{date}</p>
@@ -14,18 +14,38 @@ function FeedPost({ title, date, img, artist, description }) {
           <h2 className="post-title">{title}</h2>
           <h3 className="post-artist">{artist}</h3>
           <span className="post-description">{description}</span>
-          <div className="links">
-            <div className="play-in-miniplayer">
-              <IoPlayCircle />
-              <p>Play on mini-player</p>
-            </div>
-            <IoLogoSoundcloud />
-            <FaBandcamp />
-          </div>
+          <Links postType={postType} links={links} />
         </div>
       </div>
     </div>
   );
+}
+
+function Links({ postType, links }) {
+  if (postType === "music") {
+    return (
+      <div className="links">
+        <div className="play-in-miniplayer">
+          <IoPlayCircle />
+          <p>Play on mini-player</p>
+        </div>
+        <div className="music-links">
+          <a href={links.soundcloud}>
+            <IoLogoSoundcloud />
+          </a>
+          <a href={links.bandcamp}>
+            <FaBandcamp />
+          </a>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="links">
+        <a href={links}>Link</a>
+      </div>
+    );
+  }
 }
 
 PropTypes.FeedPost = {

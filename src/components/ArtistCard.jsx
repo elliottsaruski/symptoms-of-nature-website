@@ -15,6 +15,6 @@ function ArtistCard({ name, img }) {
 
 PropTypes.ArtistCard = {
   name: PropTypes.string,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.string,
 };
 export default ArtistCard;
