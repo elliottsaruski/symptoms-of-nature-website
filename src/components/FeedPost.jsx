@@ -1,6 +1,7 @@
 import { IoPlayCircle, IoLogoSoundcloud } from "react-icons/io5";
 import { FaBandcamp } from "react-icons/fa";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function FeedPost({ title, date, img, artist, description, postType, links }) {
   return (
@@ -12,7 +13,9 @@ function FeedPost({ title, date, img, artist, description, postType, links }) {
         </div>
         <div className="post-text">
           <h2 className="post-title">{title}</h2>
-          <h3 className="post-artist">{artist}</h3>
+          <Link to={`/artists/${artist}`}>
+            <h3 className="post-artist">{artist}</h3>
+          </Link>
           <span className="post-description">{description}</span>
           <Links postType={postType} links={links} />
         </div>
