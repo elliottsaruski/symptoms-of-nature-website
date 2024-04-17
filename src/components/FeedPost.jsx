@@ -21,7 +21,7 @@ function FeedPost({ title, date, img, artist, description, postType, links }) {
   );
 }
 
-function Links({ postType, links }) {
+export function Links({ postType, links }) {
   if (postType === "music") {
     return (
       <div className="links">

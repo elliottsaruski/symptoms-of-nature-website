@@ -15,6 +15,7 @@ export const posts = [
     date: "April 5, 2024",
     img: inPhaseCover,
     artist: "Xcope",
+    artistID: "Xcope",
     description:
       "Xcope melds ambient tones and percussive electronic rhythms to create visual worlds in his latest EP release, In Phase.",
     postType: "music",
@@ -26,6 +27,7 @@ export const posts = [
   {
     title: "Xcope @ heds opening LA + sober rob - GO! release party",
     artist: "Xcope",
+    artistID: "Xcope",
     date: "March 5, 2024",
     img: xcopeHedsImg,
     description:
@@ -39,6 +41,7 @@ export const posts = [
   {
     title: "RETURN EP",
     artist: "envi",
+    artistID: "envi",
     date: "October 21, 2023",
     img: returnEP,
     description:
@@ -54,6 +57,7 @@ export const posts = [
   {
     title: "Heds Tape Submissions",
     artist: "envi",
+    artistID: "envi",
     date: "August 16, 2023",
     img: hedsTapesSubs,
     description:
@@ -67,6 +71,7 @@ export const posts = [
   {
     title: "I Do 'Til I Don't Show",
     artist: "Chr0meC0",
+    artistID: "Chr0meC0",
     date: "May 6, 2023",
     img: IDTIDshow,
     description:
@@ -77,6 +82,7 @@ export const posts = [
   {
     title: "Collab with Glitch Magazine",
     artist: "Chr0meC0",
+    artistID: "Chr0meC0",
     date: "March 23, 2023",
     img: glitchMag,
     description:
@@ -87,6 +93,7 @@ export const posts = [
   {
     title: "Madeline Minkoff x Chr0meC0",
     artist: "Chr0meC0",
+    artistID: "Chr0meC0",
     date: "April 18, 2023",
     img: minkoffCollab,
     description:
@@ -97,6 +104,7 @@ export const posts = [
   {
     title: "Kodd Magazine Editorial: By the Night Life",
     artist: "Chr0meC0",
+    artistID: "Chr0meC0",
     date: "January 25, 2017",
     img: KoddCollab,
     description:
@@ -107,6 +115,7 @@ export const posts = [
   {
     title: "Collab with @tatianaisshac & @jrey.schultz",
     artist: "Chr0meC0",
+    artistID: "Chr0meC0",
     date: "March 4, 2024",
     img: tatianaCollab,
     description:
@@ -117,6 +126,7 @@ export const posts = [
   {
     title: "ramen world",
     artist: "ITBunnI",
+    artistID: "ITBunnI",
     date: "May, 4, 2023",
     img: ITBunniImg,
     description:

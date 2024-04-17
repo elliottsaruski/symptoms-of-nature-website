@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import { RiArrowRightUpFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-function ArtistCard({ name, img }) {
+function ArtistCard({ name, img, artistID }) {
   return (
-    <Link to={`${name}`} className="artist-card">
+    <Link to={artistID} className="artist-card">
       <img className="artist-card-img" src={img}></img>
       <h2 className="artist-card-name">
         {name}
