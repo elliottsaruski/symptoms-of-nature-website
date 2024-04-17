@@ -42,6 +42,12 @@
 *::-webkit-scrollbar-thumb {
   border-radius: 1rem;
 }
+
+#ERROR_404_PAGE {
+  height: 100svh;
+  display: grid;
+  place-content: center;
+}
 /* ---------------------------NAV LEFT---------------------- */
 #NAV_LEFT {
   width: 20svw;
@@ -313,4 +319,45 @@ nav {
 
 .artist-card:hover .link-to-artist-icon {
   scale: 1;
+}
+/* ------------------------------ARTIST PROFILE----------------------- */
+
+.artist-profile-page-wrapper {
+  width: 80svw;
+  padding-top: 2rem;
+  padding-inline: 5rem;
+}
+
+.artist-profile {
+  display: flex;
+  gap: 1rem;
+}
+
+.artist-profile-img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.artist-profile-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 2rem;
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    opacity: 55%;
+    font-weight: 300;
+  }
+  span {
+    text-wrap: balance;
+    padding-top: 1rem;
+  }
+}
+
+.artist-posts-wrapper {
+  display: flex;
+  height: 100svh;
+  /*  overflow-y: scroll; */
 }

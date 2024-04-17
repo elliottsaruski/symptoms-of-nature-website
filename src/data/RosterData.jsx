@@ -10,6 +10,7 @@ import OOOImg from "../assets/media/photos/OOO/OOO-img.png";
 export const roster = [
   {
     name: "Xcope",
+    artistID: "Xcope",
     img: XcopeImg,
     title: "producer / DJ",
     description:
@@ -22,6 +23,7 @@ export const roster = [
   },
   {
     name: "Chr0meC0",
+    artistID: "Chr0meC0",
     img: Chr0meC0Img,
     title: "Organic Industrial Designer / visual artist / phd student",
     description:
@@ -35,6 +37,7 @@ export const roster = [
   },
   {
     name: "ITbunnI",
+    artistID: "ITbunnI",
     img: ITbunniImg,
     title: "producer(s) / DJ(s)",
     description:
@@ -48,7 +51,7 @@ export const roster = [
   },
   {
     name: "envi",
-    id: "3",
+    artistID: "envi",
     img: EnviImg,
     title: "producer / DJ / 3D artist / dev",
     description:
@@ -60,10 +63,11 @@ export const roster = [
   },
   {
     name: "TS",
+    artistID: "TS",
     img: TsImg,
     title: "producer / DJ / Photographer",
     description:
-      "Xcope melds ambient tones and percussive electronic rhythms to create visual worlds. Xcope melds ambient tones and percussive electronic rhythms to create visual worlds. Xcope melds ambient tones and percussive electronic rhythms to create visual worlds.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
     links: {
       instagram: "https://www.instagram.com/t.sanch_/",
       soundcloud: "https://soundcloud.com/tristan-sanchez-1",
@@ -71,9 +75,11 @@ export const roster = [
   },
   {
     name: "justin scott",
+    artistID: "justinscott",
     img: JustinScottImg,
     title: "producer / vocalist",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
     links: {
       instagram: "https://www.instagram.com/justinsaruski/",
       soundcloud: "https://soundcloud.com/justinscott1",
@@ -81,9 +87,11 @@ export const roster = [
   },
   {
     name: "CODETRIP",
+    artistID: "CODETRIP",
     img: CodeTripImg,
     title: "producer duo",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
     links: {
       instagram: "",
       soundcloud: "",
@@ -91,9 +99,11 @@ export const roster = [
   },
   {
     name: "OOO",
+    artistID: "OOO",
     img: OOOImg,
     title: "producer duo",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
     links: {
       instagram: "",
       soundcloud: "",
