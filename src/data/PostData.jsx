@@ -42,7 +42,7 @@ export const posts = [
     date: "October 21, 2023",
     img: returnEP,
     description:
-      "Envi's first EP RETURN.Envi had not released anything since 2019. Complimented by a series of original Blender 3D animations, envi features 6 tracks on RETURN (some old, some much newer) that he took time perfecting for a whole year.",
+      "Envi's first EP RETURN. Envi had not released anything since 2019. Complimented by a series of original Blender 3D animations, envi features 6 tracks on RETURN (some old, some much newer) that he took time perfecting for a whole year.",
     postType: "music",
     links: {
       soundcloud: "https://soundcloud.com/envimusic/sets/return-ep",
