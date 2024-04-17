@@ -1,5 +1,5 @@
 :root {
-  --clr-bg: #121113;
+  --clr-bg: #090909;
   --clr-md: #303030;
   --clr-md-accent: #696969;
   --clr-li: #eee5e9;
@@ -20,6 +20,7 @@
   display: flex;
   background-color: var(--clr-bg);
   color: var(--clr-li);
+  font-size: 1rem;
 }
 
 /* ---------------------------SCROLLBAR---------------------- */
@@ -43,22 +44,19 @@
 }
 /* ---------------------------NAV LEFT---------------------- */
 #NAV_LEFT {
-  width: 25svw;
+  width: 20svw;
   height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-inline: 1rem;
-  padding-block: 2rem;
   gap: 1rem;
 }
 
 nav {
   display: flex;
-  justify-content: space-evenly;
-  background-color: var(--clr-md);
-  padding: 0.5rem;
-  outline: 2px solid var(--clr-md-accent);
+  justify-content: space-between;
+  /* background-color: var(--clr-md); */
   a {
     color: var(--clr-li);
     text-decoration: none;
@@ -68,21 +66,15 @@ nav {
 #logo-wrapper {
   display: grid;
   gap: 1rem;
-  div {
-    /* outline: 2px solid var(--clr-md-accent);
-    background-color: var(--clr-md); */
-    padding-right: 1rem;
-  }
+  background-color: var(--clr-md);
+  outline: 2px solid var(--clr-md-accent);
   hr {
     opacity: 55%;
   }
 }
 
-#logo-wrapper h1 {
-  font-size: 3.5rem;
-  letter-spacing: 0.15rem;
-  display: flex;
-  overflow: hidden;
+.SON-description {
+  padding-bottom: 0.5rem;
 }
 
 #artist-spotlight-wrapper {
@@ -98,9 +90,6 @@ nav {
   align-items: center;
   justify-content: center;
   outline: 2px solid var(--clr-md-accent);
-  img {
-    height: 200%;
-  }
 }
 
 #artist-spotlight-wrapper h3 {
@@ -113,14 +102,15 @@ nav {
   color: var(--clr-li);
   font-weight: 400;
   font-size: 3rem;
-  background-color: var(--clr-md);
+  /* background-color: var(--clr-md); */
+  backdrop-filter: blur(10px);
 }
 
 #miniplayer {
   display: flex;
   flex-direction: column;
-  background-color: var(--clr-md);
   height: 20rem;
+  background-color: var(--clr-md);
   outline: 2px solid var(--clr-md-accent);
 }
 
@@ -129,15 +119,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    height: 160%;
-    width: auto;
-  }
+  object-fit: fill;
+  backdrop-filter: blur(50px);
 }
 
 .miniplayer-button {
-  height: 2rem;
-  width: 2rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 #miniplayer-controls {
@@ -159,8 +147,9 @@ nav {
 #volume-button,
 #list-button {
   display: flex;
-  height: 100%;
   align-items: center;
+  height: 2rem;
+  width: 2rem;
 }
 
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
@@ -168,8 +157,8 @@ nav {
 #feed-wrapper,
 #artists-wrapper {
   height: 100svh;
-  width: 75svw;
-  display: grid;
+  width: 80dvw;
+
   overflow-y: scroll;
   padding-block: 2rem;
   padding-inline: 4rem;
@@ -183,21 +172,30 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* font-size: 1.2rem; */
+}
+.filterbar-content {
+  display: flex;
+  align-items: center;
+  padding-block: 0.5rem;
 }
 
 /* ------------------------------POSTS----------------------- */
 
+#feed-wrapper {
+  display: grid;
+}
+
 .post {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
+
 .post-content {
   display: flex;
   background-color: var(--clr-md);
   padding: 1rem;
   gap: 2rem;
+
   border: 2px solid var(--clr-md-accent);
   height: max-content;
   width: fit-content;
@@ -221,18 +219,26 @@ nav {
 .post-text {
   display: flex;
   flex-direction: column;
+  width: 35rem;
   text-wrap: pretty;
-  max-width: 25rem;
+}
+
+.post-title {
+  font-size: 2rem;
 }
 
 .post-description {
-  padding-block: 1rem;
+  width: 30rem;
+  padding-block: 0.5rem;
   flex: 1;
+  line-height: 1.7;
 }
 
 .post-artist {
   font-weight: 300;
   opacity: 65%;
+  font-size: 1.5rem;
+  padding-top: 0.25rem;
 }
 
 .links {
@@ -262,7 +268,7 @@ nav {
 /* ------------------------------ARTIST CARD----------------------- */
 
 #artists-wrapper {
-  display: flex !important;
+  display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
@@ -273,6 +279,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-content: center;
+  text-decoration: none;
 }
 .artist-card-name {
   font-weight: 400;
@@ -280,12 +287,18 @@ nav {
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
+  color: var(--clr-li);
 }
 .artist-card-img {
   height: 30rem;
   width: 30rem;
+  flex: 1;
+  object-fit: cover;
 }
 
+.artist-card a {
+  color: var(--clr-li);
+}
 .link-to-artist-icon {
   scale: 0.75;
 }

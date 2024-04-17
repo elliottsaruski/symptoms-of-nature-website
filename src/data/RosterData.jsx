@@ -4,6 +4,8 @@ import ITbunniImg from "../assets/media/photos/itbunni/itbunni-img.png";
 import EnviImg from "../assets/media/photos/envi/envi-img.jpg";
 import TsImg from "../assets/media/photos/TS/TS-img.png";
 import JustinScottImg from "../assets/media/photos/justinscott/justinscott-img.png";
+import CodeTripImg from "../assets/media/photos/CODETRIP/CODETRIP.png";
+import OOOImg from "../assets/media/photos/OOO/OOO-img.png";
 
 export const roster = [
   {
@@ -75,6 +77,26 @@ export const roster = [
     links: {
       instagram: "https://www.instagram.com/justinsaruski/",
       soundcloud: "https://soundcloud.com/justinscott1",
+    },
+  },
+  {
+    name: "CODETRIP",
+    img: CodeTripImg,
+    title: "producer duo",
+    description: "",
+    links: {
+      instagram: "",
+      soundcloud: "",
+    },
+  },
+  {
+    name: "OOO",
+    img: OOOImg,
+    title: "producer duo",
+    description: "",
+    links: {
+      instagram: "",
+      soundcloud: "",
     },
   },
 ];
