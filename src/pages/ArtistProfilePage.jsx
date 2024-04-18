@@ -1,14 +1,13 @@
 import { useParams } from "react-router-dom";
 import { roster } from "../data/RosterData";
 import { posts } from "../data/PostData";
-// import FeedPost from "../components/FeedPost";
-// import Filterbar from "../components/Filterbar";
-import Feed from "./Feed";
+import FeedPost from "../components/FeedPost";
+import Filterbar from "../components/Filterbar";
 
 function ArtistProfilePage() {
   const { id } = useParams();
-  const artist = roster.find((el) => el.artistID === `${id}`);
-  const artistPosts = posts.filter((el) => el.artistID === `${id}`);
+  const artist = roster.find((el) => el.artistID == `${id}`);
+  const artistPosts = posts.filter((el) => el.artistID == id);
   console.log(artistPosts);
 
   return (
@@ -21,30 +20,27 @@ function ArtistProfilePage() {
           <span>{artist.description}</span>
         </div>
       </div>
-      {/* <Filterbar /> */}
+      <Filterbar />
       <div className="artist-posts-wrapper">
-        <Feed />
+        {artistPosts.map((post, index) => {
+          return (
+            <FeedPost
+              key={index}
+              className="feed-post"
+              artist={post.artist}
+              artistID={post.artistID}
+              date={post.date}
+              title={post.title}
+              img={post.img}
+              links={post.links}
+              description={post.description}
+              postType={post.postType}
+            />
+          );
+        })}
       </div>
     </div>
   );
 }
 
 export default ArtistProfilePage;
-
-{
-  /*
-        {artistPosts.forEach((post, index) => {
-        })}
-
-  <FeedPost
-            className="feed-post"
-            key={index}
-            title={post.title}
-            date={post.date}
-            img={post.img}
-            artist={post.artist}
-            description={post.description}
-            postType={post.postType}
-            links={post.links}
-          />; */
-}
