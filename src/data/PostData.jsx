@@ -11,11 +11,11 @@ import ITBunniImg from "../assets/media/photos/itbunni/ramenWorld.png";
 
 export const posts = [
   {
+    artistID: "Xcope",
     title: "In Phase EP",
     date: "April 5, 2024",
     img: inPhaseCover,
     artist: "Xcope",
-    artistID: "Xcope",
     description:
       "Xcope melds ambient tones and percussive electronic rhythms to create visual worlds in his latest EP release, In Phase.",
     postType: "music",

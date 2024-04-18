@@ -29,16 +29,20 @@ export function Links({ postType, links }) {
     return (
       <div className="links">
         <div className="play-in-miniplayer">
-          <IoPlayCircle />
+          <IoPlayCircle className="link-icon play-button" />
           <p>Play on mini-player</p>
         </div>
         <div className="music-links">
-          <a href={links.soundcloud}>
-            <IoLogoSoundcloud />
-          </a>
-          <a href={links.bandcamp}>
-            <FaBandcamp />
-          </a>
+          {links.soundcloud && (
+            <a href={links.soundcloud}>
+              <IoLogoSoundcloud className="link-icon" />
+            </a>
+          )}
+          {links.bandcamp && (
+            <a href={links.bandcamp}>
+              <FaBandcamp className="link-icon" />
+            </a>
+          )}
         </div>
       </div>
     );
