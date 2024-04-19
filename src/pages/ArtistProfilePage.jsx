@@ -15,13 +15,15 @@ function ArtistProfilePage() {
       <div className="artist-profile">
         <img className="artist-profile-img" src={artist.img}></img>
         <div className="artist-profile-description">
-          <img src={artist.logo}></img>
+          {/* <img id="artist-profile-logo" src={artist.logo}></img> */}
+
           <h2>{artist.artistID}</h2>
           <h3>{artist.title}</h3>
           <span>{artist.description}</span>
           <Links postType={artist.profileType} links={artist.links} />
         </div>
       </div>
+      <hr id="seperator"></hr>
       <Filterbar />
       <div className="artist-posts-wrapper">
         {artistPosts.map((post, index) => {

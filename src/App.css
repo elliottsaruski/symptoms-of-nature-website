@@ -361,17 +361,10 @@ nav {
   flex-direction: column;
   text-decoration: none;
   border: 2px solid var(--clr-md-accent);
-  height: max-content;
-  width: fit-content;
 }
 .artist-card-name {
   font-weight: 400;
-
   padding: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.5rem;
-  color: var(--clr-li);
 }
 .artist-card-img {
   height: 35rem;
@@ -379,6 +372,17 @@ nav {
   object-fit: cover;
 }
 
+.artist-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  align-items: center;
+  color: var(--clr-li);
+  text-decoration: none;
+  h2 {
+    text-decoration: none;
+  }
+}
 .artist-card a {
   color: var(--clr-li);
 }
@@ -411,6 +415,12 @@ nav {
 .artist-profile {
   display: flex;
   gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+#artist-profile-logo {
+  height: 5rem;
+  width: 10rem;
 }
 
 .artist-profile-img {

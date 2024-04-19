@@ -8,13 +8,18 @@ function ArtistCard({ name, img, artistID }) {
     <Link to={artistID}>
       <motion.div
         className="artist-card"
-        initial={{ borderColor: "#696969" }}
+        initial={{
+          textDecorationColor: "transparent",
+          borderColor: "#696969",
+          opacity: 0,
+        }}
+        whileInView={{ opacity: 1, transition: { duration: 1 } }}
         whileHover={{ borderColor: "#eee5e9" }}>
         <img className="artist-card-img" src={img}></img>
-        <h2 className="artist-card-name">
-          {name}
+        <div className="artist-name-wrapper">
+          <h2 className="artist-card-name">{name}</h2>
           <RiArrowRightUpFill className="link-to-artist-icon" />
-        </h2>
+        </div>
       </motion.div>
     </Link>
   );
