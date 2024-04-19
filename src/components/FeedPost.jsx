@@ -2,12 +2,19 @@ import { IoPlayCircle, IoLogoSoundcloud } from "react-icons/io5";
 import { FaBandcamp } from "react-icons/fa";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function FeedPost({ title, date, img, artist, description, postType, links }) {
   return (
-    <div className="post">
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+      className="post">
       <p className="post-date">{date}</p>
-      <div className="post-content">
+      <motion.div
+        className="post-content"
+        initial={{ borderColor: "#696969" }}
+        whileHover={{ borderColor: "#eee5e9" }}>
         <div className="post-img">
           <img src={img} />
         </div>
@@ -19,8 +26,8 @@ function FeedPost({ title, date, img, artist, description, postType, links }) {
           <span className="post-description">{description}</span>
           <Links postType={postType} links={links} />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
