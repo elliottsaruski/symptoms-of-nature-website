@@ -75,7 +75,7 @@ export const posts = [
     date: "May 6, 2023",
     img: IDTIDshow,
     description:
-      "Textile show with an anomalous marriage of fabricated material and fleshly forms. Introducing I Do Til I Don't, a fashion show hosted by a collection of creatives from backgrounds in neuroscience to poetry. The show features work by @1.800.dreamgirl @madelineminkoff @theworldisawedding and Chr0meC0. (img: I do til I dont show, look 8 and 7)",
+      "Textile show with an anomalous marriage of fabricated material and fleshly forms. Introducing I Do Til I Don't, a fashion show hosted by a collection of creatives from backgrounds in neuroscience to poetry.",
     postType: "fashion",
     links: "https://kodd-magazine.com/en/by-the-night-life/25117/",
   },
