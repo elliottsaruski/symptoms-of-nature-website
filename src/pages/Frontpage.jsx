@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-// import Feed from "./Feed";
 
 function Frontpage() {
   return (
@@ -8,7 +7,6 @@ function Frontpage() {
       <Navbar />
       <main>
         <Outlet />
-        {/* <Feed /> */}
       </main>
     </>
   );
