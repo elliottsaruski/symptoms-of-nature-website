@@ -61,41 +61,72 @@
 
 nav {
   display: flex;
+  padding-block: 1rem;
   justify-content: space-between;
-  /* background-color: var(--clr-md); */
+
   a {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
     color: var(--clr-li);
     text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      background-color: var(--clr-md);
+      scale: 1.15;
+      outline: 0;
+      border: 0;
+    }
   }
+}
+
+#nav-seperator {
+  margin-block: 2rem;
+  border: 1px solid var(--clr-md);
 }
 
 #logo-wrapper {
   display: grid;
-  gap: 1rem;
-  background-color: var(--clr-md);
-  outline: 2px solid var(--clr-md-accent);
+  /* gap: 1rem; */
   hr {
     opacity: 55%;
+    margin-bottom: 0.5rem;
   }
 }
 
+#SON-header-logo {
+  width: 100%;
+}
+
 .SON-description {
-  padding-bottom: 0.5rem;
+  display: flex;
+  padding: 1rem;
+  background: var(--clr-md);
+  text-align: justify;
+  letter-spacing: 0.05ch;
 }
 
 #artist-spotlight-wrapper {
   display: flex;
-  flex-direction: column;
-  height: 15rem;
-}
-
-.artist-spotlight {
   position: relative;
   overflow: hidden;
-  display: flex;
+}
+
+.artist-spotlight-card {
+  display: grid;
+  height: calc(100svh / 3);
+  width: 100%;
   align-items: center;
   justify-content: center;
   outline: 2px solid var(--clr-md-accent);
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 }
 
 #artist-spotlight-wrapper h3 {
@@ -108,14 +139,14 @@ nav {
   color: var(--clr-li);
   font-weight: 400;
   font-size: 3rem;
-  /* background-color: var(--clr-md); */
+  background-color: var(--clr-md);
   backdrop-filter: blur(10px);
 }
 
 #miniplayer {
   display: flex;
   flex-direction: column;
-  height: 20rem;
+  height: calc(100svh / 3);
   background-color: var(--clr-md);
   outline: 2px solid var(--clr-md-accent);
 }
@@ -127,11 +158,21 @@ nav {
   align-items: center;
   object-fit: fill;
   backdrop-filter: blur(50px);
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
-.miniplayer-button {
+#play-button {
   height: 2.5rem;
   width: 2.5rem;
+}
+
+.miniplayer-button:not(#play-button) {
+  height: 2rem;
+  width: 2rem;
 }
 
 #miniplayer-controls {
@@ -139,6 +180,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding-block: 1rem;
+  gap: 2rem;
 }
 
 #controls-inner {
@@ -147,21 +189,21 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding-inline: 4rem;
 }
 
 #volume-button,
 #list-button {
   display: flex;
   align-items: center;
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
 
 #feed-wrapper,
-#artists-wrapper {
+#artists-wrapper,
+#artist-profile-page-wrapper {
   height: 100svh;
   width: 80dvw;
 
@@ -312,18 +354,22 @@ nav {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
+  /* flex-basis: 25rem; */
 }
 
 .artist-card {
   background-color: var(--clr-md);
   display: flex;
   flex-direction: column;
-  align-content: center;
   text-decoration: none;
   border: 2px solid var(--clr-md-accent);
+  height: max-content;
+  width: fit-content;
 }
 .artist-card-name {
   font-weight: 400;
+
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -331,9 +377,8 @@ nav {
   color: var(--clr-li);
 }
 .artist-card-img {
-  height: 25rem;
-  width: 25rem;
-  flex: 1;
+  height: 35rem;
+  width: 35rem;
   object-fit: cover;
 }
 
@@ -358,8 +403,10 @@ nav {
 /* ------------------------------ARTIST PROFILE----------------------- */
 
 .artist-profile-page-wrapper {
-  /* width: 80svw; */
-  padding-top: 2rem;
+  display: grid;
+
+  width: 80svw;
+  padding-block: 2rem;
   padding-inline: 5rem;
   overflow-y: scroll !important;
 }
@@ -398,8 +445,8 @@ nav {
   flex-direction: column;
   height: 55svh;
   flex: 1;
-  flex-grow: 1;
-  padding-block: 2rem;
+  /* flex-grow: 1; */
+  /* padding-block: 2rem; */
   padding-inline: 4rem;
   overflow-y: scroll;
 }

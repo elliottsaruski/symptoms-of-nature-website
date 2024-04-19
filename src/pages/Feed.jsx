@@ -2,6 +2,7 @@ import { posts } from "../data/PostData.jsx";
 
 import Filterbar from "../components/Filterbar";
 import FeedPost from "../components/FeedPost";
+import { Outlet } from "react-router-dom";
 
 function Feed() {
   return (
@@ -24,6 +25,7 @@ function Feed() {
           );
         })}
       </div>
+      <Outlet />
     </div>
   );
 }
