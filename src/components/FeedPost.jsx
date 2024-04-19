@@ -14,7 +14,7 @@ function FeedPost({ title, date, img, artist, description, postType, links }) {
       <motion.div
         className="post-content"
         initial={{ borderColor: "#696969" }}
-        whileHover={{ borderColor: "#eee5e9" }}>
+        whileHover={{ borderColor: "#eee5e9", scale: 1.05 }}>
         <div className="post-img">
           <img src={img} />
         </div>

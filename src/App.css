@@ -286,17 +286,15 @@ nav {
 
 .post-description {
   width: 30rem;
-  padding-block: 0.5rem;
   flex: 1;
   line-height: 1.7;
+  padding-top: 1rem;
 }
 
 .post-artist {
   font-weight: 300;
   opacity: 65%;
   font-size: 1.3rem;
-  margin-top: 0.25rem;
-  padding-top: 0.25rem;
   color: var(--clr-li);
   text-decoration: none;
 }
@@ -311,6 +309,8 @@ nav {
 
 .links a {
   color: var(--clr-li);
+  height: 100%;
+  display: flex;
 }
 
 .play-in-miniplayer {
