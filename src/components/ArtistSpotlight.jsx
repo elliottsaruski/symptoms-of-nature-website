@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { roster } from "../data/RosterData.jsx";
 import { useEffect, useState } from "react";
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 function ArtistSpotlight() {
   const [currentArtistSpotlight, setCurrentArtistSpotlight] = useState(0);
@@ -9,7 +9,7 @@ function ArtistSpotlight() {
   useEffect(() => {
     let timer1 = setTimeout(() => {
       setCurrentArtistSpotlight((prev) => (prev + 1) % roster.length);
-    }, 5000);
+    }, 8000);
 
     return () => {
       clearTimeout(timer1);
@@ -23,13 +23,27 @@ function ArtistSpotlight() {
         to={`/artists/${roster[currentArtistSpotlight].artistID}`}
         className="artist-spotlight-card"
         key={roster[currentArtistSpotlight].artistID}>
-        <img src={roster[currentArtistSpotlight].img} />
-        <h3>
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 100 }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1 }}
+          src={roster[currentArtistSpotlight].img}
+        />
+        <motion.h3
+          animate={{ translateX: -150 }}
+          transition={{ ease: "linear", duration: 8 }}>
+          {roster[currentArtistSpotlight].name}-
+          {roster[currentArtistSpotlight].name}-
+          {roster[currentArtistSpotlight].name}-
+          {roster[currentArtistSpotlight].name}-
+          {roster[currentArtistSpotlight].name}-
+          {roster[currentArtistSpotlight].name}-
           {roster[currentArtistSpotlight].name}-
           {roster[currentArtistSpotlight].name}-
           {roster[currentArtistSpotlight].name}-
           {roster[currentArtistSpotlight].name}
-        </h3>
+        </motion.h3>
       </NavLink>
     </div>
   );

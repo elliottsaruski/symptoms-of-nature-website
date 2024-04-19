@@ -1,22 +1,44 @@
 import { NavLink } from "react-router-dom";
 import SONlogo from "../assets/media/logos/SON mobile banner transparent - CROPPED.png";
 import { TiSocialInstagram } from "react-icons/ti";
+import { motion } from "framer-motion";
 
 function LogoHeader() {
   return (
     <div id="logo-wrapper">
       <nav>
         <NavLink to="/">
-          <a>home</a>
+          <motion.a
+            initial={{ scale: 1 }}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.5 },
+            }}>
+            home
+          </motion.a>
         </NavLink>
         <hr></hr>
         <NavLink to="/artists">
-          <a>artists</a>
+          <motion.a
+            initial={{ scale: 1 }}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.5 },
+            }}>
+            artists
+          </motion.a>
         </NavLink>
         <hr></hr>
-        <a href="https://www.instagram.com/symptoms_of_nature/" target="_blank">
+        <motion.a
+          initial={{ scale: 1 }}
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 0.5 },
+          }}
+          href="https://www.instagram.com/symptoms_of_nature/"
+          target="_blank">
           <TiSocialInstagram />
-        </a>
+        </motion.a>
       </nav>
       <NavLink to="/">
         <img id="SON-header-logo" src={SONlogo} />

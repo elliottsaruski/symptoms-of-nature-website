@@ -21,6 +21,11 @@
   background-color: var(--clr-bg);
   color: var(--clr-li);
   font-size: 1rem;
+  font-family: "Archivo Narrow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.63px;
 }
 
 /* ---------------------------SCROLLBAR---------------------- */
@@ -70,15 +75,6 @@ nav {
     align-items: center;
     color: var(--clr-li);
     text-decoration: none;
-
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-      background-color: var(--clr-md);
-      scale: 1.15;
-      outline: 0;
-      border: 0;
-    }
   }
 }
 
@@ -106,41 +102,42 @@ nav {
   background: var(--clr-md);
   text-align: justify;
   letter-spacing: 0.05ch;
+  line-height: 1.5;
 }
 
 #artist-spotlight-wrapper {
   display: flex;
+  flex-direction: column;
   position: relative;
+
   overflow: hidden;
+  outline: 2px solid var(--clr-md-accent);
 }
 
 .artist-spotlight-card {
   display: grid;
   height: calc(100svh / 3);
   width: 100%;
-  align-items: center;
-  justify-content: center;
-  outline: 2px solid var(--clr-md-accent);
+  /* justify-content: center; */
 
   img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 
 #artist-spotlight-wrapper h3 {
   position: absolute;
-  width: 100%;
   flex-wrap: nowrap;
   text-wrap: nowrap;
   bottom: 0;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.25rem;
   color: var(--clr-li);
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
   background-color: var(--clr-md);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px);
 }
 
 #miniplayer {
@@ -258,9 +255,9 @@ nav {
   align-items: flex-end;
 }
 
-.post-content:hover {
+/* .post-content:hover {
   border-color: var(--clr-li);
-}
+} */
 
 .post-content:hover h3 {
   text-decoration: underline;
@@ -373,7 +370,7 @@ nav {
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--clr-li);
 }
 .artist-card-img {
