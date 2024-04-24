@@ -1,33 +1,16 @@
 import { IoPlayCircle, IoLogoSoundcloud } from "react-icons/io5";
 import { FaBandcamp } from "react-icons/fa";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 function FeedPost({ title, date, img, artist, description, postType, links }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-      className="post">
-      <p className="post-date">{date}</p>
-      <motion.div
-        className="post-content"
-        initial={{ borderColor: "#696969" }}
-        whileHover={{ borderColor: "#eee5e9", scale: 1.05 }}>
-        <div className="post-img">
+    <div className="post">
+      <p>{date}</p>
+      {/* <div className="post-img">
           <img src={img} />
-        </div>
-        <div className="post-text">
-          <h2 className="post-title">{title}</h2>
-          <Link to={`/artists/${artist}`}>
-            <h3 className="post-artist">{artist}</h3>
-          </Link>
-          <span className="post-description">{description}</span>
-          <Links postType={postType} links={links} />
-        </div>
-      </motion.div>
-    </motion.div>
+        </div> */}
+      <p className="post-artist">{artist}</p>
+      <p className="post-title">{title}</p>
+    </div>
   );
 }
 
@@ -61,10 +44,5 @@ export function Links({ postType, links }) {
     );
   }
 }
-
-PropTypes.FeedPost = {
-  key: PropTypes.string,
-  title: PropTypes.string,
-};
 
 export default FeedPost;
