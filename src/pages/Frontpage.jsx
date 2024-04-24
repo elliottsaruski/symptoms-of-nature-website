@@ -5,7 +5,6 @@ function Frontpage() {
   return (
     <>
       <Navbar />
-      <hr id="nav-seperator"></hr>
       <main>
         <Outlet />
       </main>
