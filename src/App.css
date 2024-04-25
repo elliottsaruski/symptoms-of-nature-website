@@ -14,14 +14,14 @@
 }
 
 #root {
-  height: 100svh;
-  width: 100svw;
-  overflow: hidden;
   display: flex;
 }
 
 body {
   background-color: var(--clr-bg);
+  height: 100svh;
+  width: 100dvw;
+
   color: var(--clr-li);
   font-family: "Archivo Narrow", sans-serif;
   font-optical-sizing: auto;
@@ -66,8 +66,8 @@ body {
 #feed-wrapper,
 #artists-wrapper,
 #artist-profile-page-wrapper {
-  height: 100svh;
   width: 50dvw;
+  height: 100svh;
   overflow-y: scroll;
 }
 
@@ -92,18 +92,4 @@ body {
 
 /* ------------------------------ARTIST CARD----------------------- */
 
-.artist-card-img {
-  height: 15rem;
-  width: 15rem;
-  object-fit: cover;
-}
-
 /* ------------------------------ARTIST PROFILE----------------------- */
-
-
-.artist-profile-img {
-  height: 20rem;
-  width: 20rem;
-}
-
-

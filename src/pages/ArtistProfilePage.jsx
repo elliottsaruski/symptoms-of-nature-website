@@ -11,18 +11,12 @@ function ArtistProfilePage() {
   console.log(artistPosts);
 
   return (
-    <div className="artist-profile-page-wrapper">
-      <div className="artist-profile">
-        <img className="artist-profile-img" src={artist.img}></img>
-        <div className="artist-profile-description">
-          {/* <img id="artist-profile-logo" src={artist.logo}></img> */}
-
-          <h2>{artist.artistID}</h2>
-          <h3>{artist.title}</h3>
-          <span>{artist.description}</span>
-          <Links postType={artist.profileType} links={artist.links} />
-        </div>
-      </div>
+    <div id="artist-profile-page-wrapper">
+      <img className="artist-profile-img" src={artist.img}></img>
+      <h2>{artist.artistID}</h2>
+      <h3>{artist.title}</h3>
+      <span>{artist.description}</span>
+      {/* <Links postType={artist.profileType} links={artist.links} /> */}
       <hr id="seperator"></hr>
       <Filterbar />
       <div className="artist-posts-wrapper">

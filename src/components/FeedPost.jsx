@@ -8,7 +8,9 @@ function FeedPost({ title, date, img, artist, description, postType, links }) {
     <div className="post">
       <p className="post-date">{date}</p>
       <p className="post-title">{title}</p>
-      <Link to={`/artists/${artist}`}>{artist}</Link>
+      <p className="post-artist">{artist}</p>
+
+      {/* <Link to={`/artists/${artist}`}>{artist}</Link> */}
     </div>
   );
 }
