@@ -6,7 +6,7 @@ function ArtistCard({ name, img, artistID }) {
     <Link to={artistID}>
       <div className="artist-card">
         <img className="artist-card-img" src={img}></img>
-        <h2 className="artist-card-name">{name}</h2>
+        <figcaption className="artist-card-name">{name}</figcaption>
       </div>
     </Link>
   );

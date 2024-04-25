@@ -59,6 +59,7 @@ body {
 #NAV_LEFT {
   width: 50dvw;
   height: 100svh;
+  overflow: hidden;
 }
 
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
@@ -86,10 +87,68 @@ body {
 
 /* ------------------------------POSTS----------------------- */
 
+#feed-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding-inline: 2rem;
+}
+
+#feed-wrapper h2 {
+  font-size: 5rem;
+}
+.feed-post-img-wrapper {
+  background-color: rgba(255, 255, 255, 0.336);
+  flex-grow: 1;
+  border: 2px solid red;
+}
+
+#posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
 .post {
   display: flex;
+  border: 1px solid var(--clr-li);
+}
+
+.post-date {
+  flex: 0.25;
+  flex-basis: 5rem;
+  padding-inline: 1rem;
+}
+
+.post-artist {
+  flex: 0.25;
+  padding-inline: 1rem;
+}
+
+.post-title {
+  flex: 0.75;
+  padding-inline: 1rem;
 }
 
 /* ------------------------------ARTIST CARD----------------------- */
+
+#artists-wrapper h2 {
+  font-size: 5rem;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artist-card-img {
+  height: 15rem;
+  width: 15rem;
+}
 
 /* ------------------------------ARTIST PROFILE----------------------- */

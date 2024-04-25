@@ -1,5 +1,4 @@
 import { posts } from "../data/PostData.jsx";
-
 import Filterbar from "../components/Filterbar";
 import FeedPost from "../components/FeedPost";
 import { Outlet } from "react-router-dom";
@@ -7,8 +6,10 @@ import { Outlet } from "react-router-dom";
 function Feed() {
   return (
     <div id="feed-wrapper">
-      <Filterbar />
+      <h2>Feed</h2> <hr />
+      <div className="feed-post-img-wrapper"></div>
       <div id="posts-wrapper">
+        <Filterbar />
         {posts.map((post, index) => {
           return (
             <FeedPost
