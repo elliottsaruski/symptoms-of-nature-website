@@ -5,6 +5,7 @@ function Frontpage() {
   return (
     <>
       <Navbar />
+      <hr></hr>
       <main>
         <Outlet />
       </main>
