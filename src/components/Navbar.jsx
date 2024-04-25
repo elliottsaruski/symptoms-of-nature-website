@@ -12,6 +12,9 @@ function Navbar() {
           <NavLink to="/roster">
             <div>roster</div>
           </NavLink>
+          <NavLink to="/feed">
+            <div>feed</div>
+          </NavLink>
           <div
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
