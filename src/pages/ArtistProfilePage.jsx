@@ -1,14 +1,13 @@
 import { useParams } from "react-router-dom";
 import { roster } from "../data/RosterData";
 import { posts } from "../data/PostData";
-import FeedPost, { Links } from "../components/FeedPost";
+import FeedPost from "../components/FeedPost";
 import Filterbar from "../components/Filterbar";
 
 function ArtistProfilePage() {
   const { id } = useParams();
   const artist = roster.find((el) => el.artistID == `${id}`);
   const artistPosts = posts.filter((el) => el.artistID == id);
-  console.log(artistPosts);
 
   return (
     <div id="artist-profile-page-wrapper">
@@ -16,7 +15,6 @@ function ArtistProfilePage() {
       <h2>{artist.artistID}</h2>
       <h3>{artist.title}</h3>
       <span>{artist.description}</span>
-      {/* <Links postType={artist.profileType} links={artist.links} /> */}
       <hr id="seperator"></hr>
       <Filterbar />
       <div className="artist-posts-wrapper">
