@@ -3,25 +3,38 @@ import { TiSocialInstagram } from "react-icons/ti";
 
 function Navbar() {
   return (
-    <div id="NAV_LEFT">
-      <div id="logo-wrapper">
+    <div id="LEFT-COL-WRAPPER">
+      <div className="left-col--top">
+        <h1>SON</h1>
+        <hr />
         <nav>
-          <NavLink to="/">
-            <div>home</div>
+          <NavLink to="/feed">
+            <div>feed</div>
           </NavLink>
           <NavLink to="/roster">
             <div>roster</div>
           </NavLink>
-          <NavLink to="/feed">
-            <div>feed</div>
+          <NavLink to="/">
+            <div>about</div>
           </NavLink>
-          <div
+          <a
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
             <TiSocialInstagram />
-          </div>
+          </a>
         </nav>
-        <h1>SYMPTOMS OF NATURE</h1>
+      </div>
+      <hr />
+      <div className="left-col--media-wrapper">
+        {/* <img className="left-col-media" src=""></img> */}
+      </div>
+      <hr />
+      <div className="left-col--bottom">
+        <div className="colorModeToggle">
+          <p className="color-mode">dark</p>
+          <p className="color-mode">light</p>
+        </div>
+        <hr />
         <div className="SON-description">
           <span>
             We are SYMPTOMS OF NATURE, a creative collective based in Miami, FL.

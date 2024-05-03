@@ -56,12 +56,61 @@ body {
   place-content: center;
 }
 /* ---------------------------NAV LEFT---------------------- */
-#NAV_LEFT {
+#LEFT-COL-WRAPPER {
   width: 50dvw;
   height: 100svh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
+.left-col--top {
+  display: flex;
+  flex: 0.25;
+
+  h1 {
+    display: flex;
+    flex: auto;
+    font-size: 1200%;
+    /* align-items: center; */
+    justify-content: start;
+    font-family: "Major Mono Display";
+  }
+  nav {
+    display: grid;
+    place-items: end;
+    gap: 0.75rem;
+    place-content: center;
+    flex: 1;
+    padding-inline-start: 3rem;
+    font-size: 125%;
+    div,
+    a {
+      color: var(--clr-li);
+      text-decoration: none;
+    }
+  }
+}
+
+.left-col--media-wrapper {
+  background: var(--clr-md);
+  display: flex;
+  flex: auto;
+}
+
+.left-col--bottom {
+  display: flex;
+  flex: 0.1;
+  justify-content: space-evenly;
+  & :not(hr) {
+    align-content: center;
+  }
+}
+
+.colorModeToggle {
+  display: flex;
+  gap: 2rem;
+}
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
 
 #feed-wrapper,
@@ -70,6 +119,10 @@ body {
   width: 50dvw;
   height: 100svh;
   overflow-y: scroll;
+
+  h2 {
+    font-family: "Major Mono Display";
+  }
 }
 
 /* ---------------------------FILTER BAR---------------------- */
@@ -130,20 +183,33 @@ body {
   padding-inline: 1rem;
 }
 
-/* ------------------------------ARTIST CARD----------------------- */
+/* ------------------------------ROSTER----------------------- */
+#artists-wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+.artists-header {
+  display: grid;
+  gap: 1rem;
+  /* place-content: start; */
+  padding: 2rem;
+  max-width: 85%;
+}
 
 #artists-wrapper h2 {
   font-size: 5rem;
+}
+/* ------------------------------ARTIST CARD----------------------- */
+
+.artist-cards {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .artist-card {
   display: flex;
   flex-direction: column;
-}
-
-.artist-cards {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .artist-card-img {
