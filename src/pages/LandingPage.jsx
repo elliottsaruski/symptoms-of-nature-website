@@ -1,9 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import landingPageVideo from "../assets/placeholder video for son landing.mov";
 
 function LandingPage() {
   return (
     <div id="LANDING-PAGE">
-      <img src="https://cdn.pixabay.com/photo/2024/04/28/17/17/flower-8725954_1280.jpg"></img>
+      <video autoPlay loop src={landingPageVideo}></video>
       <NavLink to="/home">enter</NavLink>
     </div>
   );
