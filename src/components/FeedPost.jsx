@@ -6,9 +6,9 @@ function FeedPost({ title, date, img, artist, description, postType, links }) {
     <>
       <div className="post">
         <a className="post-date">{date}</a>
-        <hr />
+        {/* <hr /> */}
         <a className="post-artist">{artist}</a>
-        <hr />
+        {/* <hr /> */}
         <a className="post-title">{title}</a>
       </div>
     </>
