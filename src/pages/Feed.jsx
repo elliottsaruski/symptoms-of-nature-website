@@ -6,10 +6,12 @@ import { Outlet } from "react-router-dom";
 function Feed() {
   return (
     <div id="feed-wrapper">
-      <h2>FeeD</h2> <hr />
+      <h2>FeeD</h2>
+      <hr />
       <div className="feed-post-img-wrapper"></div>
       <div id="posts-wrapper">
         <Filterbar />
+        <hr />
         {posts.map((post, index) => {
           return (
             <FeedPost

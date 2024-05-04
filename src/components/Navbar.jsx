@@ -5,18 +5,21 @@ function Navbar() {
   return (
     <div id="LEFT-COL-WRAPPER">
       <div className="left-col--top">
-        <h1>SON</h1>
+        <NavLink to="/">
+          <h1>SON</h1>
+        </NavLink>
         <hr />
         <nav>
+          <NavLink to="/home">
+            <div>home</div>
+          </NavLink>
           <NavLink to="/feed">
             <div>feed</div>
           </NavLink>
           <NavLink to="/roster">
             <div>roster</div>
           </NavLink>
-          <NavLink to="/">
-            <div>about</div>
-          </NavLink>
+
           <a
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
