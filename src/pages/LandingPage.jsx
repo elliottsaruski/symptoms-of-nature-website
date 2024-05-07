@@ -4,7 +4,7 @@ import landingPageVideo from "../assets/placeholder video for son landing.mov";
 function LandingPage() {
   return (
     <div id="LANDING-PAGE">
-      <video autoPlay loop src={landingPageVideo}></video>
+      <video autoPlay loop muted src={landingPageVideo}></video>
       <NavLink to="/home">enter</NavLink>
     </div>
   );
