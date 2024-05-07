@@ -1,9 +1,9 @@
-/* :root {
+:root {
   --clr-bg: #090909;
   --clr-md: #303030;
   --clr-md-accent: #696969;
   --clr-li: #eee5e9;
-} */
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -21,6 +21,20 @@
     --clr-md-accent: #303030;
     --clr-li: #090909;
   }
+}
+
+.light {
+  --clr-bg: #eee5e9;
+  --clr-md: #696969;
+  --clr-md-accent: #303030;
+  --clr-li: #090909;
+}
+
+.dark {
+  --clr-bg: #090909;
+  --clr-md: #303030;
+  --clr-md-accent: #696969;
+  --clr-li: #eee5e9;
 }
 
 *,
@@ -49,6 +63,11 @@ body {
   letter-spacing: 0.63px;
 }
 
+hr {
+  border: 1.25px solid var(--clr-li);
+  color: var(--clr-li);
+}
+
 /* ---------------------------SCROLLBAR---------------------- */
 
 * {
@@ -63,10 +82,6 @@ body {
 
 *::-webkit-scrollbar-track {
   background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
 }
 
 #ERROR_404_PAGE {
@@ -145,18 +160,21 @@ body {
 }
 
 .left-col--media-wrapper {
-  background: var(--clr-md);
   display: flex;
-  flex: auto;
-  video {
-    width: 100%;
-    object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  flex: 2;
+  img {
+    height: 100%;
+    object-fit: contain;
   }
 }
 
 .left-col--bottom {
   display: flex;
-  flex: 0.5;
+  flex: 0.25;
   justify-content: space-evenly;
   & :not(hr) {
     align-content: center;
@@ -164,6 +182,12 @@ body {
 }
 
 /* ---------------------------colormode toggle---------------------- */
+
+#colorModeToggle {
+  display: flex;
+  border: none;
+  gap: 2rem;
+}
 
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
 
