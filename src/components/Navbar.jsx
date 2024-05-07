@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { TiSocialInstagram } from "react-icons/ti";
 import ColorModeToggle from "./ColorModeToggle";
-import landingPageVideo from "../assets/placeholder video for son landing.mov";
+import abstractNavImg from "../assets/abstract-nav-img.png";
 
 function Navbar() {
   return (
@@ -30,7 +30,7 @@ function Navbar() {
       </div>
       <hr />
       <div className="left-col--media-wrapper">
-        <video loop src={landingPageVideo}></video>
+        <img src={abstractNavImg}></img>
       </div>
       <hr />
       <div className="left-col--bottom">

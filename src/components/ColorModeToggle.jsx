@@ -1,25 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function ColorModeToggle() {
-  const [lightMode, setLightMode] = useState(false);
-
-  function handleColorModeToggle() {
-    setLightMode(!lightMode);
-  }
+  const [colorTheme, setColorTheme] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+  );
+  useEffect(() => {
+    document.body.className = colorTheme;
+  }, [colorTheme]);
 
   return (
     <>
-      <fieldset id="colorModeToggle">
-        {/* <legend>Mode</legend> */}
+      <fieldset
+        id="colorModeToggle"
+        onChange={(e) => setColorTheme(e.target.value)}>
         <div>
           <input
             type="radio"
             id="lightmode"
-            name="drone"
-            onClick={handleColorModeToggle}
+            name="colorMode"
+            value="light"
+            checked={colorTheme === "light"}
+            onChange={() => {
+              setColorTheme("light");
+            }}
           />
-          <label htmlFor="lightmode">
+          <label htmlFor="lightmode" className="colorMode-label">
             <MdLightMode />
           </label>
         </div>
@@ -27,10 +33,14 @@ function ColorModeToggle() {
           <input
             type="radio"
             id="darkmode"
-            name="drone"
-            onClick={handleColorModeToggle}
+            name="colorMode"
+            value="dark"
+            checked={colorTheme === "dark"}
+            onChange={() => {
+              setColorTheme("dark");
+            }}
           />
-          <label htmlFor="darkmode">
+          <label htmlFor="darkmode" className="colorMode-label">
             <MdDarkMode />
           </label>
         </div>

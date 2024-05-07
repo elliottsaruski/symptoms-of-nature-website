@@ -1,7 +1,9 @@
 import { IoPlayCircle, IoLogoSoundcloud } from "react-icons/io5";
 import { FaBandcamp } from "react-icons/fa";
 
-function FeedPost({ title, date, img, artist, description, postType, links }) {
+function FeedPost({ title, date, artist }) {
+  // add {img}, {description}, {postType}, {links} to props if needed
+
   return (
     <>
       <div className="post">
