@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { TiSocialInstagram } from "react-icons/ti";
+import ColorModeToggle from "./ColorModeToggle";
+import landingPageVideo from "../assets/placeholder video for son landing.mov";
 
 function Navbar() {
   return (
@@ -19,7 +21,6 @@ function Navbar() {
           <NavLink to="/roster">
             <div>roster</div>
           </NavLink>
-
           <a
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
@@ -29,14 +30,11 @@ function Navbar() {
       </div>
       <hr />
       <div className="left-col--media-wrapper">
-        {/* <img className="left-col-media" src=""></img> */}
+        <video loop src={landingPageVideo}></video>
       </div>
       <hr />
       <div className="left-col--bottom">
-        <div className="colorModeToggle">
-          <p className="color-mode">dark</p>
-          <p className="color-mode">light</p>
-        </div>
+        <ColorModeToggle />
         <hr />
         <div className="SON-description">
           <span>
