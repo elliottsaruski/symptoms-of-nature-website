@@ -14,7 +14,7 @@ function ColorModeToggle() {
       <fieldset
         id="colorModeToggle"
         onChange={(e) => setColorTheme(e.target.value)}>
-        <div>
+        <div className="color-mode-option">
           <input
             type="radio"
             id="lightmode"
@@ -26,10 +26,13 @@ function ColorModeToggle() {
             }}
           />
           <label htmlFor="lightmode" className="colorMode-label">
-            <MdLightMode />
+            <MdLightMode className="color-theme-icon" />
           </label>
         </div>
         <div>
+          <p>/</p>
+        </div>
+        <div className="color-mode-option">
           <input
             type="radio"
             id="darkmode"
@@ -41,7 +44,7 @@ function ColorModeToggle() {
             }}
           />
           <label htmlFor="darkmode" className="colorMode-label">
-            <MdDarkMode />
+            <MdDarkMode className="color-theme-icon" />
           </label>
         </div>
       </fieldset>

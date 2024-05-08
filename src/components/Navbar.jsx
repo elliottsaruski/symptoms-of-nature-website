@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { TiSocialInstagram } from "react-icons/ti";
 import ColorModeToggle from "./ColorModeToggle";
-import abstractNavImg from "../assets/abstract-nav-img.png";
+// import abstractNavImg from "../assets/abstract-nav-img.png";
 
 function Navbar() {
   return (
@@ -30,7 +30,7 @@ function Navbar() {
       </div>
       <hr />
       <div className="left-col--media-wrapper">
-        <img src={abstractNavImg}></img>
+        {/* <img src={abstractNavImg}></img> */}
       </div>
       <hr />
       <div className="left-col--bottom">

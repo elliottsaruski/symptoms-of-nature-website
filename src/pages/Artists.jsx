@@ -7,6 +7,13 @@ function Artists() {
     <div id="artists-wrapper">
       <div className="artists-header">
         <h2>RosTeR</h2>
+        <hr />
+        <span>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil
+          debitis, saepe distinctio molestias non molestiae tempore dignissimos
+          nulla eveniet, dolor, consequatur tempora enim voluptatem! Velit fuga
+          illum consequatur quae!
+        </span>
         <span>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil
           debitis, saepe distinctio molestias non molestiae tempore dignissimos
@@ -14,7 +21,6 @@ function Artists() {
           illum consequatur quae!
         </span>
       </div>
-      <hr />
       <div className="artist-cards">
         {roster.map((artist, index) => {
           return (
@@ -23,6 +29,7 @@ function Artists() {
               name={artist.name}
               img={artist.img}
               artistID={artist.artistID}
+              title={artist.title}
             />
           );
         })}

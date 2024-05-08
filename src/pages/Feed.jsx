@@ -8,6 +8,18 @@ function Feed() {
     <div id="feed-wrapper">
       <h2>FeeD</h2>
       <hr />
+      <span>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil
+        debitis, saepe distinctio molestias non molestiae tempore dignissimos
+        nulla eveniet, dolor, consequatur tempora enim voluptatem! Velit fuga
+        illum consequatur quae!
+      </span>
+      <span>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil
+        debitis, saepe distinctio molestias non molestiae tempore dignissimos
+        nulla eveniet, dolor, consequatur tempora enim voluptatem! Velit fuga
+        illum consequatur quae!
+      </span>
       <div className="feed-post-img-wrapper"></div>
       <div id="posts-wrapper">
         <Filterbar />
