@@ -3,7 +3,7 @@ import Chr0meC0Img from "../assets/media/photos/chr0mec0/chr0meC0-img.png";
 import ITbunniImg from "../assets/media/photos/itbunni/itbunni-img.png";
 import EnviImg from "../assets/media/photos/envi/envi-img.jpg";
 import TsImg from "../assets/media/photos/TS/TS-img.png";
-import JustinScottImg from "../assets/media/photos/justinscott/justinscott-img.png";
+import JustinScottImg from "../assets/media/photos/justinscott/justinscott-img.jpg";
 import CodeTripImg from "../assets/media/photos/CODETRIP/CODETRIP.png";
 import OOOImg from "../assets/media/photos/OOO/OOO-img.png";
 import xcopeLogo from "../assets/media/photos/xcope/Xcope logo transparent.png";
@@ -28,7 +28,7 @@ export const roster = [
     name: "Chr0meC0",
     artistID: "Chr0meC0",
     img: Chr0meC0Img,
-    title: "Organic Industrial Designer / visual artist / phd student",
+    title: "Organic Industrial Designer / visual artist",
     description:
       "Chr0me (b. 1997, Chicago) is a Miami based organic industrial fashion designer and social identity neuroscience PhD scholar. Their latest designs aspire to evoke manipulated liquid water input variables and a foreign state of liquid outcome such as crystallization, molds/fungi, aquarium life, and rock formations.",
     links: [
@@ -45,7 +45,7 @@ export const roster = [
     name: "ITbunnI",
     artistID: "ITbunnI",
     img: ITbunniImg,
-    title: "producer(s) / DJ(s)",
+    title: "producer / vocalist DJ Duo",
     description:
       "Chr0me (b. 1997, Chicago) is a Miami based organic industrial fashion designer and social identity neuroscience PhD scholar. Their latest designs aspire to evoke manipulated liquid water input variables and a foreign state of liquid outcome such as crystallization, molds/fungi, aquarium life, and rock formations.",
     links: [
@@ -111,7 +111,7 @@ export const roster = [
     name: "OOO",
     artistID: "OOO",
     img: OOOImg,
-    title: "producer duo",
+    title: "producer group",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
     links: [{ instagram: "" }, { soundcloud: "" }],
