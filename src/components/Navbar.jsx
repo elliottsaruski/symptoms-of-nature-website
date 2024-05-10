@@ -10,6 +10,7 @@ function Navbar() {
         <NavLink to="/">
           <h1>SON</h1>
         </NavLink>
+        <hr />
         <nav>
           <NavLink to="/home">
             <div>home</div>
@@ -29,7 +30,7 @@ function Navbar() {
       </div>
       <hr />
       <div className="left-col--media-wrapper">
-        {/* <img src={abstractNavImg}></img> */}
+        <img src="https://images.pexels.com/photos/364495/pexels-photo-364495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
       </div>
       <hr />
       <div className="left-col--bottom">
