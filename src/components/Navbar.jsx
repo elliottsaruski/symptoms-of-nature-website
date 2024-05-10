@@ -10,7 +10,6 @@ function Navbar() {
         <NavLink to="/">
           <h1>SON</h1>
         </NavLink>
-        <hr />
         <nav>
           <NavLink to="/home">
             <div>home</div>

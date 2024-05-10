@@ -1,17 +1,58 @@
 import { IoPlayCircle, IoLogoSoundcloud } from "react-icons/io5";
 import { FaBandcamp } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
-function FeedPost({ title, date, artist }) {
+import { useState } from "react";
+
+function FeedPost({ title, artist, date, img, description }) {
   // add {img}, {description}, {postType}, {links} to props if needed
+  const [postModuleOpen, setPostModuleOpen] = useState(false);
 
   return (
     <>
-      <div className="post">
-        <a className="post-date">{date}</a>
-        {/* <hr /> */}
+      <div className="post" onClick={() => setPostModuleOpen(!postModuleOpen)}>
+        <img className="post-img" src={img}></img>
         <a className="post-artist">{artist}</a>
-        {/* <hr /> */}
         <a className="post-title">{title}</a>
+      </div>
+      <PostModule
+        postModuleOpen={postModuleOpen}
+        setPostModuleOpen={setPostModuleOpen}
+        title={title}
+        artist={artist}
+        date={date}
+        img={img}
+        description={description}
+      />
+    </>
+  );
+}
+
+function PostModule({
+  postModuleOpen,
+  setPostModuleOpen,
+  title,
+  artist,
+  date,
+  img,
+  description,
+}) {
+  return (
+    <>
+      <div
+        onClick={() => setPostModuleOpen(false)}
+        className="post-module-outside"
+        id={postModuleOpen ? "post-open" : "post-closed"}>
+        <IoMdClose id="close-post-module-icon" />
+      </div>
+      <div
+        className="post-module-wrapper"
+        id={postModuleOpen ? "post-open" : "post-closed"}>
+        <h2>{title}</h2>
+        <img src={img} alt="project-img" />
+        <h3>{artist}</h3>
+        <time>{date}</time>
+        <span>{description}</span>
       </div>
     </>
   );

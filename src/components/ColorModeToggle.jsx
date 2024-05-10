@@ -29,9 +29,7 @@ function ColorModeToggle() {
             <MdLightMode className="color-theme-icon" />
           </label>
         </div>
-        <div>
-          <p>/</p>
-        </div>
+        <hr />
         <div className="color-mode-option">
           <input
             type="radio"
