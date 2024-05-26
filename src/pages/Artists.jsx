@@ -8,18 +8,6 @@ function Artists() {
       <div className="artists-header">
         <h2>RosTeR</h2>
         <hr />
-        <span>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil
-          debitis, saepe distinctio molestias non molestiae tempore dignissimos
-          nulla eveniet, dolor, consequatur tempora enim voluptatem! Velit fuga
-          illum consequatur quae!
-        </span>
-        <span>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil
-          debitis, saepe distinctio molestias non molestiae tempore dignissimos
-          nulla eveniet, dolor, consequatur tempora enim voluptatem! Velit fuga
-          illum consequatur quae!
-        </span>
       </div>
       <div className="artist-cards">
         {roster.map((artist, index) => {

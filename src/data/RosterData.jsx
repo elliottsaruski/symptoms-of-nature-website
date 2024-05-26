@@ -1,12 +1,12 @@
 import XcopeImg from "../assets/media/photos/xcope/xcope-img.jpg";
+import xcopeLogo from "../assets/media/photos/xcope/Xcope logo transparent.png";
 import Chr0meC0Img from "../assets/media/photos/chr0mec0/chr0meC0-img.png";
 import ITbunniImg from "../assets/media/photos/itbunni/itbunni-img.png";
-import EnviImg from "../assets/media/photos/envi/envi-img.jpg";
-import TsImg from "../assets/media/photos/TS/TS-img.png";
-import JustinScottImg from "../assets/media/photos/justinscott/justinscott-img.jpg";
-import CodeTripImg from "../assets/media/photos/CODETRIP/CODETRIP.png";
 import OOOImg from "../assets/media/photos/OOO/OOO-img.png";
-import xcopeLogo from "../assets/media/photos/xcope/Xcope logo transparent.png";
+// import EnviImg from "../assets/media/photos/envi/envi-img.jpg";
+// import TsImg from "../assets/media/photos/TS/TS-img.png";
+// import JustinScottImg from "../assets/media/photos/justinscott/justinscott-img.jpg";
+// import CodeTripImg from "../assets/media/photos/CODETRIP/CODETRIP.png";
 
 export const roster = [
   {
@@ -59,55 +59,6 @@ export const roster = [
     profileType: "music",
   },
   {
-    name: "envi",
-    artistID: "envi",
-    img: EnviImg,
-    title: "producer / DJ / 3D artist / dev",
-    description:
-      "Born and raised in Miami,FL, envi, 'Elliott Saruski' is an electronic music producer, multi-media nerd, and front-end dev. His sound is characterized by heavy bass, melodic synths, and unique melodies. Loves all music but is currently in a dnb phase.",
-    links: [
-      { instagram: "https://www.instagram.com/elliottsaruski/" },
-      { soundcloud: "https://soundcloud.com/envimusic" },
-    ],
-    profileType: "music",
-  },
-  {
-    name: "TS",
-    artistID: "TS",
-    img: TsImg,
-    title: "producer / DJ / Photographer",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
-    links: [
-      { instagram: "https://www.instagram.com/t.sanch_/" },
-      { soundcloud: "https://soundcloud.com/tristan-sanchez-1" },
-    ],
-    profileType: "music",
-  },
-  {
-    name: "justin scott",
-    artistID: "justinscott",
-    img: JustinScottImg,
-    title: "producer / vocalist",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
-    links: [
-      { instagram: "https://www.instagram.com/justinsaruski/" },
-      { soundcloud: "https://soundcloud.com/justinscott1" },
-    ],
-    profileType: "music",
-  },
-  {
-    name: "CODETRIP",
-    artistID: "CODETRIP",
-    img: CodeTripImg,
-    title: "producer duo",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
-    links: [{ instagram: "" }, { soundcloud: "" }],
-    profileType: "music",
-  },
-  {
     name: "OOO",
     artistID: "OOO",
     img: OOOImg,
@@ -117,4 +68,65 @@ export const roster = [
     links: [{ instagram: "" }, { soundcloud: "" }],
     profileType: "music",
   },
+
+  //ANYTHING BELOW HERE IS JUST FOR FUTURE REFERENCE
+  // {
+  //   name: "envi",
+  //   artistID: "envi",
+  //   img: EnviImg,
+  //   title: "producer / DJ / 3D artist / dev",
+  //   description:
+  //     "Born and raised in Miami,FL, envi, 'Elliott Saruski' is an electronic music producer, multi-media nerd, and front-end dev. His sound is characterized by heavy bass, melodic synths, and unique melodies. Loves all music but is currently in a dnb phase.",
+  //   links: [
+  //     { instagram: "https://www.instagram.com/elliottsaruski/" },
+  //     { soundcloud: "https://soundcloud.com/envimusic" },
+  //   ],
+  //   profileType: "music",
+  // },
+  // {
+  //   name: "TS",
+  //   artistID: "TS",
+  //   img: TsImg,
+  //   title: "producer / DJ / Photographer",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
+  //   links: [
+  //     { instagram: "https://www.instagram.com/t.sanch_/" },
+  //     { soundcloud: "https://soundcloud.com/tristan-sanchez-1" },
+  //   ],
+  //   profileType: "music",
+  // },
+  // {
+  //   name: "justin scott",
+  //   artistID: "justinscott",
+  //   img: JustinScottImg,
+  //   title: "producer / vocalist",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
+  //   links: [
+  //     { instagram: "https://www.instagram.com/justinsaruski/" },
+  //     { soundcloud: "https://soundcloud.com/justinscott1" },
+  //   ],
+  //   profileType: "music",
+  // },
+  // {
+  //   name: "CODETRIP",
+  //   artistID: "CODETRIP",
+  //   img: CodeTripImg,
+  //   title: "producer duo",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
+  //   links: [{ instagram: "" }, { soundcloud: "" }],
+  //   profileType: "music",
+  // },
+  // {
+  //   name: "OOO",
+  //   artistID: "OOO",
+  //   img: OOOImg,
+  //   title: "producer group",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam aliquid dolores, dicta veniam quas vitae iste quod in rem molestiae et consectetur error praesentium, eveniet sunt porro aut ad.",
+  //   links: [{ instagram: "" }, { soundcloud: "" }],
+  //   profileType: "music",
+  // },
 ];

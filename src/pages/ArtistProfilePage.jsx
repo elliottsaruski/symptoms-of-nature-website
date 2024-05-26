@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { roster } from "../data/RosterData";
 import { posts } from "../data/PostData";
 import FeedPost from "../components/FeedPost";
-import Filterbar from "../components/Filterbar";
+// import Filterbar from "../components/Filterbar";
 
 function ArtistProfilePage() {
   const { id } = useParams();
@@ -11,12 +11,20 @@ function ArtistProfilePage() {
 
   return (
     <div id="artist-profile-page-wrapper">
-      <img className="artist-profile-img" src={artist.img}></img>
-      <h2>{artist.artistID}</h2>
+      <div className="artist-profile-header">
+        <div className="artist-profile-name-wrapper">
+          <h2>{artist.artistID}</h2>
+          <h2>{artist.artistID}</h2>
+          <h2>{artist.artistID}</h2>
+          <h2>{artist.artistID}</h2>
+        </div>
+
+        <img className="artist-profile-img" src={artist.img}></img>
+      </div>
       <h3>{artist.title}</h3>
       <span>{artist.description}</span>
       <hr id="seperator"></hr>
-      <Filterbar />
+      {/* <Filterbar /> */}
       <div className="artist-posts-wrapper">
         {artistPosts.map((post, index) => {
           return (
