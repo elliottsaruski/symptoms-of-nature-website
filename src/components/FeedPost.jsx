@@ -13,11 +13,7 @@ function FeedPost({ title, artist, date, img, description, artistID }) {
       <div className="post" onClick={() => setPostModuleOpen(!postModuleOpen)}>
         <img className="post-img" src={img}></img>
         <div className="post-title-wrapper">
-          <section className="post-titles">
-            <a className="post-title">{title}</a>
-            <a className="post-title">{title}</a>
-            <a className="post-title">{title}</a>
-          </section>
+          <a className="post-title">{title}</a>
           <a className="post-artist">{artist}</a>
         </div>
       </div>
