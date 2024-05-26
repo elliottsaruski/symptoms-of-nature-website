@@ -21,11 +21,6 @@ function Navbar() {
           <NavLink to="/roster">
             <div>roster</div>
           </NavLink>
-          <a
-            href="https://www.instagram.com/symptoms_of_nature/"
-            target="_blank">
-            <TiSocialInstagram />
-          </a>
         </nav>
       </div>
       <hr />
@@ -33,13 +28,21 @@ function Navbar() {
         <img src="https://images.pexels.com/photos/364495/pexels-photo-364495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
       </div>
       <hr />
-      <div className="left-col--bottom">
-        <ColorModeToggle />
+
+      <div className="SON-description">
+        <span>
+          We are <strong>SYMPTOMS OF NATURE</strong>, a creative collective
+          based in Miami, FL.
+        </span>
         <hr />
-        <div className="SON-description">
-          <span>
-            We are SYMPTOMS OF NATURE, a creative collective based in Miami, FL.
-          </span>
+        <div className="color-mode-and-insta-toggle-wrapper">
+          <ColorModeToggle />
+          {/* <hr /> */}
+          <a
+            href="https://www.instagram.com/symptoms_of_nature/"
+            target="_blank">
+            <TiSocialInstagram />
+          </a>
         </div>
       </div>
     </div>

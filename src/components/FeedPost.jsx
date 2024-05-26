@@ -12,8 +12,14 @@ function FeedPost({ title, artist, date, img, description, artistID }) {
     <>
       <div className="post" onClick={() => setPostModuleOpen(!postModuleOpen)}>
         <img className="post-img" src={img}></img>
-        <a className="post-title">{title}</a>
-        <a className="post-artist">{artist}</a>
+        <div className="post-title-wrapper">
+          <section className="post-titles">
+            <a className="post-title">{title}</a>
+            <a className="post-title">{title}</a>
+            <a className="post-title">{title}</a>
+          </section>
+          <a className="post-artist">{artist}</a>
+        </div>
       </div>
       <PostModule
         postModuleOpen={postModuleOpen}
@@ -47,7 +53,7 @@ function PostModule({
         id={postModuleOpen ? "post-open" : "post-closed"}>
         <IoMdClose id="close-post-module-icon" />
       </div>
-      <div
+      <dialog
         className="post-module-wrapper"
         id={postModuleOpen ? "post-open" : "post-closed"}>
         <div className="module-header">
@@ -58,7 +64,7 @@ function PostModule({
           </div>
           <img src={img} alt="project-img" />
         </div>
-      </div>
+      </dialog>
     </>
   );
 }
