@@ -228,6 +228,10 @@ body {
   }
 }
 
+.home-about-SON-title {
+  font-size: smaller;
+}
+
 /* ---------------------------HOME ABOUT WRAPPER---------------------- */
 
 .home-content-wrapper {
@@ -259,32 +263,31 @@ body {
 
 .post {
   display: flex;
+  /* flex-direction: column; */
   position: relative;
-  /* background-color: var(--clr-md); */
+  background-color: var(--clr-md);
   /* width: 55vw; */
   img {
     height: 25rem;
     aspect-ratio: 1;
+    flex: 1;
     object-fit: contain;
     /* mix-blend-mode: lighten; */
   }
 }
 
 .post-title-wrapper {
-  display: grid;
-}
-
-.post-titles {
-  background: var(--clr-accent1);
-  display: grid;
-  grid-template-rows: repeat(3, 2rem);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: max-content;
+  align-content: flex-end;
+  height: 100%;
+  align-items: start;
 }
 
 .post-title {
-  /* mix-blend-mode: overlay; */
   font-size: 4rem;
-  margin-left: -5rem;
-  margin-top: 5rem;
   font-weight: 600;
   text-shadow: 2px 2px 0px rgba(10, 10, 10, 0.26);
 }
@@ -292,9 +295,6 @@ body {
 .post-artist {
   font-size: 2rem;
   display: flex;
-  margin-left: 0.5rem;
-  margin-top: 2rem;
-  /* flex-wrap: wrap; */
 }
 
 .post-module-outside {
@@ -463,6 +463,12 @@ body {
 @media screen and (max-width: 768px) {
   #root {
     flex-direction: column;
+    img {
+      height: 10rem;
+    }
+    h2 {
+      font-size: 400%;
+    }
   }
   .left-col--media-wrapper img,
   hr {
@@ -476,16 +482,45 @@ body {
 
   .left-col--top {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     border-bottom: 1px solid var(--clr-li);
     /* width: 100svw; */
+    position: sticky;
   }
 
-  .SON-description {
+  .SON-description span {
     display: none;
   }
 
   .left-col--bottom {
     position: absolute;
+  }
+
+  #posts-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    height: 500%;
+  }
+
+  #feed-wrapper,
+  #artists-wrapper,
+  #artist-profile-page-wrapper,
+  #home-about-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    height: 100dvh;
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
+    /* flex: 1.5; */
+    /* flex-basis: 50dvw; */
+    /* gap: 2rem; */
+    /* padding: 2rem 4rem; */
+  }
+
+  .post-titles {
+    display: flex;
+    flex-direction: column;
   }
 }
