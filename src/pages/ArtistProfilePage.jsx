@@ -20,9 +20,11 @@ function ArtistProfilePage() {
         </div>
 
         <img className="artist-profile-img" src={artist.img}></img>
+        <div className="artist-profile-content">
+          <h3>{artist.title}</h3>
+          <span>{artist.description}</span>
+        </div>
       </div>
-      <h3>{artist.title}</h3>
-      <span>{artist.description}</span>
       <hr id="seperator"></hr>
       {/* <Filterbar /> */}
       <div className="artist-posts-wrapper">
