@@ -11,41 +11,22 @@ function ColorModeToggle() {
 
   return (
     <>
-      <fieldset
-        id="colorModeToggle"
-        onChange={(e) => setColorTheme(e.target.value)}>
-        <div className="color-mode-option">
-          <input
-            type="radio"
-            id="lightmode"
-            name="colorMode"
-            value="light"
-            checked={colorTheme === "light"}
-            onChange={() => {
-              setColorTheme("light");
-            }}
-          />
-          <label htmlFor="lightmode" className="colorMode-label">
-            <MdLightMode className="color-theme-icon" />
-          </label>
+      <section id="colorModeToggle">
+        <div
+          className={colorTheme == "light" ? "light active" : "light"}
+          onClick={() => {
+            setColorTheme("light");
+          }}>
+          <MdLightMode className="color-theme-icon" />
         </div>
-        {/* <hr /> */}
-        <div className="color-mode-option">
-          <input
-            type="radio"
-            id="darkmode"
-            name="colorMode"
-            value="dark"
-            checked={colorTheme === "dark"}
-            onChange={() => {
-              setColorTheme("dark");
-            }}
-          />
-          <label htmlFor="darkmode" className="colorMode-label">
-            <MdDarkMode className="color-theme-icon" />
-          </label>
+        <div
+          className={colorTheme == "dark" ? "dark active" : "dark"}
+          onClick={() => {
+            setColorTheme("dark");
+          }}>
+          <MdDarkMode className="color-theme-icon" />
         </div>
-      </fieldset>
+      </section>
     </>
   );
 }
