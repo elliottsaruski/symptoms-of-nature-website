@@ -3,14 +3,14 @@ function AboutPage() {
     <div id="home-about-wrapper">
       <h2 className="home-about-SON-title">sYmptoMs oF NatURe</h2>
       <hr />
-      <span>
-        Symptoms of Nature is not just a collective; its an immersion into the
-        depths of creativity. Were a group of artisans, creators, and innovators
-        who thrive on experimentation and exploration. Our canvas knows no
-        bounds, spanning from the tangible world of textile and wearable art to
-        the ethereal realms of soundscapes and digital media.
-      </span>
       <div className="home-content-wrapper">
+        <span>
+          Symptoms of Nature is not just a collective; its an immersion into the
+          depths of creativity. Were a group of artisans, creators, and
+          innovators who thrive on experimentation and exploration. Our canvas
+          knows no bounds, spanning from the tangible world of textile and
+          wearable art to the ethereal realms of soundscapes and digital media.
+        </span>
         <div className="about-img-wrapper">
           <img
             src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

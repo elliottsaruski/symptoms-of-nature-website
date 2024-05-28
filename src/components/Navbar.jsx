@@ -1,37 +1,60 @@
 import { NavLink } from "react-router-dom";
 import { TiSocialInstagram } from "react-icons/ti";
 import ColorModeToggle from "./ColorModeToggle";
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 // import abstractNavImg from "../assets/abstract-nav-img.png";
 // import sonLogoDarkMode from "../assets/logos/son_logo_header_DARKMODE.jpg";
 // import sonLogoLightMode from "../assets/logos/son_logo_header_LIGHTMODE.jpg";
 
-// function MobileNavbar(){
+function MobileNavbar() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  return (
+    <div id="mobile-nav-wrapper">
+      <div className="hamburger-wrapper">
+        <GiHamburgerMenu
+          className="hamburger-icon"
+          onClick={() => {
+            setMobileNavOpen(!mobileNavOpen);
+          }}
+        />
+      </div>
 
-//   return (
-//     <>
-// {
-/* <nav>
-<NavLink to="/home">
-  <div>home</div>
-</NavLink>
-<NavLink to="/feed">
-  <div>feed</div>
-</NavLink>
-<NavLink to="/roster">
-  <div>roster</div>
-</NavLink>
-<div className="instagram-wrapper">
-  <a
-    href="https://www.instagram.com/symptoms_of_nature/"
-    target="_blank">
-    <TiSocialInstagram />
-  </a>
-</div>
-</nav> */
-// }
-//     </>
-//   );
-// }
+      <nav className={!mobileNavOpen ? "nav-mobile-closed" : "nav-mobile-open"}>
+        <NavLink
+          to="/home"
+          onClick={() => {
+            setMobileNavOpen(false);
+          }}>
+          <div>home</div>
+        </NavLink>
+        <NavLink
+          to="/feed"
+          onClick={() => {
+            setMobileNavOpen(false);
+          }}>
+          <div>feed</div>
+        </NavLink>
+        <NavLink
+          to="/roster"
+          onClick={() => {
+            setMobileNavOpen(false);
+          }}>
+          <div>roster</div>
+        </NavLink>
+        <div className="instagram-wrapper">
+          <a
+            href="https://www.instagram.com/symptoms_of_nature/"
+            target="_blank">
+            <TiSocialInstagram />
+          </a>
+        </div>
+      </nav>
+      <hr />
+    </div>
+  );
+}
 
 function Navbar() {
   return (
@@ -45,7 +68,7 @@ function Navbar() {
           </div>
         </NavLink>
         <hr />
-        <nav>
+        <nav id="nav-full">
           <NavLink to="/home">
             <div>home</div>
           </NavLink>
@@ -63,6 +86,7 @@ function Navbar() {
             </a>
           </div>
         </nav>
+        <MobileNavbar />
       </div>
       {/* <hr /> */}
       <div className="left-col--media-wrapper">
@@ -77,8 +101,7 @@ function Navbar() {
         <hr />
         <span>
           We are SYMPTOMS OF NATURE, a creative collective based in Miami, FL.
-          Immerse yourself in the experimental phase of media creation. Join us
-          as we uncover the eclectic symptoms of our nature.
+          Immerse yourself in the experimental phase of media creation.
         </span>
       </div>
     </div>
