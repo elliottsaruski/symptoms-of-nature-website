@@ -16,13 +16,13 @@ function AboutPage() {
             src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
+            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
         </div>
         <h3>Our Symphony of Creation:</h3>
@@ -37,13 +37,13 @@ function AboutPage() {
             src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
         </div>
         <h4>Wearable Art</h4>
@@ -54,13 +54,13 @@ function AboutPage() {
         </span>
         <div className="about-img-wrapper">
           <img
-            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -74,16 +74,16 @@ function AboutPage() {
         </span>
         <div className="about-img-wrapper">
           <img
-            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
         </div>
         <h4>Digital & Hand-drawn Media/Art</h4>
@@ -94,16 +94,16 @@ function AboutPage() {
         </span>
         <div className="about-img-wrapper">
           <img
-            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
             className="about-img-placeholder"></img>
         </div>
         <h4>Computer Coding</h4>
@@ -117,13 +117,13 @@ function AboutPage() {
             src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
         </div>
         <h4> Join Us on this Creative Odyssey</h4>
@@ -135,9 +135,20 @@ function AboutPage() {
           Are you ready to embrace the symptoms of nature? Lets embark on this
           creative journey together.
         </span>
-        <img
-          src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          className="about-img-placeholder"></img>
+        <div className="about-img-wrapper">
+          <img
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            className="about-img-placeholder"></img>
+          <img
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            className="about-img-placeholder"></img>
+          <img
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            className="about-img-placeholder"></img>
+          <img
+            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            className="about-img-placeholder"></img>
+        </div>
       </div>
     </div>
   );

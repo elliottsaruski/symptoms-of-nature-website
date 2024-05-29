@@ -4,7 +4,7 @@
   --rootBrown: hsl(34, 39%, 25%);
   --darkLeaf: hsl(109, 45%, 14%);
   --aquaBlue: hsl(210, 100%, 80%);
-  --fontColor: hsl(333, 21%, 92%);
+  --fontColor: hsla(333, 22%, 90%, 0.952);
   --backgroundColor: hsla(0, 0%, 10%, 0.993);
   --backgroundColorTransparent: hsla(0, 0%, 6%, 0.616);
 
@@ -155,10 +155,7 @@ body {
     div,
     a {
       display: flex;
-      /* width: 100%; */
       color: var(--clr-li);
-      flex: auto;
-      /* text-align: end; */
       justify-content: end;
     }
   }
@@ -177,9 +174,7 @@ body {
 
 .SON-description {
   display: flex;
-  /* flex: 0.2; */
   line-height: 1.7;
-  /* justify-content: space-around; */
   span {
     display: flex;
     height: 100%;
@@ -553,8 +548,6 @@ body {
     flex: auto;
     height: 78dvh;
     margin-top: 15dvh;
-
-
   }
 
   .post-titles {
