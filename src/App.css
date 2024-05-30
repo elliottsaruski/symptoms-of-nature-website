@@ -7,12 +7,13 @@
   --fontColor: hsla(333, 22%, 90%, 0.952);
   --backgroundColor: hsla(0, 0%, 10%, 0.993);
   --backgroundColorTransparent: hsla(0, 0%, 6%, 0.616);
+  --ACCENT: #cdc2fb;
 
   .light {
     --clr-bg: var(--fontColor);
     --clr-md: var(--backgroundColorTransparent);
     --clr-li: var(--backgroundColor);
-    --clr-accent1: var(--aquaBlue);
+    --clr-accent1: var(--ACCENT);
     --clr-accent2: var(--fireRed);
   }
 
@@ -21,7 +22,7 @@
     --clr-md: var(--backgroundColorTransparent);
     --clr-li: var(--fontColor);
     --clr-accent1: var(--fireRed);
-    --clr-accent2: var(--aquaBlue);
+    --clr-accent2: var(--ACCENT);
   }
 }
 
@@ -45,14 +46,33 @@
   }
 }
 
+/* -----------FONT ------------------------- */
+@font-face {
+  font-family: "PPEiko thin";
+  font-weight: thin;
+  src: url("/fonts/PPEiko/PPEiko-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "PPEiko";
+  font-weight: heavy;
+  src: url("/fonts/PPEiko/PPEiko-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "OTBrut";
+  src: url("/fonts/OTBrut/OTBrut-Regular.otf") format("opentype");
+}
+
 body {
   height: 100svh;
   width: 100dvw;
 
   color: var(--clr-li);
   background-color: var(--clr-bg);
+  font-family: "PPEiko";
 
-  font-family: "Archivo Narrow", sans-serif;
+  /* font-family: "Archivo Narrow", sans-serif; */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -130,20 +150,20 @@ body {
   }
   h1 {
     font-size: clamp(400%, 7vw, 800%);
-    font-family: "Major Mono Display";
+    font-family: "OTBrut";
     flex: 5;
-    padding: 1rem 3rem;
+    /* padding: 1rem 3rem; */
   }
 
   .symptoms-of-nature-logo-wrapper {
     display: flex;
-    flex: 5;
-    /* img {
+    /* flex: 5; */
+    img {
       object-fit: cover;
       height: 100%;
       width: 25rem;
-      mix-blend-mode: multiply;
-    } */
+      /* mix-blend-mode: multiply; */
+    }
   }
 
   nav {
@@ -166,6 +186,12 @@ body {
   overflow: hidden;
   flex: 2;
 
+  video {
+    width: 100%;
+    /* height: 100rem; */
+    object-fit: cover;
+  }
+
   img {
     width: 100%;
     object-fit: cover;
@@ -174,7 +200,7 @@ body {
 
 .SON-description {
   display: flex;
-  line-height: 1.7;
+  /* line-height: 1.7; */
   span {
     display: flex;
     height: 100%;
@@ -228,6 +254,7 @@ body {
   border: none;
   outline: 0.15rem solid var(--clr-accent1);
   /* font-weight: 600; */
+  font-family: "";
 }
 
 .instagram-wrapper {
@@ -256,11 +283,13 @@ body {
   /* gap: 2rem; */
 
   h2 {
-    font-family: "Major Mono Display";
+    /* font-family: "OTBrut"; */
     font-size: clamp(5rem, 7vw, 10rem);
     font-weight: 300;
     padding-left: 3rem;
     padding-bottom: 1rem;
+    /* text-decoration: underline;
+    text-decoration-color: var(--clr-accent1); */
   }
 }
 
@@ -274,9 +303,26 @@ body {
   display: grid;
   gap: 2rem;
   padding: 1rem 3rem;
+  font-family: PPEiko thin;
+
   h4 {
     font-size: 200%;
   }
+}
+
+.home-about-wrapper h2:nth-child() {
+  font-family: "PPEiko heavy";
+}
+
+.symptoms-of-nature-wrapper {
+  text-align: center;
+  line-height: 0.7;
+  padding-block: 2rem;
+}
+
+.symptoms-of-nature-wrapper h2:nth-child(2) {
+  font-family: "OTBrut";
+  color: var(--clr-accent1);
 }
 
 .about-img-wrapper {
