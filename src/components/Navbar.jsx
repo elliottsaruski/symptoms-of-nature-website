@@ -5,8 +5,9 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 // import abstractNavImg from "../assets/abstract-nav-img.png";
-// import sonLogoDarkMode from "../assets/logos/son_logo_header_DARKMODE.jpg";
-// import sonLogoLightMode from "../assets/logos/son_logo_header_LIGHTMODE.jpg";
+import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
+import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
+import landingPageVideo from "../assets/placeholder video for son landing.mov";
 
 function MobileNavbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -61,13 +62,15 @@ function Navbar() {
     <div id="LEFT-COL-WRAPPER">
       <div className="left-col--top">
         <NavLink to="/">
-          <h1>SON</h1>
+          {/* <h1>SON</h1> */}
           <div className="symptoms-of-nature-logo-wrapper">
-            {/* <img src={sonLogoDarkMode} alt="symptoms-of-nature-logo" /> */}
+            <img src={sonLogoDarkMode} alt="symptoms-of-nature-logo" />
+            {/* <img src={sonLogoLightMode} alt="symptoms-of-nature-logo" /> */}
+
             {/* <img src={sonLogoLightMode} alt="symptoms-of-nature-logo" /> */}
           </div>
         </NavLink>
-        <hr />
+        {/* <hr /> */}
         <nav id="nav-full">
           <NavLink to="/home">
             <div>home</div>
@@ -90,7 +93,9 @@ function Navbar() {
       </div>
       {/* <hr /> */}
       <div className="left-col--media-wrapper">
-        <img src="https://images.pexels.com/photos/364495/pexels-photo-364495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
+        <video autoPlay loop muted src={landingPageVideo}></video>
+
+        {/* <img src="https://images.pexels.com/photos/364495/pexels-photo-364495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img> */}
       </div>
       {/* <hr /> */}
 

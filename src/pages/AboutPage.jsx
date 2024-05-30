@@ -1,7 +1,10 @@
 function AboutPage() {
   return (
     <div id="home-about-wrapper">
-      <h2 className="home-about-SON-title">sYmptoMs oF NatURe</h2>
+      <div className="symptoms-of-nature-wrapper">
+        <h2 className="home-about-SON-title">Symptoms</h2>
+        <h2 className="home-about-SON-title">of Nature</h2>
+      </div>
       <hr />
       <div className="home-content-wrapper">
         <span>
