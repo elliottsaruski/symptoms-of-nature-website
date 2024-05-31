@@ -6,8 +6,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 // import abstractNavImg from "../assets/abstract-nav-img.png";
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
-import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
-import landingPageVideo from "../assets/placeholder video for son landing.mov";
+// import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
+import landingPageVideo from "../assets/media/son-8bit-header.mov";
 
 function MobileNavbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
