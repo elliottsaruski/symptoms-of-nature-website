@@ -91,13 +91,13 @@ function Navbar() {
         </nav>
         <MobileNavbar />
       </div>
-      {/* <hr /> */}
+      <hr />
       <div className="left-col--media-wrapper">
         <video autoPlay loop muted src={landingPageVideo}></video>
 
         {/* <img src="https://images.pexels.com/photos/364495/pexels-photo-364495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img> */}
       </div>
-      {/* <hr /> */}
+      <hr />
 
       <div className="SON-description">
         <div className="color-mode-and-insta-toggle-wrapper">

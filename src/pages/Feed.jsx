@@ -6,7 +6,7 @@ function Feed() {
   return (
     <div id="feed-wrapper">
       <h2>Feed</h2>
-      {/* <hr /> */}
+      <hr />
 
       <div id="posts-wrapper">
         {posts.map((post, index) => {
