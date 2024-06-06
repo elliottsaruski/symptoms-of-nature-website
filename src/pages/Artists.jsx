@@ -6,7 +6,7 @@ function Artists() {
   return (
     <div id="artists-wrapper">
       <div className="artists-header">
-        <h2>RosTeR</h2>
+        <h2>Roster</h2>
         <hr />
       </div>
       <div className="artist-cards">

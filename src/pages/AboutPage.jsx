@@ -15,18 +15,9 @@ function AboutPage() {
           wearable art to the ethereal realms of soundscapes and digital media.
         </span>
         <div className="about-img-wrapper">
-          <img
+          {/* <img
             src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
+            className="about-img-placeholder"></img> */}
         </div>
         <h3>Our Symphony of Creation:</h3>
         <h4>Textile Art</h4>
@@ -36,7 +27,7 @@ function AboutPage() {
           speaks volumes about our passion for innovation.
         </span>
         <div className="about-img-wrapper">
-          <img
+          {/* <img
             src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
@@ -44,10 +35,7 @@ function AboutPage() {
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
+            className="about-img-placeholder"></img> */}
         </div>
         <h4>Wearable Art</h4>
         <span>
@@ -56,7 +44,7 @@ function AboutPage() {
           artistic expression.
         </span>
         <div className="about-img-wrapper">
-          <img
+          {/* <img
             src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
@@ -64,10 +52,7 @@ function AboutPage() {
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
+            className="about-img-placeholder"></img> */}
         </div>
         <h4>Soundscapes & Music</h4>
         <span>
@@ -76,7 +61,7 @@ function AboutPage() {
           through the depths of your imagination.
         </span>
         <div className="about-img-wrapper">
-          <img
+          {/* <img
             src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
@@ -84,10 +69,7 @@ function AboutPage() {
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
+            className="about-img-placeholder"></img> */}
         </div>
         <h4>Digital & Hand-drawn Media/Art</h4>
         <span>
@@ -96,7 +78,7 @@ function AboutPage() {
           free-flowing sketches, our art knows no limits.
         </span>
         <div className="about-img-wrapper">
-          <img
+          {/* <img
             src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
             className="about-img-placeholder"></img>
           <img
@@ -104,10 +86,7 @@ function AboutPage() {
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/1366909/pexels-photo-1366909.jpeg"
-            className="about-img-placeholder"></img>
+            className="about-img-placeholder"></img> */}
         </div>
         <h4>Computer Coding</h4>
         <span>
@@ -116,7 +95,7 @@ function AboutPage() {
           our coding endeavors push the boundaries of whats possible.
         </span>
         <div className="about-img-wrapper">
-          <img
+          {/* <img
             src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
@@ -124,10 +103,7 @@ function AboutPage() {
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/298821/pexels-photo-298821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
+            className="about-img-placeholder"></img> */}
         </div>
         <h4> Join Us on this Creative Odyssey</h4>
         <span>
@@ -139,7 +115,7 @@ function AboutPage() {
           creative journey together.
         </span>
         <div className="about-img-wrapper">
-          <img
+          {/* <img
             src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="about-img-placeholder"></img>
           <img
@@ -147,10 +123,7 @@ function AboutPage() {
             className="about-img-placeholder"></img>
           <img
             src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
-          <img
-            src="https://images.pexels.com/photos/207353/pexels-photo-207353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="about-img-placeholder"></img>
+            className="about-img-placeholder"></img> */}
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@
 
 #root {
   display: flex;
-
+  line-height: 1.7;
   hr {
     opacity: 15%;
     border-width: 0.05rem;
@@ -131,12 +131,12 @@ body {
 }
 /* ---------------------------NAV LEFT---------------------- */
 #LEFT-COL-WRAPPER {
-  width: 50dvw;
+  /* width: 35dvw; */
   height: 100svh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  flex: 1.25;
+  flex: 1;
 }
 
 .left-col--top {
@@ -171,12 +171,14 @@ body {
     flex: 1;
     font-size: 1.5em;
     padding: 1rem 3rem;
+    font-family: "PPEiko thin";
 
     div,
     a {
       display: flex;
       color: var(--clr-li);
       justify-content: end;
+      align-items: center;
     }
   }
 }
@@ -188,8 +190,8 @@ body {
 
   video {
     width: 100%;
-    /* height: 100rem; */
     object-fit: cover;
+    mix-blend-mode: lighten;
   }
 
   img {
@@ -208,6 +210,7 @@ body {
     padding: 1rem;
     flex: 1;
     font-size: 1.5em;
+    font-family: "PPEiko thin";
   }
 
   a {
@@ -226,9 +229,6 @@ body {
 
 #colorModeToggle {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* justify-items: center; */
   gap: 1rem;
   border: 1px solid var(--clr-li);
   border-radius: 0.15rem;
@@ -250,11 +250,12 @@ body {
 .active :not(h1) {
   background-color: var(--clr-accent1);
   color: var(--clr-bg);
-  border-radius: 0.5px;
+  border-radius: 0.25rem;
+  padding: 0.1rem;
   border: none;
-  outline: 0.15rem solid var(--clr-accent1);
+  /* outline: 0.15rem solid var(--clr-accent1); */
   /* font-weight: 600; */
-  font-family: "";
+  font-family: "PPEiko";
 }
 
 .instagram-wrapper {
@@ -306,7 +307,11 @@ body {
   font-family: PPEiko thin;
 
   h4 {
-    font-size: 200%;
+    font-size: 300%;
+  }
+
+  span {
+    max-width: 45rem;
   }
 }
 
@@ -348,13 +353,13 @@ body {
 
 .post {
   display: flex;
+  gap: 2rem;
 
   img {
-    height: 15rem;
+    height: 20rem;
     aspect-ratio: 1;
     flex: 0.25;
     object-fit: contain;
-    /* mix-blend-mode: lighten; */
   }
 }
 
@@ -369,13 +374,17 @@ body {
 }
 
 .post-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
+  font-family: "PPEiko";
+
 }
 
 .post-artist {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
+  font-family: "PPEiko thin";
+
 }
 
 .post-module-outside {
@@ -445,18 +454,19 @@ body {
 /* ------------------------------ARTIST CARD----------------------- */
 
 .artist-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(30rem, 100%), 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(min(51rem, 100%), 1fr));
-  /* gap: 2rem; */
-  justify-content: start;
+  display: flex;
+  padding: 2rem;
+  /* grid-template-columns: repeat(auto-fill, minmax(min(30rem, 100%), 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(min(30rem, 100%), 1fr)); */
+  gap: 2rem;
+  /* justify-content: start; */
 }
 
 .artist-card {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 5rem;
+  /* padding: 5rem; */
   color: var(--clr-li);
   h3 {
     text-decoration: none;
@@ -477,8 +487,9 @@ body {
 } */
 
 .artist-card-img {
-  display: flex;
+  /* display: flex; */
   width: 100%;
+  height: 20rem;
   object-fit: cover;
 }
 
@@ -556,7 +567,7 @@ body {
     overflow-y: hidden;
   }
 
-  .left-col--media-wrapper img,
+  .left-col--media-wrapper video,
   hr {
     display: none;
   }
