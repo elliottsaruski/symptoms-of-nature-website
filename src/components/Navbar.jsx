@@ -100,7 +100,7 @@ function Navbar() {
       <hr />
 
       <div className="SON-description">
-        <div className="color-mode-and-insta-toggle-wrapper">
+        <div className="color-mode-and-theme-wrapper">
           <ColorModeToggle />
         </div>
         <hr />

@@ -1,28 +1,46 @@
 :root {
-  --fireRed: hsl(6, 74%, 47%);
-  --nightShade: hsl(16, 89%, 7%);
-  --rootBrown: hsl(34, 39%, 25%);
-  --darkLeaf: hsl(109, 45%, 14%);
-  --aquaBlue: hsl(210, 100%, 80%);
-  --fontColor: hsla(333, 22%, 90%, 0.952);
-  --backgroundColor: hsla(0, 0%, 10%, 0.993);
-  --backgroundColorTransparent: hsla(0, 0%, 6%, 0.616);
-  --ACCENT: #cdc2fb;
+  --DewWhite: #eaeae9;
+  --WolfGrey: #c1c1c1;
+  --TulipBlurple: #7863f7;
+  --FireRed: #ef4923;
+  --Charcoal: hsl(0, 3%, 6%);
 
-  .light {
-    --clr-bg: var(--fontColor);
-    --clr-md: var(--backgroundColorTransparent);
-    --clr-li: var(--backgroundColor);
-    --clr-accent1: var(--ACCENT);
-    --clr-accent2: var(--fireRed);
+  --GrassGreen: #c1d73a;
+  --ForestGreen: hsl(106, 34%, 15%);
+  --OffWhite: #eaeae9;
+  --SubtleBlack: #1a1411;
+  --LavaRed: #ef4923;
+
+  .forest.dark {
+    --clr-bg: var(--SubtleBlack);
+    --clr-md: var(--ForestGreen);
+    --clr-li: var(--OffWhite);
+    --clr-accent1: var(--LavaRed);
+    --clr-accent2: var(--GrassGreen);
   }
 
-  .dark {
-    --clr-bg: var(--backgroundColor);
-    --clr-md: var(--backgroundColorTransparent);
-    --clr-li: var(--fontColor);
-    --clr-accent1: var(--fireRed);
-    --clr-accent2: var(--ACCENT);
+  .forest.light {
+    --clr-bg: var(--OffWhite);
+    --clr-md: var(--ForestGreen);
+    --clr-li: var(--SubtleBlack);
+    --clr-accent1: var(--GrassGreen);
+    --clr-accent2: var(--LavaRed);
+  }
+
+  .techno.dark {
+    --clr-bg: var(--Charcoal);
+    --clr-md: var(--WolfGrey);
+    --clr-li: var(--DewWhite);
+    --clr-accent1: var(--TulipBlurple);
+    --clr-accent2: var(--FireRed);
+  }
+
+  .techno.light {
+    --clr-bg: var(--DewWhite);
+    --clr-md: var(--WolfGrey);
+    --clr-li: var(--Charcoal);
+    --clr-accent1: var(--TulipBlurple);
+    --clr-accent2: var(--FireRed);
   }
 }
 
@@ -49,13 +67,13 @@
 /* -----------FONT ------------------------- */
 @font-face {
   font-family: "PPEiko thin";
-  font-weight: thin;
+  /* font-weight: thin; */
   src: url("/fonts/PPEiko/PPEiko-Thin.otf") format("opentype");
 }
 
 @font-face {
   font-family: "PPEiko";
-  font-weight: heavy;
+  /* font-weight: heavy; */
   src: url("/fonts/PPEiko/PPEiko-Heavy.otf") format("opentype");
 }
 
@@ -85,7 +103,7 @@ body {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--clr-accent2) transparent;
+  scrollbar-color: var(--clr-accent1) transparent;
 }
 
 /* Chrome, Edge, and Safari */
@@ -159,9 +177,9 @@ body {
     display: flex;
     /* flex: 5; */
     img {
-      object-fit: cover;
+      object-fit: contain;
       height: 100%;
-      width: 25rem;
+      width: 20rem;
       /* mix-blend-mode: multiply; */
     }
   }
@@ -180,6 +198,16 @@ body {
       justify-content: end;
       align-items: center;
     }
+  }
+}
+
+.instagram-wrapper {
+  display: flex;
+  justify-content: end;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
   }
 }
 
@@ -219,7 +247,7 @@ body {
 }
 
 /* ---------------------------colormode toggle---------------------- */
-.color-mode-and-insta-toggle-wrapper {
+.color-mode-and-theme-wrapper {
   display: grid;
   padding: 1rem;
   gap: 1rem;
@@ -247,6 +275,25 @@ body {
   }
 }
 
+#colorThemeSelect {
+  display: grid;
+  label {
+    font-size: 75%;
+    font-family: "PPEiko thin";
+  }
+  select {
+    color: var(--clr-li);
+    background-color: var(--clr-accent1);
+    border: 0px;
+    outline: 0px;
+  }
+
+  option {
+    color: var(--clr-li);
+    background-color: transparent;
+  }
+}
+
 .active :not(h1) {
   background-color: var(--clr-accent1);
   color: var(--clr-bg);
@@ -256,16 +303,6 @@ body {
   /* outline: 0.15rem solid var(--clr-accent1); */
   /* font-weight: 600; */
   font-family: "PPEiko";
-}
-
-.instagram-wrapper {
-  display: flex;
-  justify-content: end;
-
-  svg {
-    height: 2rem;
-    width: 2rem;
-  }
 }
 
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
@@ -377,14 +414,12 @@ body {
   font-size: 3rem;
   font-weight: 600;
   font-family: "PPEiko";
-
 }
 
 .post-artist {
   font-size: 1.5rem;
   display: flex;
   font-family: "PPEiko thin";
-
 }
 
 .post-module-outside {
@@ -448,18 +483,20 @@ body {
 
 .artists-header {
   display: grid;
-  gap: 1rem;
+  line-height: 1.15;
+  /* gap: 1rem; */
 }
 
 /* ------------------------------ARTIST CARD----------------------- */
 
 .artist-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  place-content: center;
+  align-items: center;
   padding: 2rem;
-  /* grid-template-columns: repeat(auto-fill, minmax(min(30rem, 100%), 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(min(30rem, 100%), 1fr)); */
-  gap: 2rem;
-  /* justify-content: start; */
 }
 
 .artist-card {
@@ -565,6 +602,7 @@ body {
   }
   body {
     overflow-y: hidden;
+    position: relative;
   }
 
   .left-col--media-wrapper video,
@@ -574,11 +612,13 @@ body {
 
   .left-col--top {
     display: flex;
-    position: fixed;
-    flex: auto;
+    justify-content: space-between;
+    /* position: fixed; */
+    height: 10rem;
+    align-items: center;
     width: 100%;
+    /* flex: 1; */
     border-bottom: 1px solid var(--clr-li);
-    height: auto;
   }
 
   .SON-description span {
@@ -603,8 +643,12 @@ body {
     display: flex;
     flex-direction: column;
     flex: auto;
-    height: 78dvh;
-    margin-top: 15dvh;
+    height: 65svh;
+    /* margin-top: 30svh; */
+
+    h2 {
+      text-align: center;
+    }
   }
 
   .post-titles {
@@ -612,7 +656,7 @@ body {
     flex-direction: column;
   }
 
-  .color-mode-and-insta-toggle-wrapper {
+  .color-mode-and-theme-wrapper {
     display: flex;
     position: fixed;
     bottom: 0;
@@ -627,6 +671,8 @@ body {
   #mobile-nav-wrapper {
     display: grid;
     z-index: 10000000;
+    position: relative;
+
     .nav-mobile-closed {
       display: none;
     }
@@ -649,7 +695,6 @@ body {
 
   .hamburger-wrapper {
     display: flex;
-    flex: auto;
     width: 100%;
     align-items: center;
     justify-content: flex-end;
@@ -665,19 +710,37 @@ body {
 
   .artist-cards {
     display: grid;
-    grid-template-columns: unset;
-    grid-template-rows: unset;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
     place-content: center;
+    place-items: center;
+    align-items: center;
+  }
+
+  .artist-card-img {
+    height: 100%;
+    width: fit-content;
+    object-fit: contain;
   }
 
   #posts-wrapper {
     display: grid;
-    grid-template-columns: unset;
-    grid-template-rows: unset;
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+
+    grid-row-gap: 2rem;
     place-content: center;
+    place-items: center;
+    align-items: center;
   }
 
   .post {
     display: grid;
+  }
+
+  .post-img img {
+    width: 100px;
+    height: 100px;
   }
 }
