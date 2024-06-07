@@ -54,7 +54,7 @@
 
 #root {
   display: flex;
-  line-height: 1.7;
+  /* line-height: 1.7; */
   hr {
     opacity: 15%;
     border-width: 0.05rem;
@@ -72,14 +72,43 @@
 }
 
 @font-face {
-  font-family: "PPEiko";
-  /* font-weight: heavy; */
+  font-family: "PPEiko heavy";
   src: url("/fonts/PPEiko/PPEiko-Heavy.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "OTBrut";
+  font-family: "PPEiko blackItalic";
+  src: url("/fonts/PPEiko/PPEiko-BlackItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "PPEiko lightItalic";
+  src: url("/fonts/PPEiko/PPEiko-LightItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "PPEiko medium";
+  src: url("/fonts/PPEiko/PPEiko-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "OTBrut regular";
   src: url("/fonts/OTBrut/OTBrut-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "OTBrut italic";
+  src: url("/fonts/OTBrut/OTBrut-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "OTBrut italicMono";
+  src: url("/fonts/OTBrut/OTBrut-ItalicMono.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "OTBrut regularMono";
+  src: url("/fonts/OTBrut/OTBrut-RegularMono.otf") format("opentype");
 }
 
 body {
@@ -88,7 +117,7 @@ body {
 
   color: var(--clr-li);
   background-color: var(--clr-bg);
-  font-family: "PPEiko";
+  font-family: "PPEiko heavy";
 
   /* font-family: "Archivo Narrow", sans-serif; */
   font-optical-sizing: auto;
@@ -128,6 +157,7 @@ body {
   display: flex;
   position: absolute;
   background-color: var(--clr-md);
+  z-index: 200;
 
   a {
     position: absolute;
@@ -168,7 +198,8 @@ body {
   }
   h1 {
     font-size: clamp(400%, 7vw, 800%);
-    font-family: "OTBrut";
+    font-family: "OTBrut regular";
+
     flex: 5;
     /* padding: 1rem 3rem; */
   }
@@ -180,10 +211,13 @@ body {
       object-fit: contain;
       height: 100%;
       width: 20rem;
+      flex: 1;
       /* mix-blend-mode: multiply; */
+      /* margin-left: 2rem; */
     }
   }
-
+  /* .symptoms-of-nature-logo {
+  } */
   nav {
     display: grid;
     flex: 1;
@@ -219,7 +253,6 @@ body {
   video {
     width: 100%;
     object-fit: cover;
-    mix-blend-mode: lighten;
   }
 
   img {
@@ -302,7 +335,7 @@ body {
   border: none;
   /* outline: 0.15rem solid var(--clr-accent1); */
   /* font-weight: 600; */
-  font-family: "PPEiko";
+  font-family: "PPEiko heavy";
 }
 
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
@@ -347,9 +380,9 @@ body {
     font-size: 300%;
   }
 
-  span {
+  /* span {
     max-width: 45rem;
-  }
+  } */
 }
 
 .home-about-wrapper h2:nth-child() {
@@ -363,7 +396,8 @@ body {
 }
 
 .symptoms-of-nature-wrapper h2:nth-child(2) {
-  font-family: "OTBrut";
+  font-family: "OTBrut regular";
+
   color: var(--clr-accent1);
 }
 
@@ -413,7 +447,7 @@ body {
 .post-title {
   font-size: 3rem;
   font-weight: 600;
-  font-family: "PPEiko";
+  font-family: "PPEiko heavy";
 }
 
 .post-artist {
@@ -489,9 +523,13 @@ body {
 
 /* ------------------------------ARTIST CARD----------------------- */
 
+#ARTIST-CARD {
+  text-decoration: none;
+}
+
 .artist-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   place-content: center;
@@ -504,7 +542,9 @@ body {
   flex-direction: column;
   position: relative;
   /* padding: 5rem; */
+  text-decoration: none;
   color: var(--clr-li);
+  gap: 0.5rem;
   h3 {
     text-decoration: none;
   }
@@ -544,25 +584,29 @@ body {
 }
 
 .artist-card-name {
-  backdrop-filter: blur(0.5rem);
+  /* backdrop-filter: blur(0.5rem); */
   font-size: 200%;
+  font-family: "OTBrut regular";
 }
 
 .artist-card-title {
   text-decoration: none;
-  outline: none;
-  border: none;
+  line-height: 1;
   width: 100%;
-  font-weight: 500;
-  opacity: 65%;
-  color: var(--clr-accent2);
+  color: var(--clr-accent1);
+  font-family: "PPEiko thin";
+
+  a {
+    text-decoration: none;
+  }
 }
 
 /* ------------------------------ARTIST PROFILE----------------------- */
 
 #artist-profile-page-wrapper {
   h2 {
-    font-size: 6.5rem;
+    font-size: 4rem;
+    font-family: "OTBrut italicMono";
   }
 }
 
@@ -576,7 +620,7 @@ body {
 }
 
 .artist-profile-header {
-  display: flex;
+  display: grid;
 }
 
 #mobile-nav-wrapper {
@@ -584,6 +628,9 @@ body {
   display: none;
 }
 
+.artist-profile-content span {
+  font-family: "PPEiko thin";
+}
 /* ------------------------------MOBILE----------------------- */
 
 @media screen and (max-width: 1200px) {
@@ -617,8 +664,12 @@ body {
     height: 10rem;
     align-items: center;
     width: 100%;
-    /* flex: 1; */
     border-bottom: 1px solid var(--clr-li);
+  }
+
+  .symptoms-of-nature-logo {
+    scale: 0.75;
+    /* margin-left: unset; */
   }
 
   .SON-description span {
@@ -643,8 +694,9 @@ body {
     display: flex;
     flex-direction: column;
     flex: auto;
-    height: 65svh;
+    height: 75svh;
     /* margin-top: 30svh; */
+    text-align: center;
 
     h2 {
       text-align: center;
@@ -660,7 +712,6 @@ body {
     display: flex;
     position: fixed;
     bottom: 0;
-    z-index: 2;
     left: 0;
   }
 
@@ -670,8 +721,7 @@ body {
 
   #mobile-nav-wrapper {
     display: grid;
-    z-index: 10000000;
-    position: relative;
+    z-index: 100;
 
     .nav-mobile-closed {
       display: none;
@@ -690,7 +740,7 @@ body {
     user-select: none;
     background: var(--clr-bg);
     backdrop-filter: blur(20px);
-    z-index: 100000000;
+    z-index: 0;
   }
 
   .hamburger-wrapper {
@@ -700,11 +750,13 @@ body {
     justify-content: flex-end;
     align-content: flex-end;
     height: auto;
-    padding-right: 5rem;
+    padding-right: 2rem;
+    /* z-index: 0 !important; */
 
     svg {
       height: 2rem;
       width: 2rem;
+      /* z-index: -1; */
     }
   }
 
@@ -737,10 +789,11 @@ body {
 
   .post {
     display: grid;
+    /* align-items: center; */
   }
 
   .post-img img {
-    width: 100px;
-    height: 100px;
+    width: 20rem;
+    height: 20rem;
   }
 }

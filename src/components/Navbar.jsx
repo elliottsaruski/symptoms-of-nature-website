@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 // import abstractNavImg from "../assets/abstract-nav-img.png";
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
 // import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
-import landingPageVideo from "../assets/media/son-8bit-header.mov";
+import landingPageVideo from "../assets/son_nav_videoNEW.mov";
 
 function MobileNavbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -64,7 +64,11 @@ function Navbar() {
         <NavLink to="/">
           {/* <h1>SON</h1> */}
           <div className="symptoms-of-nature-logo-wrapper">
-            <img src={sonLogoDarkMode} alt="symptoms-of-nature-logo" />
+            <img
+              src={sonLogoDarkMode}
+              className="symptoms-of-nature-logo"
+              alt="symptoms-of-nature-logo"
+            />
             {/* <img src={sonLogoLightMode} alt="symptoms-of-nature-logo" /> */}
 
             {/* <img src={sonLogoLightMode} alt="symptoms-of-nature-logo" /> */}
@@ -94,11 +98,8 @@ function Navbar() {
       <hr />
       <div className="left-col--media-wrapper">
         <video autoPlay loop muted src={landingPageVideo}></video>
-
-        {/* <img src="https://images.pexels.com/photos/364495/pexels-photo-364495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img> */}
       </div>
       <hr />
-
       <div className="SON-description">
         <div className="color-mode-and-theme-wrapper">
           <ColorModeToggle />

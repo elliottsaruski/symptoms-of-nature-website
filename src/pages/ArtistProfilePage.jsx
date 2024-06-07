@@ -12,13 +12,7 @@ function ArtistProfilePage() {
   return (
     <div id="artist-profile-page-wrapper">
       <div className="artist-profile-header">
-        <div className="artist-profile-name-wrapper">
-          <h2>{artist.artistID}</h2>
-          <h2>{artist.artistID}</h2>
-          <h2>{artist.artistID}</h2>
-          <h2>{artist.artistID}</h2>
-        </div>
-
+        <h2>{artist.artistID}</h2>
         <img className="artist-profile-img" src={artist.img}></img>
         <div className="artist-profile-content">
           <h3>{artist.title}</h3>
