@@ -19,7 +19,7 @@ function ArtistProfilePage() {
           <span>{artist.description}</span>
         </div>
       </div>
-      <hr id="seperator"></hr>
+      <hr></hr>
       {/* <Filterbar /> */}
       <div className="artist-posts-wrapper">
         {artistPosts.map((post, index) => {

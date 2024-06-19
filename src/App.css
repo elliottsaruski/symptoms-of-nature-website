@@ -42,6 +42,14 @@
     --clr-accent1: var(--TulipBlurple);
     --clr-accent2: var(--FireRed);
   }
+
+  .dark .symptoms-of-nature-logo-light {
+    display: none;
+  }
+
+  .light .symptoms-of-nature-logo-dark {
+    display: none;
+  }
 }
 
 *,
@@ -54,7 +62,7 @@
 
 #root {
   display: flex;
-  /* line-height: 1.7; */
+  line-height: 1.85;
   hr {
     opacity: 15%;
     border-width: 0.05rem;
@@ -177,6 +185,12 @@ body {
     object-fit: cover;
   }
 }
+
+/* ---------------------------LOGOS---------------------- */
+
+.symptoms-of-nature-logo img .techno.dark {
+  content: url("./assets/logos/SON_LOGOlightmode-small.png");
+}
 /* ---------------------------NAV LEFT---------------------- */
 #LEFT-COL-WRAPPER {
   /* width: 35dvw; */
@@ -189,8 +203,6 @@ body {
 
 .left-col--top {
   display: flex;
-  /* position: relative; */
-  /* justify-content: space-between; */
 
   a {
     color: var(--clr-li);
@@ -199,25 +211,21 @@ body {
   h1 {
     font-size: clamp(400%, 7vw, 800%);
     font-family: "OTBrut regular";
-
     flex: 5;
-    /* padding: 1rem 3rem; */
   }
 
   .symptoms-of-nature-logo-wrapper {
     display: flex;
-    /* flex: 5; */
     img {
       object-fit: contain;
       height: 100%;
-      width: 20rem;
-      flex: 1;
-      /* mix-blend-mode: multiply; */
-      /* margin-left: 2rem; */
+      width: 15rem;
     }
   }
-  /* .symptoms-of-nature-logo {
-  } */
+  .symptoms-of-nature-logo-dark,
+  .symptoms-of-nature-logo-light {
+    padding: 1rem;
+  }
   nav {
     display: grid;
     flex: 1;
@@ -470,8 +478,8 @@ body {
 .post-module-wrapper {
   display: grid;
   background-color: var(--clr-bg);
-  width: 75svw;
-  height: 80lvh;
+  width: 75dvw;
+  height: 80svh;
   z-index: 100;
   place-self: center;
   top: 0;
@@ -528,13 +536,16 @@ body {
 }
 
 .artist-cards {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-row-gap: 2rem; */
+  display: flex;
+  flex-wrap: wrap;
   place-content: center;
-  align-items: center;
+  align-items: start;
   padding: 2rem;
+  gap: 2rem;
 }
 
 .artist-card {
@@ -544,7 +555,8 @@ body {
   /* padding: 5rem; */
   text-decoration: none;
   color: var(--clr-li);
-  gap: 0.5rem;
+  gap: 0.25rem;
+  width: 35rem;
   h3 {
     text-decoration: none;
   }
@@ -636,10 +648,9 @@ body {
 @media screen and (max-width: 1200px) {
   #root {
     flex-direction: column;
-    font-size: 0.75rem;
-    img {
-      height: 15rem;
-    }
+    font-size: 0.85rem;
+    line-height: 2;
+
     h1 {
       font-size: 5rem;
     }
@@ -659,17 +670,16 @@ body {
 
   .left-col--top {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* position: fixed; */
-    height: 10rem;
+    /* height: 10rem; */
+    gap: 0;
     align-items: center;
     width: 100%;
     border-bottom: 1px solid var(--clr-li);
   }
-
-  .symptoms-of-nature-logo {
-    scale: 0.75;
-    /* margin-left: unset; */
+  .symptoms-of-nature-logo-wrapper {
+    flex: 1;
   }
 
   .SON-description span {
@@ -690,22 +700,38 @@ body {
   #feed-wrapper,
   #artists-wrapper,
   #artist-profile-page-wrapper,
-  #home-about-wrapper {
+  #home-about-wrapper,
+  #artist-profile-page-wrapper {
     display: flex;
     flex-direction: column;
     flex: auto;
     height: 75svh;
-    /* margin-top: 30svh; */
-    text-align: center;
+    gap: 2rem;
+    padding: 1rem;
 
     h2 {
       text-align: center;
+      padding-left: 0;
+      padding-bottom: 0;
+      line-height: 1;
     }
   }
 
+  .home-content-wrapper {
+    /* width: 100%; */
+    padding: 1rem;
+  }
+
+  .symptoms-of-nature-wrapper {
+    font-size: 95%;
+  }
   .post-titles {
     display: flex;
     flex-direction: column;
+  }
+
+  #posts-wrapper {
+    padding: 0;
   }
 
   .color-mode-and-theme-wrapper {
@@ -713,6 +739,11 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
+    width: 100%;
+    /* background-color: red; */
+    backdrop-filter: blur(10px);
+    align-items: end;
+    justify-content: start;
   }
 
   #nav-full {
@@ -721,8 +752,9 @@ body {
 
   #mobile-nav-wrapper {
     display: grid;
-    z-index: 100;
-
+    flex: 1.5;
+    justify-content: end;
+    padding-right: 1rem;
     .nav-mobile-closed {
       display: none;
     }
@@ -740,46 +772,32 @@ body {
     user-select: none;
     background: var(--clr-bg);
     backdrop-filter: blur(20px);
-    z-index: 0;
+    z-index: 1000;
   }
 
   .hamburger-wrapper {
     display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-end;
-    align-content: flex-end;
-    height: auto;
-    padding-right: 2rem;
-    /* z-index: 0 !important; */
+    flex: auto;
 
     svg {
       height: 2rem;
       width: 2rem;
-      /* z-index: -1; */
     }
   }
 
-  .artist-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    place-content: center;
-    place-items: center;
-    align-items: center;
+  .artist-card {
+    width: unset;
   }
 
   .artist-card-img {
     height: 100%;
-    width: fit-content;
+    width: 15rem;
     object-fit: contain;
   }
 
   #posts-wrapper {
-    display: grid;
-    grid-column-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    display: flex;
+    flex-wrap: wrap;
 
     grid-row-gap: 2rem;
     place-content: center;
@@ -795,5 +813,13 @@ body {
   .post-img img {
     width: 20rem;
     height: 20rem;
+  }
+  .post-module-wrapper {
+    height: 85svh;
+    width: 95dvw;
+  }
+
+  .module-header {
+    display: grid;
   }
 }
