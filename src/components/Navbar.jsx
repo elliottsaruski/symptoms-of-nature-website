@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 // import abstractNavImg from "../assets/abstract-nav-img.png";
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
-// import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
+import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
 import landingPageVideo from "../assets/son_nav_videoNEW.mov";
 
 function MobileNavbar() {
@@ -61,19 +61,20 @@ function Navbar() {
   return (
     <div id="LEFT-COL-WRAPPER">
       <div className="left-col--top">
-        <NavLink to="/">
-          {/* <h1>SON</h1> */}
-          <div className="symptoms-of-nature-logo-wrapper">
-            <img
-              src={sonLogoDarkMode}
-              className="symptoms-of-nature-logo"
-              alt="symptoms-of-nature-logo"
-            />
-            {/* <img src={sonLogoLightMode} alt="symptoms-of-nature-logo" /> */}
-
-            {/* <img src={sonLogoLightMode} alt="symptoms-of-nature-logo" /> */}
-          </div>
-        </NavLink>
+        {/* <NavLink to="/"> */}
+        <div className="symptoms-of-nature-logo-wrapper">
+          <img
+            src={sonLogoDarkMode}
+            className="symptoms-of-nature-logo-dark"
+            alt="symptoms-of-nature-logo"
+          />
+          <img
+            src={sonLogoLightMode}
+            className="symptoms-of-nature-logo-light"
+            alt="symptoms-of-nature-logo"
+          />
+        </div>
+        {/* </NavLink> */}
         {/* <hr /> */}
         <nav id="nav-full">
           <NavLink to="/home">

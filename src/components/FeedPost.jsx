@@ -54,9 +54,9 @@ function PostModule({
         id={postModuleOpen ? "post-open" : "post-closed"}>
         <div className="module-header">
           <div className="module-content">
-            <h3>{artist}</h3> <h2>{title}</h2>
+            <h5>{artist}</h5> <h4>{title}</h4>
             <hr />
-            <span>{description}</span>
+            <p>{description}</p>
           </div>
           <img src={img} alt="project-img" />
         </div>
