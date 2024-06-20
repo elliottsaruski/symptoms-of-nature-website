@@ -62,7 +62,7 @@
 
 #root {
   display: flex;
-  line-height: 1.85;
+  /* line-height: 1.85; */
   hr {
     opacity: 15%;
     border-width: 0.05rem;
@@ -228,10 +228,15 @@ body {
   }
   nav {
     display: grid;
-    flex: 1;
+    flex: auto;
     font-size: 1.5em;
+    place-items: start;
+    place-content: end;
+    /* text-align: left; */
+    /* text-align: start; */
     padding: 1rem 3rem;
     font-family: "PPEiko thin";
+    /* border: 0.1rem solid blue; */
 
     div,
     a {
@@ -343,7 +348,7 @@ body {
   border: none;
   /* outline: 0.15rem solid var(--clr-accent1); */
   /* font-weight: 600; */
-  font-family: "PPEiko heavy";
+  /* font-family: "PPEiko heavy"; */
 }
 
 /* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
