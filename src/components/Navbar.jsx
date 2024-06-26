@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { TiSocialInstagram } from "react-icons/ti";
+// import { TiSocialInstagram } from "react-icons/ti";
 import ColorModeToggle from "./ColorModeToggle";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 // import abstractNavImg from "../assets/abstract-nav-img.png";
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
 import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
-import landingPageVideo from "../assets/son_nav_videoNEW.mov";
+// import landingPageVideo from "../assets/son_nav_videoNEW.mov";
 
 function MobileNavbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -20,8 +20,8 @@ function MobileNavbar() {
             setMobileNavOpen(!mobileNavOpen);
           }}
         />
+        {/* <hr /> */}
       </div>
-
       <nav className={!mobileNavOpen ? "nav-mobile-closed" : "nav-mobile-open"}>
         <NavLink
           to="/home"
@@ -31,11 +31,18 @@ function MobileNavbar() {
           <div>home</div>
         </NavLink>
         <NavLink
-          to="/feed"
+          to="/about"
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>feed</div>
+          <div>about</div>
+        </NavLink>
+        <NavLink
+          to="/issues"
+          onClick={() => {
+            setMobileNavOpen(false);
+          }}>
+          <div>issues</div>
         </NavLink>
         <NavLink
           to="/roster"
@@ -44,13 +51,13 @@ function MobileNavbar() {
           }}>
           <div>roster</div>
         </NavLink>
-        <div className="instagram-wrapper">
+        {/* <div className="instagram-wrapper">
           <a
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
             <TiSocialInstagram />
           </a>
-        </div>
+        </div> */}
       </nav>
       <hr />
     </div>
@@ -61,7 +68,6 @@ function Navbar() {
   return (
     <div id="LEFT-COL-WRAPPER">
       <div className="left-col--top">
-        {/* <NavLink to="/"> */}
         <div className="symptoms-of-nature-logo-wrapper">
           <img
             src={sonLogoDarkMode}
@@ -74,31 +80,31 @@ function Navbar() {
             alt="symptoms-of-nature-logo"
           />
         </div>
-        {/* </NavLink> */}
         {/* <hr /> */}
+        {/* <div className="instagram-wrapper"> */}
+        {/* <a href="https://www.instagram.com/symptoms_of_nature/" target="_blank">
+          <TiSocialInstagram />
+        </a> */}
+        {/* </div> */}
         <nav id="nav-full">
           <NavLink to="/home">
             <div>home</div>
           </NavLink>
-          <NavLink to="/feed">
-            <div>feed</div>
+          <NavLink to="/about">
+            <div>about</div>
+          </NavLink>
+          <NavLink to="/issues">
+            <div>issues</div>
           </NavLink>
           <NavLink to="/roster">
             <div>roster</div>
           </NavLink>
-          <div className="instagram-wrapper">
-            <a
-              href="https://www.instagram.com/symptoms_of_nature/"
-              target="_blank">
-              <TiSocialInstagram />
-            </a>
-          </div>
         </nav>
         <MobileNavbar />
       </div>
       <hr />
       <div className="left-col--media-wrapper">
-        <video autoPlay loop muted src={landingPageVideo}></video>
+        {/* <video autoPlay loop muted src={landingPageVideo}></video> */}
       </div>
       <hr />
       <div className="SON-description">
@@ -108,7 +114,7 @@ function Navbar() {
         <hr />
         <span>
           We are SYMPTOMS OF NATURE, a creative collective based in Miami, FL.
-          Immerse yourself in the experimental phase of media creation.
+          {/* Immerse yourself in the experimental phase of media creation. */}
         </span>
       </div>
     </div>

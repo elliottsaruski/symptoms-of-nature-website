@@ -1,3 +1,4 @@
+/* ----------- ROOT + RESET ------------------------------------------------------ */
 :root {
   --DewWhite: #eaeae9;
   --WolfGrey: #c1c1c1;
@@ -62,20 +63,15 @@
 
 #root {
   display: flex;
-  /* line-height: 1.85; */
   hr {
     opacity: 15%;
-    border-width: 0.05rem;
-    border-radius: 1;
-    border-style: double;
     border-color: var(--clr-li);
   }
 }
 
-/* -----------FONT ------------------------- */
+/* ----------- FONT ------------------------------------------------------ */
 @font-face {
   font-family: "PPEiko thin";
-  /* font-weight: thin; */
   src: url("/fonts/PPEiko/PPEiko-Thin.otf") format("opentype");
 }
 
@@ -119,15 +115,14 @@
   src: url("/fonts/OTBrut/OTBrut-RegularMono.otf") format("opentype");
 }
 
+/* --------------------------- BODY ----------------------------------------- */
+
 body {
   height: 100svh;
   width: 100dvw;
-
   color: var(--clr-li);
   background-color: var(--clr-bg);
   font-family: "PPEiko heavy";
-
-  /* font-family: "Archivo Narrow", sans-serif; */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -136,7 +131,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------------------------SCROLLBAR---------------------- */
+/* --------------------------- SCROLLBAR -------------------------------- */
 
 * {
   scrollbar-width: thin;
@@ -158,7 +153,8 @@ body {
   place-content: center;
 }
 
-/* ---------------------------LANDINGPAGE---------------------- */
+/* --------------------------- LANDINGPAGE ---------------------------- */
+
 #LANDING-PAGE {
   height: 100svh;
   width: 100dvw;
@@ -186,12 +182,14 @@ body {
   }
 }
 
-/* ---------------------------LOGOS---------------------- */
+/* --------------------------- LOGOS ---------------------- */
 
 .symptoms-of-nature-logo img .techno.dark {
   content: url("./assets/logos/SON_LOGOlightmode-small.png");
 }
-/* ---------------------------NAV LEFT---------------------- */
+
+/* --------------------------- LEFT COL + NAV ------------------------------------ */
+
 #LEFT-COL-WRAPPER {
   /* width: 35dvw; */
   height: 100svh;
@@ -203,7 +201,6 @@ body {
 
 .left-col--top {
   display: flex;
-
   a {
     color: var(--clr-li);
     text-decoration: none;
@@ -226,25 +223,22 @@ body {
   .symptoms-of-nature-logo-light {
     padding: 1rem;
   }
-  nav {
-    display: grid;
-    flex: auto;
-    font-size: 1.5em;
-    place-items: start;
-    place-content: end;
-    /* text-align: left; */
-    /* text-align: start; */
-    padding: 1rem 3rem;
-    font-family: "PPEiko thin";
-    /* border: 0.1rem solid blue; */
+}
+nav {
+  display: grid;
+  flex: 2;
+  font-size: 1.5em;
+  place-items: start;
+  place-content: end;
+  padding: 1rem 3rem;
+  font-family: "PPEiko thin";
 
-    div,
-    a {
-      display: flex;
-      color: var(--clr-li);
-      justify-content: end;
-      align-items: center;
-    }
+  div,
+  a {
+    display: flex;
+    color: var(--clr-li);
+    justify-content: end;
+    align-items: center;
   }
 }
 
@@ -266,6 +260,7 @@ body {
   video {
     width: 100%;
     object-fit: cover;
+    /* flex: 1; */
   }
 
   img {
@@ -276,14 +271,12 @@ body {
 
 .SON-description {
   display: flex;
-  /* line-height: 1.7; */
   span {
     display: flex;
     height: 100%;
     align-items: center;
     padding: 1rem;
-    flex: 1;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: "PPEiko thin";
   }
 
@@ -295,7 +288,7 @@ body {
 /* ---------------------------colormode toggle---------------------- */
 .color-mode-and-theme-wrapper {
   display: grid;
-  padding: 1rem;
+  padding: 0.5rem;
   gap: 1rem;
   justify-content: center;
   align-items: center;
@@ -303,11 +296,11 @@ body {
 
 #colorModeToggle {
   display: flex;
-  gap: 1rem;
-  border: 1px solid var(--clr-li);
+  /* border: 0.01rem solid var(--clr-li); */
   border-radius: 0.15rem;
-  padding: 0.5rem 0.5rem;
+  /* padding: 0.15rem 0.25rem; */
   place-content: center;
+  justify-content: space-between;
   overflow: hidden;
 
   div {
@@ -324,7 +317,7 @@ body {
 #colorThemeSelect {
   display: grid;
   label {
-    font-size: 75%;
+    font-size: 85%;
     font-family: "PPEiko thin";
   }
   select {
@@ -356,7 +349,9 @@ body {
 #feed-wrapper,
 #artists-wrapper,
 #artist-profile-page-wrapper,
-#home-about-wrapper {
+#home-about-wrapper,
+#issues-wrapper,
+#home-page-wrapper {
   display: flex;
   flex-direction: column;
   height: 100svh;
@@ -370,10 +365,16 @@ body {
     /* font-family: "OTBrut"; */
     font-size: clamp(5rem, 7vw, 10rem);
     font-weight: 300;
-    padding-left: 3rem;
-    padding-bottom: 1rem;
+
     /* text-decoration: underline;
     text-decoration-color: var(--clr-accent1); */
+  }
+
+  span,
+  p {
+    font-family: PPEiko medium;
+    display: flex;
+    width: 40rem;
   }
 }
 
@@ -381,7 +382,15 @@ body {
   font-size: smaller;
 }
 
-/* ---------------------------HOME ABOUT WRAPPER---------------------- */
+/* --------------------------- ABOUT ---------------------- */
+
+.about-spans {
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  padding-block: 1rem;
+}
+/* --------------------------- HOME ---------------------- */
 
 .home-content-wrapper {
   display: grid;
@@ -426,11 +435,74 @@ body {
   object-fit: cover;
 }
 
-/* ------------------------------POSTS----------------------- */
+/* ------------------------------ ISSUES PAGE ----------------------- */
+.issues {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+#zine-card {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  color: var(--clr-li);
+  border: 0.05rem solid var(--clr-md);
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+  img {
+    height: 15rem;
+
+    /* width: auto; */
+    object-fit: cover;
+  }
+}
+
+.zine-card-details {
+  font-size: 155%;
+  font-family: OTBrut italicMono;
+  p {
+    font-size: 55%;
+  }
+}
+
+.artists-featured-wrapper {
+  display: none;
+  position: absolute;
+}
+
+#zine-card:hover:not(.zine-card-NOTREADY),
+#zine-card:focus-visible:not(.zine-card-NOTREADY) {
+  background-color: var(--clr-accent1);
+  border: 0.05rem solid transparent;
+  position: relative;
+
+  .artists-featured-wrapper {
+    display: grid;
+    background-color: var(--clr-bg);
+    font-family: PPEiko medium;
+    padding: 1rem;
+    height: 100%;
+    position: absolute;
+    right: -0.25rem;
+    top: 1rem;
+    width: min-content;
+    justify-content: flex-end;
+    place-content: flex-end;
+    place-items: flex-end;
+  }
+}
+.zine-card-NOTREADY {
+  filter: grayscale() blur(2px) brightness(0.5);
+}
+
+/* ------------------------------ POSTS ----------------------- */
 
 #posts-wrapper {
   display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr)); */
   gap: 5rem;
   padding: 3rem;
 }
@@ -491,7 +563,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-
   overflow-y: scroll;
   padding: 3rem;
   overflow-x: hidden;
@@ -526,7 +597,7 @@ body {
   place-content: start;
   gap: 1rem;
 }
-/* ------------------------------ROSTER----------------------- */
+/* ------------------------------ ROSTER ----------------------- */
 
 .artists-header {
   display: grid;
@@ -534,7 +605,7 @@ body {
   /* gap: 1rem; */
 }
 
-/* ------------------------------ARTIST CARD----------------------- */
+/* ------------------------------ ARTIST CARD ----------------------- */
 
 #ARTIST-CARD {
   text-decoration: none;
@@ -675,16 +746,23 @@ body {
 
   .left-col--top {
     display: flex;
-    /* justify-content: space-between; */
-    /* position: fixed; */
-    /* height: 10rem; */
     gap: 0;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid var(--clr-li);
+    height: 6rem;
+    border-bottom: 0.05rem solid var(--clr-li);
+    nav {
+      place-content: center;
+      place-items: center;
+    }
   }
   .symptoms-of-nature-logo-wrapper {
-    flex: 1;
+    display: flex;
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 10rem !important;
+    }
   }
 
   .SON-description span {
@@ -706,19 +784,19 @@ body {
   #artists-wrapper,
   #artist-profile-page-wrapper,
   #home-about-wrapper,
-  #artist-profile-page-wrapper {
+  #artist-profile-page-wrapper,
+  #issues-wrapper {
     display: flex;
     flex-direction: column;
     flex: auto;
-    height: 75svh;
-    gap: 2rem;
+    /* height: 75svh; */
     padding: 1rem;
-
+    gap: 0.5rem;
     h2 {
-      text-align: center;
-      padding-left: 0;
+      /* UNCOMMENT FOR UNCENTERED TEXT ON MOBILE */
+      /* text-align: start; */
       padding-bottom: 0;
-      line-height: 1;
+      font-size: 205%;
     }
   }
 
@@ -728,7 +806,7 @@ body {
   }
 
   .symptoms-of-nature-wrapper {
-    font-size: 95%;
+    font-size: 250%;
   }
   .post-titles {
     display: flex;
@@ -742,11 +820,13 @@ body {
   .color-mode-and-theme-wrapper {
     display: flex;
     position: fixed;
+    height: 4dvh;
     bottom: 0;
     left: 0;
     width: 100%;
     /* background-color: red; */
-    backdrop-filter: blur(10px);
+    background-color: var(--clr-bg);
+    /* backdrop-filter: blur(10px); */
     align-items: end;
     justify-content: start;
   }
@@ -769,14 +849,13 @@ body {
     display: grid;
     height: 100%;
     width: 100%;
-    place-content: center;
     position: absolute;
     top: 0;
     left: 0;
-    place-items: center;
+    bottom: 0;
+    right: 0;
     user-select: none;
     background: var(--clr-bg);
-    backdrop-filter: blur(20px);
     z-index: 1000;
   }
 
@@ -790,14 +869,23 @@ body {
     }
   }
 
+  .artist-cards {
+    gap: 1rem;
+    /* margin: 0 auto; */
+  }
+
   .artist-card {
-    width: unset;
+    /* width: unset; */
+    font-size: 85%;
+    width: auto;
+    /* width: 10rem; */
+    flex: auto;
   }
 
   .artist-card-img {
     height: 100%;
-    width: 15rem;
-    object-fit: contain;
+    width: 25rem;
+    object-fit: cover;
   }
 
   #posts-wrapper {
