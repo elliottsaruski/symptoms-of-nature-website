@@ -113,7 +113,7 @@ function Navbar() {
         </div>
         <hr />
         <span>
-          We are SYMPTOMS OF NATURE, a creative collective based in Miami, FL.
+          A creative collective based in Miami, FL.
           {/* Immerse yourself in the experimental phase of media creation. */}
         </span>
       </div>

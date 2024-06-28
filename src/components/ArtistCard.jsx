@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function ArtistCard({ name, img, artistID, title }) {
   return (
-    <Link to={artistID} id="ARTIST_CARD">
+    <Link to={artistID}>
       <div className="artist-card">
         <img className="artist-card-img" src={img}></img>
         <div className="artist-card-context">

@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ZineData from "../data/ZineData";
 
 function IssuesPage() {
@@ -18,6 +18,7 @@ function IssuesPage() {
         </div>
         <div className="artists-featured-wrapper">
           <h5>featured artists:</h5>
+          <hr />
           {issue._FEATURED_ARTISTS.map((artist, index) => {
             return <p key={index}>{artist}</p>;
           })}

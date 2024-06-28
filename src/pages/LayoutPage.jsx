@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 
-function Frontpage() {
+function LayoutPage() {
   return (
     <>
       <Navbar />
@@ -11,4 +11,4 @@ function Frontpage() {
   );
 }
 
-export default Frontpage;
+export default LayoutPage;
