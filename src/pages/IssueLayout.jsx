@@ -1,10 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { ReactReader } from "react-reader";
 import { Link } from "react-router-dom";
 
-
 function IssueLayout() {
-  const [location, setLocation] = useState(0);
+  // const [location, setLocation] = useState(0);
 
   return (
     <>
