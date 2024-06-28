@@ -1,14 +1,19 @@
 import Navbar from "../components/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import IssueLayout from "./IssueLayout";
 
 function LayoutPage() {
-  return (
-    <>
-      <Navbar />
-      <hr />
-      <Outlet />
-    </>
-  );
+  const { pathname } = useLocation();
+  if (pathname === "/issues/000") return <IssueLayout />;
+  else {
+    return (
+      <>
+        <Navbar />
+        <hr />
+        <Outlet />
+      </>
+    );
+  }
 }
 
 export default LayoutPage;
