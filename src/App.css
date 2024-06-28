@@ -335,16 +335,16 @@ nav {
 
 .active :not(h1) {
   background-color: var(--clr-accent1);
-  color: var(--clr-bg);
+  color: var(--clr-li);
   border-radius: 0.25rem;
-  padding: 0.1rem;
+  /* padding: 0.1rem; */
   border: none;
-  /* outline: 0.15rem solid var(--clr-accent1); */
+  /* outline: 0.15rem solid var(--clr-accent2); */
   /* font-weight: 600; */
   /* font-family: "PPEiko heavy"; */
 }
 
-/* ---------------------------FEED + ARTISTS WRAPPERS---------------------- */
+/* ---------------------------LAYOUT---------------------- */
 
 #feed-wrapper,
 #artists-wrapper,
@@ -358,23 +358,21 @@ nav {
   overflow-y: scroll;
   overflow-x: hidden;
   flex: 1.5;
-  /* flex-basis: 50dvw; */
-  /* gap: 2rem; */
 
   h2 {
-    /* font-family: "OTBrut"; */
-    font-size: clamp(5rem, 7vw, 10rem);
+    /* font-family: "PPEiko blackItalic"; */
+    font-size: 850%;
+    /* font-size: clamp(5rem, 7vw, 10rem); */
     font-weight: 300;
-
-    /* text-decoration: underline;
-    text-decoration-color: var(--clr-accent1); */
+    padding-inline: 2rem;
   }
 
-  span,
-  p {
-    font-family: PPEiko medium;
+  span {
+    font-family: "PPEiko medium";
     display: flex;
-    width: 40rem;
+    padding: 2rem;
+    max-width: 60rem;
+    text-align: justify;
   }
 }
 
@@ -421,6 +419,7 @@ nav {
   font-family: "OTBrut regular";
 
   color: var(--clr-accent1);
+  line-height: 0.236;
 }
 
 .about-img-wrapper {
@@ -471,7 +470,7 @@ nav {
 
 .artists-featured-wrapper {
   display: none;
-  position: absolute;
+  flex-direction: column;
 }
 
 #zine-card:hover:not(.zine-card-NOTREADY),
@@ -481,22 +480,29 @@ nav {
   position: relative;
 
   .artists-featured-wrapper {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: var(--clr-bg);
     font-family: PPEiko medium;
-    padding: 1rem;
-    height: 100%;
     position: absolute;
-    right: -0.25rem;
-    top: 1rem;
-    width: min-content;
-    justify-content: flex-end;
-    place-content: flex-end;
-    place-items: flex-end;
+    right: 0;
+    top: 0;
+    height: 100%;
+    /* width: 25%; */
+    padding: 1rem;
+    h5 {
+      font-family: "PPEiko blackItalic";
+    }
+    p {
+      width: auto;
+      font-family: "PPEiko lightItalic";
+    }
   }
 }
 .zine-card-NOTREADY {
   filter: grayscale() blur(2px) brightness(0.5);
+  user-select: none;
+  cursor: not-allowed;
 }
 
 /* ------------------------------ POSTS ----------------------- */
@@ -599,91 +605,58 @@ nav {
 }
 /* ------------------------------ ROSTER ----------------------- */
 
-.artists-header {
-  display: grid;
-  line-height: 1.15;
-  /* gap: 1rem; */
-}
-
 /* ------------------------------ ARTIST CARD ----------------------- */
 
-#ARTIST-CARD {
-  text-decoration: none;
-}
-
 .artist-cards {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-column-gap: 2rem;
-  grid-row-gap: 2rem; */
-  display: flex;
-  flex-wrap: wrap;
-  place-content: center;
+  grid-row-gap: 2rem;
   align-items: start;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .artist-card {
   display: flex;
   flex-direction: column;
   position: relative;
-  /* padding: 5rem; */
   text-decoration: none;
   color: var(--clr-li);
   gap: 0.25rem;
-  width: 35rem;
+  aspect-ratio: 1;
   h3 {
     text-decoration: none;
   }
-  a {
+  * {
     text-decoration: none;
   }
 }
-
-/* .dark .artist-card {
-  background-color: var(--clr-md);
-  color: var(--clr-li);
-}
-
-.light .artist-card {
-  color: var(--clr-bg);
-  background-color: var(--backgroundColor);
-} */
 
 .artist-card-img {
-  /* display: flex; */
   width: 100%;
-  height: 20rem;
+  height: 100%;
   object-fit: cover;
+  aspect-ratio: 1;
 }
 
 .artist-card-context {
   display: flex;
   flex-direction: column;
-}
-
-.artist-card-context {
-  display: flex;
-  flex-direction: column;
-  h3 {
-    text-decoration: dashed;
-  }
+  text-decoration: none;
 }
 
 .artist-card-name {
-  /* backdrop-filter: blur(0.5rem); */
   font-size: 200%;
-  font-family: "OTBrut regular";
+  font-family: "OTBrut regularMono";
 }
 
 .artist-card-title {
   text-decoration: none;
   line-height: 1;
   width: 100%;
-  color: var(--clr-accent1);
+  color: var(--clr-accent2);
   font-family: "PPEiko thin";
-
   a {
     text-decoration: none;
   }

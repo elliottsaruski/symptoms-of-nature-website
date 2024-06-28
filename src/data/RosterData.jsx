@@ -1,6 +1,8 @@
 import XcopeImg from "../assets/media/photos/xcope/xcope-img.jpg";
 import Chr0meC0Img from "../assets/media/photos/chr0mec0/chr0meC0-img.png";
 import ITbunniImg from "../assets/media/photos/itbunni/itbunni-img.png";
+import OOOimg from "../assets/media/photos/OOO/ooo2.svg";
+import tsimg from "../assets/media/photos/TS/TS-img.png";
 
 export const roster = [
   {
@@ -66,7 +68,7 @@ export const roster = [
   {
     name: "Out Of Order",
     artistID: "OOO",
-    img: "",
+    img: OOOimg,
     title: "producer group",
     description:
       "Definition: not working properly or at all; not according to the rules. Out of Order is composed of 3 musicians/producers and lifelong friends. The name serves as a reflection of the group's lack of concern for traditional sounds and rigid industry standards. In other words, OOO seeks to inspire others to create without adherence to boundaries or rules and instead promote the pursuit of artistic self-expression and independence.",
@@ -88,7 +90,7 @@ export const roster = [
   {
     name: "TS",
     artistID: "TS",
-    img: "",
+    img: tsimg,
     title: "producer / DJ / photographer",
     description: "",
     links: [
