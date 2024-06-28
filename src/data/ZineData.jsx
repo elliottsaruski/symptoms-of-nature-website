@@ -1,5 +1,5 @@
 import stampspic from "../assets/media/janae_stampsPrint.png";
-import placeholderzinepic from "../assets/logos/SON_LOGO_darkmode.png";
+// import placeholderzinepic from "../assets/logos/SON_LOGO_darkmode.png";
 const ZineData = [
   {
     _ID: 1,
