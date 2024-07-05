@@ -9,7 +9,7 @@ function AboutPage() {
         <h2 className="home-about-SON-title">Symptoms</h2>
         <h2 className="home-about-SON-title">of Nature</h2>
       </div> */}
-      <img src={headerIcon} alt="" />
+      <img src={headerIcon} id="about-icon" alt="" />
       <img src={aboutPageHeaderIMG} id="about-header-img" alt="" />
       <img src={aboutPageHeaderTEXT} id="about-header-text" alt="" />
 
@@ -26,7 +26,9 @@ function AboutPage() {
           </select>{" "}
           with media spanning from{" "}
           <select name="two" id="two">
-            <option value="">textile, art, music, psychology, film, & coding</option>
+            <option value="">
+              textile, art, music, psychology, film, & coding
+            </option>
             {/* <option value="">
               textile, wearable art, music, identity psychology, & computer
               coding

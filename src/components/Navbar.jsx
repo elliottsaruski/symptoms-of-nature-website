@@ -57,6 +57,10 @@ function MobileNavbar() {
             <TiSocialInstagram />
           </a>
         </div> */}
+
+        <div className="color-mode-and-theme-wrapper">
+          <ColorModeToggle />
+        </div>
       </nav>
       <hr />
     </div>
@@ -102,18 +106,14 @@ function Navbar() {
         <MobileNavbar />
       </div>
       <hr />
-      <div className="left-col--media-wrapper">
-        {/* <video autoPlay loop muted src={landingPageVideo}></video> */}
-      </div>
+      <div className="left-col--media-wrapper"></div>
       <hr />
       <div className="SON-description">
         <div className="color-mode-and-theme-wrapper">
           <ColorModeToggle />
         </div>
         <hr />
-        <span>
-          A creative collective based in Miami, FL
-        </span>
+        <span>A creative collective based in Miami, FL</span>
       </div>
     </div>
   );
