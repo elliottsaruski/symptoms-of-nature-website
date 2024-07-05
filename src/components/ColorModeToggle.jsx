@@ -28,7 +28,7 @@ function ColorModeToggle() {
           <MdDarkMode className="color-theme-icon" />
         </div>
       </section>
-      <section id="colorThemeSelect">
+      <div id="colorThemeSelect">
         <label htmlFor="theme-select">Theme:</label>
         <select
           defaultValue={"techno"}
@@ -46,7 +46,7 @@ function ColorModeToggle() {
           </option>
           <option value="forest">forest</option>
         </select>
-      </section>
+      </div>
     </>
   );
 }

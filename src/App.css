@@ -201,6 +201,7 @@ body {
 
 .left-col--top {
   display: flex;
+  flex: 0.5;
   a {
     color: var(--clr-li);
     text-decoration: none;
@@ -235,7 +236,7 @@ nav {
   text-transform: capitalize;
   margin-right: 5rem;
   line-height: 1;
-  height: 100%;
+  height: auto;
 
   a {
     flex: auto;
@@ -559,6 +560,7 @@ nav {
 .post {
   display: flex;
   gap: 2rem;
+  padding: 2rem;
 
   img {
     height: 20rem;
@@ -647,7 +649,11 @@ nav {
   gap: 1rem;
 }
 /* ------------------------------ ROSTER ----------------------- */
-
+.artist-profile-header {
+  display: flex !important;
+  padding: 1rem;
+  gap: 2rem;
+}
 /* ------------------------------ ARTIST CARD ----------------------- */
 
 .artist-cards {
@@ -711,20 +717,31 @@ nav {
   h2 {
     font-size: 4rem;
     font-family: "OTBrut italicMono";
+    padding: 0;
+  }
+  span {
+    padding: 0;
+    max-width: 40ch;
+    font-family: "PPEiko thin";
+  }
+  .artist-profile-img {
+    height: 25rem;
+    aspect-ratio: 1;
+    max-width: 100%;
+    object-fit: cover;
   }
 }
 
-.artist-profile-img {
-  height: 100%;
-  width: auto;
-  aspect-ratio: 1;
-  object-fit: contain;
-  margin-left: -4rem;
-  z-index: -1;
+.artist-profile-header {
+  display: grid !important;
+  padding: 1rem;
+  gap: 2rem;
 }
 
-.artist-profile-header {
-  display: grid;
+.artist-profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 #mobile-nav-wrapper {
@@ -735,13 +752,19 @@ nav {
 .artist-profile-content span {
   font-family: "PPEiko thin";
 }
+
+.artist-posts-wrapper {
+  padding: 1rem;
+  border-top: 0.15rem solid var(--clr-accent2);
+}
 /* ------------------------------MOBILE----------------------- */
 
 @media screen and (max-width: 1200px) {
   #root {
     flex-direction: column;
     font-size: 0.85rem;
-    line-height: 2;
+    height: 100dvh;
+    /* line-height: 2; */
 
     h1 {
       font-size: 5rem;
@@ -754,9 +777,20 @@ nav {
     overflow-y: hidden;
     position: relative;
   }
+  #LEFT-COL-WRAPPER {
+    /* display: displayinternal; */
+    flex: unset;
+    height: 10svh !important;
+  }
+
+  .left-col--top {
+    display: flex !important;
+    height: inherit;
+  }
 
   .left-col--media-wrapper video,
-  hr {
+  hr,
+  .left-col--media-wrapper {
     display: none;
   }
 
@@ -765,7 +799,7 @@ nav {
     gap: 0;
     align-items: center;
     width: 100%;
-    height: 6rem;
+    height: 10svh;
     border-bottom: 0.05rem solid var(--clr-li);
     nav {
       place-content: center;
@@ -798,14 +832,12 @@ nav {
 
   #feed-wrapper,
   #artists-wrapper,
-  #artist-profile-page-wrapper,
   #home-wrapper,
-  #artist-profile-page-wrapper,
   #issues-wrapper {
     display: flex;
     flex-direction: column;
     flex: 2;
-    /* height: 75svh; */
+    height: 85svh;
     padding-bottom: 10svh;
 
     padding: 1rem;
@@ -818,9 +850,40 @@ nav {
     }
   }
 
-  .home-content-wrapper {
-    /* width: 100%; */
-    padding: 1rem;
+  #home-wrapper {
+    overflow-y: scroll;
+    height: min-content;
+    padding: 0;
+    flex: 2;
+  }
+
+  select#two {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  #about-icon {
+    height: 3rem;
+    width: 3rem;
+  }
+  #about-header-img {
+    max-width: 100%;
+    padding-top: 1rem;
+  }
+
+  #about-header-text {
+    width: 75%;
+  }
+
+  .about-spans {
+    font-size: 1.1rem;
+    p {
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 
   /* .symptoms-of-nature-wrapper {
@@ -837,17 +900,16 @@ nav {
 
   .color-mode-and-theme-wrapper {
     display: flex;
-    position: fixed;
-    height: min-content;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    /* background-color: red; */
-    background-color: var(--clr-bg);
-    /* backdrop-filter: blur(10px); */
-    align-items: end;
+    align-items: center;
     justify-content: start;
     z-index: 10000;
+    outline: 1px solid var(--clr-accent1);
+  }
+
+  #colorThemeSelect {
+    display: grid;
+    gap: 0.25rem;
   }
 
   #nav-full {
@@ -863,7 +925,9 @@ nav {
       display: none;
     }
   }
-
+  .color-mode-and-theme-wrapper {
+    display: none;
+  }
   .nav-mobile-open {
     display: grid;
     height: 100%;
@@ -876,6 +940,10 @@ nav {
     user-select: none;
     background: var(--clr-bg);
     z-index: 1000;
+    gap: 2rem;
+    .color-mode-and-theme-wrapper {
+      display: flex;
+    }
   }
 
   .hamburger-wrapper {
