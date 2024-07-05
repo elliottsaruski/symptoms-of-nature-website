@@ -4,10 +4,9 @@ import ColorModeToggle from "./ColorModeToggle";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-// import abstractNavImg from "../assets/abstract-nav-img.png";
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
 import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
-// import landingPageVideo from "../assets/son_nav_videoNEW.mov";
+// import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
 
 function MobileNavbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -28,28 +27,28 @@ function MobileNavbar() {
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>home</div>
+          <div>HOME</div>
         </NavLink>
         <NavLink
           to="/about"
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>about</div>
+          <div>ABOUT</div>
         </NavLink>
         <NavLink
           to="/issues"
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>issues</div>
+          <div>ISSUES</div>
         </NavLink>
         <NavLink
           to="/roster"
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>roster</div>
+          <div>ROSTER</div>
         </NavLink>
         {/* <div className="instagram-wrapper">
           <a
@@ -88,16 +87,16 @@ function Navbar() {
         {/* </div> */}
         <nav id="nav-full">
           <NavLink to="/home">
-            <div>home</div>
+            <div>HOME</div>
           </NavLink>
           <NavLink to="/about">
-            <div>about</div>
+            <div>ABOUT</div>
           </NavLink>
           <NavLink to="/issues">
-            <div>issues</div>
+            <div>ISSUES</div>
           </NavLink>
           <NavLink to="/roster">
-            <div>roster</div>
+            <div>ROSTER</div>
           </NavLink>
         </nav>
         <MobileNavbar />
@@ -113,8 +112,7 @@ function Navbar() {
         </div>
         <hr />
         <span>
-          A creative collective based in Miami, FL.
-          {/* Immerse yourself in the experimental phase of media creation. */}
+          A creative collective based in Miami, FL
         </span>
       </div>
     </div>

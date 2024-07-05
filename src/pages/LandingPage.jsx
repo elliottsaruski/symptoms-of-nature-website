@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import landingPageVideo from "../assets/placeholder video for son landing.mov";
+import landingPageVideo from "../assets/media/vids/placeholder video for son landing.mov";
 
 function LandingPage() {
   return (

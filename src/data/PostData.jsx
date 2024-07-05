@@ -1,6 +1,6 @@
-import inPhaseCover from "../assets/media/photos/xcope/in phase cover.jpg";
-import IDTIDshow from "../assets/media/photos/chr0mec0/IDTIDS-img1.png";
-import ITBunniImg from "../assets/media/photos/itbunni/ramenWorld.png";
+import inPhaseCover from "../assets/media/photos/ROSTER/xcope/in phase cover.jpg";
+import IDTIDshow from "../assets/media/photos/ROSTER/chr0mec0/IDTIDS-img1.png";
+import ITBunniImg from "../assets/media/photos/ROSTER/itbunni/ramenWorld.png";
 
 export const posts = [
   {
