@@ -6,12 +6,12 @@ function IssueLayout() {
   // const [location, setLocation] = useState(0);
 
   return (
-    <>
+    <div id="issue-wrapper">
       <Link to="/issues">back</Link>
-      <div style={{ height: "90vh", width: "90vw" }}>
+      <div style={{ height: "75svh", width: "90vw" }}>
         <ReactReader url="https://react-reader.metabits.no/files/alice.epub" />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -16,10 +16,11 @@ function ArtistProfilePage() {
         <div className="artist-profile-content">
           <h2>{artist.artistID}</h2>
           <h3>{artist.title}</h3>
+          <hr id="hr-important"></hr>
           <span>{artist.description}</span>
         </div>
       </div>
-      <hr></hr>
+      <hr id="hr-important"></hr>
       {/* <Filterbar /> */}
       <div className="artist-posts-wrapper">
         <h4>featured work</h4>

@@ -386,6 +386,7 @@ nav {
   overflow-y: scroll;
   overflow-x: hidden;
   flex: 1.5;
+  max-width: 100%;
   h2 {
     /* font-family: "PPEiko blackItalic"; */
     font-size: 450%;
@@ -403,7 +404,6 @@ nav {
   }
 }
 
-
 /* --------------------------- HOME PAGE ---------------------- */
 
 /* --------------------------- ABOUT ---------------------- */
@@ -413,7 +413,9 @@ nav {
   margin: auto;
   place-content: center;
   gap: 1rem;
+  padding-block: 5rem;
   /* height: 100svh; */
+  position: relative;
   img {
     object-fit: cover;
   }
@@ -467,6 +469,39 @@ nav {
   }
 }
 
+.drop-pic {
+  display: none;
+}
+
+.drop-1-activated {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  height: 15rem;
+  aspect-ratio: 1;
+  top: 10rem;
+  left: 1rem;
+}
+
+.drop-2-activated {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  height: 15rem;
+  aspect-ratio: 1;
+  top: 0rem;
+  right: 1rem;
+}
+.drop-3-activated {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  height: 15rem;
+  aspect-ratio: 1;
+  bottom: 20rem;
+  right: -5rem;
+  mix-blend-mode: difference;
+}
 /* ------------------------------ ISSUES PAGE ----------------------- */
 .issues {
   display: flex;
@@ -480,15 +515,15 @@ nav {
   flex-direction: column;
   /* flex: auto; */
   color: var(--clr-li);
-  border: 0.05rem solid var(--clr-md);
+  border: 0.15rem solid var(--clr-md);
   /* width: 100%; */
   gap: 1rem;
   padding: 1rem;
   position: relative;
   max-width: 100%;
   img {
-    height: 15rem;
-
+    width: 25rem;
+    /* width: 100%; */
     /* width: auto; */
     object-fit: cover;
   }
@@ -510,7 +545,7 @@ nav {
 #zine-card:hover:not(.zine-card-NOTREADY),
 #zine-card:focus-visible:not(.zine-card-NOTREADY) {
   background-color: var(--clr-accent1);
-  border: 0.05rem solid transparent;
+  border: 0.15rem solid transparent;
   position: relative;
 
   .artists-featured-wrapper {
@@ -537,6 +572,32 @@ nav {
   filter: grayscale() blur(2px) brightness(0.5);
   user-select: none;
   cursor: not-allowed;
+  place-content: center;
+  img {
+    width: 25rem;
+    aspect-ratio: 16/9;
+  }
+}
+/* ------------------------------ ISSUE LAYOUT ----------------------- */
+
+#issue-wrapper {
+  display: grid;
+  place-content: center;
+  height: 100svh;
+  width: 100vw;
+  a {
+    flex: 1;
+    width: min-content;
+    margin: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--clr-li);
+    border: 0.15rem solid var(--clr-accent2);
+    border-radius: 0.15rem;
+    background-color: var(--clr-accent1);
+  }
 }
 
 /* ------------------------------ POSTS ----------------------- */
@@ -564,16 +625,21 @@ nav {
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* height: max-content; */
-  /* align-content: flex-end; */
-  /* height: 100%; */
   align-items: start;
+  gap: 1rem;
+  font-family: "PPMondwest Regular";
+
+  p {
+    font-family: "PPMondwest Regular";
+    max-width: 50ch;
+    line-height: 1.5;
+  }
 }
 
 .post-title {
   font-size: 3rem;
   font-weight: 600;
-  font-family: "PPEiko heavy";
+  font-family: "PPEiko medium";
 }
 
 .post-artist {
@@ -665,8 +731,12 @@ nav {
   position: relative;
   text-decoration: none;
   color: var(--clr-li);
-  gap: 0.25rem;
+  gap: 0.75rem;
   aspect-ratio: 1;
+  border: 0.15rem solid rgba(70, 70, 70, 0.425);
+  border-radius: 0.15rem;
+  padding: 2rem;
+
   h3 {
     text-decoration: none;
   }
@@ -675,7 +745,10 @@ nav {
   }
 }
 .artist-card:hover {
-  outline: 1px solid var(--clr-accent2);
+  border: 0.15rem solid var(--clr-accent1);
+  .artist-card-title {
+    color: var(--clr-accent1);
+  }
 }
 
 .artist-card-img {
@@ -693,7 +766,7 @@ nav {
 }
 
 .artist-card-name {
-  font-size: 200%;
+  font-size: 160%;
   font-family: "OTBrut regularMono";
 }
 
@@ -718,11 +791,13 @@ nav {
   }
   span {
     padding: 0;
-    max-width: 40ch;
+    /* max-width: 55ch; */
+    line-height: 1.7;
+    font-size: 110%;
     font-family: "PPEiko thin";
   }
   .artist-profile-img {
-    height: 25rem;
+    height: 20rem;
     aspect-ratio: 1;
     max-width: 100%;
     object-fit: cover;
@@ -730,7 +805,7 @@ nav {
 }
 
 .artist-profile-header {
-  display: grid !important;
+  /* display: grid !important; */
   padding: 1rem;
   gap: 2rem;
 }
@@ -753,7 +828,7 @@ nav {
 .artist-posts-wrapper {
   display: grid;
   padding: 1rem;
-  border-top: 0.15rem solid var(--clr-accent2);
+  /* border-top: 0.15rem solid var(--clr-accent2); */
   gap: 1rem;
 }
 
@@ -780,7 +855,7 @@ nav {
   #LEFT-COL-WRAPPER {
     /* display: displayinternal; */
     flex: unset;
-    height: 10svh !important;
+    height: min-content;
   }
 
   .left-col--top {
@@ -800,7 +875,7 @@ nav {
     align-items: center;
     width: 100%;
     height: 10svh;
-    border-bottom: 0.05rem solid var(--clr-li);
+    border-bottom: 0.05rem solid rgba(70, 70, 70, 0.425);
     nav {
       place-content: center;
       place-items: center;
@@ -910,6 +985,17 @@ nav {
   /* .symptoms-of-nature-wrapper {
     font-size: 250%;
   } */
+  #hr-important {
+    display: flex;
+  }
+  .artist-profile-header {
+    flex-wrap: wrap;
+  }
+
+  .artist-profile-content {
+    max-width: 100%;
+    line-height: 1.6;
+  }
   .post-titles {
     display: flex;
     flex-direction: column;
@@ -963,7 +1049,8 @@ nav {
     user-select: none;
     background: var(--clr-bg);
     z-index: 1000;
-    gap: 2rem;
+    gap: 1rem;
+    font-size: 200%;
     .color-mode-and-theme-wrapper {
       display: flex;
     }
@@ -1022,31 +1109,38 @@ nav {
   .artist-posts-wrapper {
     display: grid;
     gap: 1rem;
+    /* border-top: 0.15rem solid var(--clr-accent1); */
   }
 
   .post {
-    display: grid;
-    gap: 0rem;
-    max-width: 100%;
-    width: auto;
-    /* height: 15rem; */
-    padding: 0;
-    /* background-color: var(--clr-accent2); */
-
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    gap: 2rem;
+    border: 0.15rem solid var(--clr-md);
+    width: fit-content;
+    justify-content: center;
+    p {
+      max-width: unset;
+    }
     img {
-      width: 100%;
-      max-width: 100%;
+      width: 25rem;
       object-fit: cover;
+      max-width: 100%;
     }
   }
 
   .post-title-wrapper {
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    /* margin: auto */
+    flex-basis: 15rem;
+    padding-right: 1rem;
   }
 
-  .post-img img {
-    width: auto;
-    height: 20rem;
+  .post-img {
+    width: 100%;
+    height: auto;
     max-width: 100%;
   }
   .post-module-wrapper {
