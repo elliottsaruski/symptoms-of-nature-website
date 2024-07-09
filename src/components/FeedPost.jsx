@@ -14,6 +14,8 @@ function FeedPost({ title, artist, date, img, description, artistID }) {
         <img className="post-img" src={img}></img>
         <div className="post-title-wrapper">
           <h5 className="post-title">{title}</h5>
+          <h6>by: {artist}</h6>
+          <p>{description}</p>
         </div>
       </div>
       <PostModule

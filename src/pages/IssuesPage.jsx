@@ -5,7 +5,7 @@ function IssuesPage() {
   const issues = ZineData.map((issue) => {
     return (
       <Link
-        to={issue._URL}
+        to={issue._STATUS === "READY" && issue._URL}
         id="zine-card"
         key={issue._ID}
         className={

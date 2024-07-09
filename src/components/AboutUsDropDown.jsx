@@ -1,7 +1,27 @@
-// import { useState } from "react";
+import { useState } from "react";
+import dropdownoneIMG from "../assets/media/photos/ABOUT/popups/streetlines.png";
+import dropdowntwoIMG from "../assets/media/photos/ABOUT/popups/headscans.png";
 
 function AboutUsDropDown() {
-  //   const handleDropDownOneChange = () => {};
+  const [dropDownOneSelected, setDropDownOneSelected] = useState(false);
+  const [dropDownTwoSelected, setDropDownTwoSelected] = useState(false);
+  const [dropDownThreeSelected, setDropDownThreeSelected] = useState(false);
+
+  const handleDropDownOneChange = (evt) => {
+    if (evt.target !== "") {
+      setDropDownOneSelected(true);
+    }
+  };
+  const handleDropDownTwoChange = (evt) => {
+    if (evt.target !== "") {
+      setDropDownTwoSelected(true);
+    }
+  };
+  const handleDropDownThreeChange = (evt) => {
+    if (evt.target !== "") {
+      setDropDownThreeSelected(true);
+    }
+  };
   //   const handleDropDownTwoChange = () => {};
   //   const handleDropDownThreeChange = () => {};
 
@@ -11,7 +31,10 @@ function AboutUsDropDown() {
         {/* ----------------------------------TEXT--------------------------------------- */}
         Symptoms of Nature is a collective immersed in the{" "}
         {/* ----------------------------------DROPDOWN 1--------------------------------------- */}
-        <select name="one" id="one">
+        <select
+          name="one"
+          id="one"
+          onChange={(e) => handleDropDownOneChange(e.target.value)}>
           <option value=""> </option>
           <option value="experimental">experimental</option>
           <option value="hypothetical">hypothetical</option>
@@ -22,7 +45,10 @@ function AboutUsDropDown() {
         {/* ----------------------------------TEXT--------------------------------------- */}
         phase of creation with media spanning from{" "}
         {/* ----------------------------------DROPDOWN 2--------------------------------------- */}
-        <select name="two" id="two">
+        <select
+          name="two"
+          id="two"
+          onChange={(e) => handleDropDownTwoChange(e.target.value)}>
           <option value=""></option>
           <option value="music">music</option>
           <option value="fashion">fashion</option>
@@ -36,7 +62,10 @@ function AboutUsDropDown() {
         {/* ----------------------------------TEXT--------------------------------------- */}
         . We provide a space for all to showcase their{" "}
         {/* ----------------------------------DROPDOWN 3--------------------------------------- */}
-        <select name="three" id="three">
+        <select
+          name="three"
+          id="three"
+          onChange={(e) => handleDropDownThreeChange(e.target.value)}>
           <option value=""></option>
           <option value="evolution">evolution</option>
           <option value="grandeur">grandeur</option>
@@ -47,6 +76,21 @@ function AboutUsDropDown() {
         {/* ----------------------------------TEXT--------------------------------------- */}
         creatively and unlock the next step in our mindscape.
       </p>
+      <img
+        src={dropdownoneIMG}
+        alt=""
+        className={dropDownOneSelected ? "drop-1-activated" : "drop-pic"}
+      />
+      <img
+        src={dropdowntwoIMG}
+        alt=""
+        className={dropDownTwoSelected ? "drop-2-activated" : "drop-pic"}
+      />
+      <img
+        src={dropdownoneIMG}
+        alt=""
+        className={dropDownThreeSelected ? "drop-3-activated" : "drop-pic"}
+      />
     </div>
   );
 }
