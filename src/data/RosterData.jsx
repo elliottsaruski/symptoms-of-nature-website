@@ -1,7 +1,7 @@
 import XcopeImg from "../assets/media/photos/ROSTER/xcope/xcope-img.jpg";
 import Chr0meC0Img from "../assets/media/photos/ROSTER/chr0mec0/chr0meC0-img.png";
 import ITbunniImg from "../assets/media/photos/ROSTER/itbunni/itbunni-img.png";
-import OOOimg from "../assets/media/photos/ROSTER/OOO/ooo2.svg";
+import OOOimg from "../assets/media/photos/ROSTER/OOO/ooo.svg";
 import tsimg from "../assets/media/photos/ROSTER/TS/TS-img.png";
 
 export const roster = [
@@ -67,7 +67,7 @@ export const roster = [
   },
   {
     name: "Out Of Order",
-    artistID: "OOO",
+    artistID: "Out of Order",
     img: OOOimg,
     title: "producer group",
     description:

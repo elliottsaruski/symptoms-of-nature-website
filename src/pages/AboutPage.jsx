@@ -18,6 +18,8 @@ function AboutPage() {
           Symptoms of Nature is a collective immersed in the experimental phase
           of{" "}
           <select name="one" id="one">
+            <option value=""> </option>
+
             <option value="">creation</option>
             <option value="vape">vape and chill</option>
             <option value="online">terminally online</option>
@@ -26,21 +28,16 @@ function AboutPage() {
           </select>{" "}
           with media spanning from{" "}
           <select name="two" id="two">
-            <option value="">
-              textile, art, music, psychology, film, & coding
-            </option>
-            {/* <option value="">
-              textile, wearable art, music, identity psychology, & computer
-              coding
-            </option> */}
+            <option value=""></option>
             <option value="dog">plumbing textiles</option>
             <option value="cat">telephone archives</option>
-            <option value="hamster">protein soundscapes</option>
+            <option value="hamster"> protein soundscapes</option>
             <option value="hamster">identity crisis psychology</option>
             <option value="hamster">fetus assisted computer coding</option>
           </select>{" "}
           . We provide a space for all to showcase their{" "}
           <select name="three" id="three">
+            <option value=""></option>
             <option value="">evolution</option>
             <option value="divorce">divorce ring</option>
             <option value="ableton">10k hours in ableton</option>
