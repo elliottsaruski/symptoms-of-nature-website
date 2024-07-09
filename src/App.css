@@ -369,11 +369,7 @@ nav {
   background-color: var(--clr-accent1);
   color: var(--clr-li);
   border-radius: 0.25rem;
-  /* padding: 0.1rem; */
   border: none;
-  /* outline: 0.15rem solid var(--clr-accent2); */
-  /* font-weight: 600; */
-  /* font-family: "PPEiko heavy"; */
 }
 
 /* ---------------------------LAYOUT---------------------- */
@@ -407,43 +403,46 @@ nav {
   }
 }
 
-.home-about-SON-title {
-  font-size: smaller;
-}
+
+/* --------------------------- HOME PAGE ---------------------- */
 
 /* --------------------------- ABOUT ---------------------- */
 #home-wrapper {
-  display: flex;
-  /* gap: 2rem; */
+  display: grid;
   place-items: center;
-  /* padding-block: 1rem; */
   margin: auto;
+  place-content: center;
+  gap: 1rem;
+  /* height: 100svh; */
   img {
     object-fit: cover;
   }
 }
 
-/* #about-header-img {
-} */
+#about-header-img {
+  display: flex;
+  margin-bottom: -2.5rem;
+}
 
 #about-header-text {
-  margin-bottom: 0.5rem;
+  display: flex;
+  margin-bottom: -0.5rem;
 }
-#about-icon {
-  padding-block: 2rem;
-}
+/* #about-icon {
+  padding-block: 1rem;
+} */
 
 .about-spans {
   display: flex;
   /* gap: 1rem; */
   /* margin: auto; */
-  line-height: 1.85;
-  font-size: 2rem;
+  line-height: 1.55;
+  font-size: 1.6rem;
   text-align: justify;
   p {
     font-family: "PPMondwest Regular";
     padding-top: 0 !important;
-    max-width: 40rem;
+    max-width: 35rem;
     text-align: justify;
     /* word-break: pretty; */
     justify-content: center;
@@ -463,54 +462,9 @@ nav {
 
   option {
     color: var(--clr-bg);
-    text-align: center;
+    /* text-align: center; */
+    height: min-content;
   }
-}
-
-/* --------------------------- HOME ---------------------- */
-
-.home-content-wrapper {
-  display: grid;
-  gap: 2rem;
-  padding: 1rem 3rem;
-  font-family: PPEiko thin;
-
-  h4 {
-    font-size: 300%;
-  }
-
-  /* span {
-    max-width: 45rem;
-  } */
-}
-
-/* .home-about-wrapper h2:nth-child() {
-  font-family: "PPEiko heavy";
-} */
-
-/* .symptoms-of-nature-wrapper {
-  text-align: center;
-  line-height: 1;
-  padding-block: 2rem;
-} */
-
-/* .symptoms-of-nature-wrapper h2:nth-child(2) {
-  font-family: "OTBrut regular";
-
-  color: var(--clr-accent1);
-  line-height: 0.5;
-} */
-
-.about-img-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
-  /* gap: 1rem; */
-}
-
-.about-img-placeholder {
-  height: 15rem;
-  width: 100%;
-  object-fit: cover;
 }
 
 /* ------------------------------ ISSUES PAGE ----------------------- */
@@ -802,7 +756,8 @@ nav {
   border-top: 0.15rem solid var(--clr-accent2);
   gap: 1rem;
 }
-/* ------------------------------MOBILE----------------------- */
+
+/* -----------------------MOBILE  QUERY ---------------------------*/
 
 @media screen and (max-width: 1200px) {
   #root {
@@ -897,27 +852,26 @@ nav {
     /* height: min-content; */
     /* padding: 0; */
     flex: 2;
+    place-content: start;
     padding-block: 2rem;
+    max-width: 100%;
   }
 
   #about-icon {
     padding-block: 0;
   }
-  select#two {
-    display: flex;
-    /* flex-wrap: wrap; */
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-  }
 
   #about-icon {
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    margin-block: 0.5rem;
+    padding: 0;
+    object-fit: contain;
   }
   #about-header-img {
     max-width: 100%;
-    padding-top: 1rem;
+    margin-bottom: unset;
+
+    /* padding-top: 1rem; */
   }
 
   #about-header-text {
@@ -925,19 +879,31 @@ nav {
     width: 75%;
     object-fit: cover;
     /* height: 60%; */
-    /* margin-block: -5rem; */
+    margin-block: unset;
   }
 
   .about-spans {
-    font-size: 1.1rem;
-    tesx p {
+    text-justify: auto;
+    font-size: 1.3rem;
+    padding-block: 1rem;
+    p {
       max-width: 80%;
       margin: 0 auto;
     }
+
     select {
-      text-align: center;
-      justify-content: center;
-      align-items: center;
+      height: min-content;
+    }
+    option {
+      font-size: 1.25rem;
+      padding: 0;
+      margin: 0;
+      height: min-content;
+      background-color: var(--clr-accent2);
+    }
+    option::selection {
+      color: var(--clr-li);
+      background-color: var(--clr-accent1);
     }
   }
 
@@ -980,9 +946,11 @@ nav {
       display: none;
     }
   }
-  .color-mode-and-theme-wrapper {
+  .color-mode-and-theme-wrapper,
+  .instagram-wrapper {
     display: none;
   }
+
   .nav-mobile-open {
     display: grid;
     height: 100%;
@@ -997,6 +965,9 @@ nav {
     z-index: 1000;
     gap: 2rem;
     .color-mode-and-theme-wrapper {
+      display: flex;
+    }
+    .instagram-wrapper {
       display: flex;
     }
   }
@@ -1089,5 +1060,42 @@ nav {
 
   .issues {
     padding: 0;
+  }
+}
+
+/* -----------------------MOBILE LANDSCAPE QUERY ---------------------------*/
+
+@media (orientation: landscape) and (max-width: 1200px) {
+  #LEFT-COL-WRAPPER {
+    height: fit-content !important;
+    flex: unset;
+  }
+  .left-col--top {
+    height: 100%;
+    /* flex: unset; */
+    /* overflow: hidden; */
+  }
+  #feed-wrapper,
+  #artists-wrapper,
+  #home-wrapper,
+  #issues-wrapper {
+    height: auto;
+    height: min-content;
+  }
+
+  #home-wrapper {
+    padding: 0;
+    height: min-content;
+  }
+
+  .symptoms-of-nature-logo-wrapper {
+    flex: 1;
+    height: auto;
+    width: auto;
+    /* margin: 5rem; */
+  }
+
+  .nav-mobile-open {
+    gap: 1rem;
   }
 }
