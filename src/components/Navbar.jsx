@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-// import { TiSocialInstagram } from "react-icons/ti";
+import { TiSocialInstagram } from "react-icons/ti";
 import ColorModeToggle from "./ColorModeToggle";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -50,19 +50,19 @@ function MobileNavbar() {
           }}>
           <div>ROSTER</div>
         </NavLink>
-        {/* <div className="instagram-wrapper">
+
+        <div className="color-mode-and-theme-wrapper">
+          <ColorModeToggle />
+        </div>
+        <hr />
+        <div className="instagram-wrapper">
           <a
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
             <TiSocialInstagram />
           </a>
-        </div> */}
-
-        <div className="color-mode-and-theme-wrapper">
-          <ColorModeToggle />
         </div>
       </nav>
-      <hr />
     </div>
   );
 }
@@ -84,11 +84,7 @@ function Navbar() {
           />
         </div>
         {/* <hr /> */}
-        {/* <div className="instagram-wrapper"> */}
-        {/* <a href="https://www.instagram.com/symptoms_of_nature/" target="_blank">
-          <TiSocialInstagram />
-        </a> */}
-        {/* </div> */}
+
         <nav id="nav-full">
           <NavLink to="/home">
             <div>HOME</div>
@@ -114,6 +110,14 @@ function Navbar() {
         </div>
         <hr />
         <span>A creative collective based in Miami, FL</span>
+        <hr />
+        <div className="instagram-wrapper">
+          <a
+            href="https://www.instagram.com/symptoms_of_nature/"
+            target="_blank">
+            <TiSocialInstagram />
+          </a>
+        </div>
       </div>
     </div>
   );
