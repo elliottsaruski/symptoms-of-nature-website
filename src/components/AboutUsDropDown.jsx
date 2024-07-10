@@ -1,11 +1,14 @@
 import { useState } from "react";
 import dropdownoneIMG from "../assets/media/photos/ABOUT/popups/streetlines.png";
 import dropdowntwoIMG from "../assets/media/photos/ABOUT/popups/headscans.png";
+import dropdownthreeIMG from "../assets/media/photos/ABOUT/popups/dafoe.png";
+import dropdownfourIMG from "../assets/media/photos/ABOUT/popups/headexplode.png";
 
 function AboutUsDropDown() {
   const [dropDownOneSelected, setDropDownOneSelected] = useState(false);
   const [dropDownTwoSelected, setDropDownTwoSelected] = useState(false);
   const [dropDownThreeSelected, setDropDownThreeSelected] = useState(false);
+  const [dropDownFourSelected, setDropDownFourSelected] = useState(false);
 
   const handleDropDownOneChange = (evt) => {
     if (evt.target !== "") {
@@ -22,8 +25,11 @@ function AboutUsDropDown() {
       setDropDownThreeSelected(true);
     }
   };
-  //   const handleDropDownTwoChange = () => {};
-  //   const handleDropDownThreeChange = () => {};
+  const handleDropDownFourChange = (evt) => {
+    if (evt.target !== "") {
+      setDropDownFourSelected(true);
+    }
+  };
 
   return (
     <div className="about-spans">
@@ -35,7 +41,7 @@ function AboutUsDropDown() {
           name="one"
           id="one"
           onChange={(e) => handleDropDownOneChange(e.target.value)}>
-          <option value=""> </option>
+          <option value="">-----------</option>
           <option value="experimental">experimental</option>
           <option value="hypothetical">hypothetical</option>
           <option value="bohemian">bohemian</option>
@@ -49,7 +55,7 @@ function AboutUsDropDown() {
           name="two"
           id="two"
           onChange={(e) => handleDropDownTwoChange(e.target.value)}>
-          <option value=""></option>
+          <option value="">-----------</option>
           <option value="music">music</option>
           <option value="fashion">fashion</option>
           <option value="film">film</option>
@@ -66,15 +72,27 @@ function AboutUsDropDown() {
           name="three"
           id="three"
           onChange={(e) => handleDropDownThreeChange(e.target.value)}>
-          <option value=""></option>
+          <option value="">-----------------------</option>
           <option value="evolution">evolution</option>
           <option value="grandeur">grandeur</option>
           <option value="ableton">10k ableton hrs</option>
-          <option value="">rick owens impersonation</option>
-          <option value="">penis</option>
+          <option value="rick">rick owens impersonation</option>
+          <option value="penis">penis</option>
         </select>{" "}
         {/* ----------------------------------TEXT--------------------------------------- */}
-        creatively and unlock the next step in our mindscape.
+        creatively and unlock the next step in our
+        <select
+          name="four"
+          id="four"
+          onChange={(e) => handleDropDownFourChange(e.target.value)}>
+          <option value="">------------------</option>
+          <option value="mindscape">mindscape</option>
+          <option value="journey">creative journey</option>
+          <option value="rubiks">colorless rubiks cube</option>
+          <option value="world">whole new world</option>
+          <option value="penis">penis</option>
+        </select>
+        .
       </p>
       <img
         src={dropdownoneIMG}
@@ -87,9 +105,14 @@ function AboutUsDropDown() {
         className={dropDownTwoSelected ? "drop-2-activated" : "drop-pic"}
       />
       <img
-        src={dropdownoneIMG}
+        src={dropdownthreeIMG}
         alt=""
         className={dropDownThreeSelected ? "drop-3-activated" : "drop-pic"}
+      />
+      <img
+        src={dropdownfourIMG}
+        alt=""
+        className={dropDownFourSelected ? "drop-4-activated" : "drop-pic"}
       />
     </div>
   );

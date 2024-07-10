@@ -3,6 +3,9 @@ import Chr0meC0Img from "../assets/media/photos/ROSTER/chr0mec0/chr0meC0-img.png
 import ITbunniImg from "../assets/media/photos/ROSTER/itbunni/itbunni-img.png";
 import OOOimg from "../assets/media/photos/ROSTER/OOO/ooo.svg";
 import tsimg from "../assets/media/photos/ROSTER/TS/TS-img.png";
+import enviimg from "../assets/media/photos/ROSTER/envi/ENVI press-photo.jpg";
+
+import placeholderartistpic from "../assets/logos/SON_LOGO_darkmode.png";
 
 export const roster = [
   {
@@ -54,7 +57,7 @@ export const roster = [
   {
     name: "eatbones",
     artistID: "eatbones",
-    img: "",
+    img: placeholderartistpic,
     title: "graphic artist / ZINE designer",
     description:
       "eatbones is our resident graphic designer, brand guru, ZINE Chief Editor, and PR. WIthout them, SON wouldn't look anything like it does.",
@@ -78,8 +81,8 @@ export const roster = [
   },
   {
     name: "Ruski Media",
-    artistID: "RUSKIMEDIA",
-    img: "",
+    artistID: "RuskiMedia",
+    img: placeholderartistpic,
     title: "film / media production",
     description:
       "Ruski Media consists of filmmaking duo and real-life siblings, the Saruski Brothers. Based in Miami, Elliott and Justin share a passion for writing and producing unique, offbeat short films. Gaining influence from filmmaking legends like Jordan Peele, David Cronenberg, Christopher Nolan, Quentin Dupieux, and many others, their work is characterized by enthralling scenery and environments, unconventional storytelling, and surreal special effects. Their first short film, I'm Sure It's Fine, will be released alongside Symptoms of Nature #000, Genesis.",
@@ -103,7 +106,7 @@ export const roster = [
   {
     name: "Bouncyduck",
     artistID: "Bouncyduck",
-    img: "",
+    img: placeholderartistpic,
     title: "producer",
     description: "",
     links: [{ instagram: "" }, { soundcloud: "" }],
@@ -112,8 +115,8 @@ export const roster = [
   },
   {
     name: "Sohn Jamal",
-    artistID: "Sohn jamal",
-    img: "",
+    artistID: "SohnJamal",
+    img: placeholderartistpic,
     title: "producer",
     description: "",
     links: [{ instagram: "" }, { soundcloud: "" }],
@@ -122,8 +125,8 @@ export const roster = [
   },
   {
     name: "Charles Nimbus",
-    artistID: "Charles Nimbus",
-    img: "",
+    artistID: "CharlesNimbus",
+    img: placeholderartistpic,
     title: "producer",
     description: "",
     links: [{ instagram: "" }, { soundcloud: "" }],
@@ -133,7 +136,7 @@ export const roster = [
   {
     name: "Cybashawty",
     artistID: "Cybashawty",
-    img: "",
+    img: placeholderartistpic,
     title: "producer",
     description: "",
     links: [{ instagram: "" }, { soundcloud: "" }],
@@ -142,8 +145,8 @@ export const roster = [
   },
   {
     name: "Wilson Ryan",
-    artistID: "Wilson Ryan",
-    img: "",
+    artistID: "WilsonRyan",
+    img: placeholderartistpic,
     title: "producer",
     description: "",
     links: [{ instagram: "" }, { soundcloud: "" }],
@@ -153,9 +156,10 @@ export const roster = [
   {
     name: "envi",
     artistID: "envi",
-    img: "",
+    img: enviimg,
     title: "producer",
-    description: "",
+    description:
+      "Born and raised in Miami, FL, envi is an electronic music producer, multi-media nerd, and front-end dev. His sound is characterized by heavy bass, melodic synths, and unique melodies.",
     links: [{ instagram: "" }, { soundcloud: "" }],
     profileType: "music",
     featured_in: ["ZINE #000"],
@@ -163,7 +167,7 @@ export const roster = [
   {
     name: "Asifeh",
     artistID: "Asifeh",
-    img: "",
+    img: placeholderartistpic,
     title: "producer",
     description: "",
     links: [{ instagram: "" }, { soundcloud: "" }],

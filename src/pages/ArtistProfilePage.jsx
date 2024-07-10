@@ -14,7 +14,7 @@ function ArtistProfilePage() {
       <div className="artist-profile-header">
         <img className="artist-profile-img" src={artist.img}></img>
         <div className="artist-profile-content">
-          <h2>{artist.artistID}</h2>
+          <h2>{artist.name}</h2>
           <h3>{artist.title}</h3>
           <hr id="hr-important"></hr>
           <span>{artist.description}</span>

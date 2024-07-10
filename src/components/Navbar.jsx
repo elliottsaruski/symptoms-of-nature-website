@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { TiSocialInstagram } from "react-icons/ti";
+import { RiInstagramLine } from "react-icons/ri";
 import ColorModeToggle from "./ColorModeToggle";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -59,7 +59,7 @@ function MobileNavbar() {
           <a
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
-            <TiSocialInstagram />
+            <RiInstagramLine />
           </a>
         </div>
       </nav>
@@ -115,7 +115,7 @@ function Navbar() {
           <a
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
-            <TiSocialInstagram />
+            <RiInstagramLine />
           </a>
         </div>
       </div>
