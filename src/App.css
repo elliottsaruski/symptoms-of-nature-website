@@ -259,7 +259,10 @@ nav {
   place-items: center;
   text-align: center;
   place-content: center end;
-  font-family: "OTBrut regular";
+  /* -----------------------------------------------FONT SWITCH FOR NAVBAR---------------------------- */
+  /* font-family: "OTBrut regular"; */
+  font-family: "PPMondwest Regular";
+
   text-transform: capitalize;
   margin-right: 5rem;
   line-height: 1;
@@ -273,13 +276,36 @@ nav {
 
 .instagram-wrapper {
   display: flex;
-  /* justify-content: end; */
+  justify-content: center;
   /* max-width: 100%; */
   margin: auto;
+  flex: 0.25;
+  a {
+    display: flex;
+    place-content: center;
+    padding-inline: 0.25rem;
+  }
+  a::after {
+    content: "INSTA";
+    opacity: 0%;
+    position: fixed;
+    color: var(--clr-li);
+    background-color: var(--clr-accent1);
+    height: inherit;
+    width: inherit;
+  }
+  a:hover::after {
+    display: flex;
+    opacity: 100%;
 
+    svg {
+      opacity: 0%;
+    }
+  }
   svg {
     height: 2rem;
     width: 2rem;
+    color: var(--clr-li);
   }
 }
 
@@ -302,13 +328,16 @@ nav {
 
 .SON-description {
   display: flex;
+
   span {
     display: flex;
     height: 100%;
+    flex: 1;
+
     align-items: center;
-    padding: 1rem;
+    padding-inline: 1rem;
     font-size: 1.3em;
-    font-family: "OTBrut regular";
+    font-family: "PPMondwest Regular";
     letter-spacing: 0.15ch;
   }
 
@@ -324,6 +353,8 @@ nav {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  font-family: "PPMondwest Regular";
 }
 
 #colorModeToggle {
@@ -350,7 +381,9 @@ nav {
   display: grid;
   label {
     font-size: 85%;
-    font-family: "OTBrut regular";
+    font-family: "PPMondwest Regular";
+
+    /* font-family: "OTBrut regular"; */
   }
   select {
     color: var(--clr-li);
@@ -377,7 +410,7 @@ nav {
 #feed-wrapper,
 #artists-wrapper,
 #artist-profile-page-wrapper,
-#home-wrapper,
+#about-wrapper,
 #issues-wrapper,
 #home-page-wrapper {
   display: flex;
@@ -396,7 +429,7 @@ nav {
   }
 
   span {
-    font-family: "PPEiko medium";
+    font-family: "PPMondwest Regular";
     display: flex;
     padding: 2rem;
     max-width: 60rem;
@@ -407,14 +440,12 @@ nav {
 /* --------------------------- HOME PAGE ---------------------- */
 
 /* --------------------------- ABOUT ---------------------- */
-#home-wrapper {
+#about-wrapper {
   display: grid;
   place-items: center;
   margin: auto;
-  place-content: center;
   gap: 1rem;
   padding-block: 5rem;
-  /* height: 100svh; */
   position: relative;
   img {
     object-fit: cover;
@@ -504,10 +535,12 @@ nav {
 }
 /* ------------------------------ ISSUES PAGE ----------------------- */
 .issues {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  align-items: start;
   padding: 2rem;
   gap: 2rem;
+  place-items: center;
 }
 
 #zine-card {
@@ -523,8 +556,10 @@ nav {
   max-width: 100%;
   img {
     width: 25rem;
+    height: 14rem;
     /* width: 100%; */
     /* width: auto; */
+    max-width: 100%;
     object-fit: cover;
   }
 }
@@ -589,9 +624,9 @@ nav {
     flex: 1;
     width: min-content;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     text-decoration: none;
     color: var(--clr-li);
     border: 0.15rem solid var(--clr-accent2);
@@ -609,16 +644,28 @@ nav {
 
 .post {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 1rem;
   /* outline: 1px solid var(--clr-accent2); */
   max-width: 100%;
+  width: fit-content;
+  border: 0.15rem solid rgba(70, 70, 70, 0.425);
+  font-family: "PPMondwest Regular";
+
   /* width: 35rem !important; */
   img {
-    height: 20rem;
+    height: 15rem;
     aspect-ratio: 1;
     flex: 0.25;
-    object-fit: contain;
+    object-fit: cover;
   }
+  h6 {
+    font-size: 110%;
+  }
+}
+.post:hover,
+.post:focus-visible {
+  border: 0.15rem solid var(--clr-accent1);
 }
 
 .post-title-wrapper {
@@ -715,10 +762,9 @@ nav {
 .artist-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+
   align-items: start;
-  padding: 2rem;
+  padding: 1rem;
   gap: 2rem;
   a {
     text-decoration: none;
@@ -735,7 +781,7 @@ nav {
   aspect-ratio: 1;
   border: 0.15rem solid rgba(70, 70, 70, 0.425);
   border-radius: 0.15rem;
-  padding: 2rem;
+  padding: 1rem;
 
   h3 {
     text-decoration: none;
@@ -791,7 +837,7 @@ nav {
   }
   span {
     padding: 0;
-    /* max-width: 55ch; */
+    max-width: 70ch;
     line-height: 1.7;
     font-size: 110%;
     font-family: "PPEiko thin";
@@ -873,8 +919,7 @@ nav {
     display: flex;
     gap: 0;
     align-items: center;
-    width: 100%;
-    height: 10svh;
+
     border-bottom: 0.05rem solid rgba(70, 70, 70, 0.425);
     nav {
       place-content: center;
@@ -903,7 +948,7 @@ nav {
 
   #feed-wrapper,
   #artists-wrapper,
-  #home-wrapper,
+  #about-wrapper,
   #issues-wrapper {
     display: flex;
     flex-direction: column;
@@ -922,13 +967,10 @@ nav {
     }
   }
 
-  #home-wrapper {
+  #about-wrapper {
     overflow-y: scroll;
-    /* height: min-content; */
-    /* padding: 0; */
-    flex: 2;
     place-content: start;
-    padding-block: 2rem;
+    padding-block: 1rem;
     max-width: 100%;
   }
 
@@ -1106,6 +1148,12 @@ nav {
     align-items: center;
   }
 
+  #artist-profile-page-wrapper {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
   .artist-posts-wrapper {
     display: grid;
     gap: 1rem;
@@ -1115,16 +1163,14 @@ nav {
   .post {
     display: flex;
     flex-wrap: wrap;
-    padding: 3rem;
-    gap: 2rem;
-    border: 0.15rem solid var(--clr-md);
+    padding: 1rem;
+    gap: 1rem;
     width: fit-content;
-    justify-content: center;
     p {
-      max-width: unset;
+      max-width: 100%;
     }
     img {
-      width: 25rem;
+      width: auto;
       object-fit: cover;
       max-width: 100%;
     }
@@ -1143,9 +1189,13 @@ nav {
     height: auto;
     max-width: 100%;
   }
+
   .post-module-wrapper {
-    height: 85svh;
-    width: 95dvw;
+    position: absolute;
+    height: 75vh;
+    width: 100svw;
+    border-width: 0.15rem;
+    font-family: "PPMondwest Regular";
   }
 
   .module-header {
@@ -1154,6 +1204,27 @@ nav {
 
   .issues {
     padding: 0;
+
+    max-width: 100%;
+  }
+
+  #zine-card {
+    max-width: 100%;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+  #issue-wrapper {
+    place-content: start;
+    justify-content: center;
+    /* place-items: center; */
+    gap: 1rem;
+    margin-block: 1rem;
+    *::not(button) {
+      height: 100svh;
+      /* flex: auto; */
+    }
   }
 }
 
@@ -1171,13 +1242,13 @@ nav {
   }
   #feed-wrapper,
   #artists-wrapper,
-  #home-wrapper,
+  #about-wrapper,
   #issues-wrapper {
     height: auto;
     height: min-content;
   }
 
-  #home-wrapper {
+  #about-wrapper {
     padding: 0;
     height: min-content;
   }

@@ -29,7 +29,7 @@ function ColorModeToggle() {
         </div>
       </section>
       <div id="colorThemeSelect">
-        <label htmlFor="theme-select">Theme:</label>
+        {/* <label htmlFor="theme-select">theme</label> */}
         <select
           defaultValue={"techno"}
           name="theme"
