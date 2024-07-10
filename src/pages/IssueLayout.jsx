@@ -8,7 +8,7 @@ function IssueLayout() {
   return (
     <div id="issue-wrapper">
       <Link to="/issues">back</Link>
-      <div style={{ height: "75svh", width: "90vw" }}>
+      <div style={{ height: "80svh", width: "95vw" }}>
         <ReactReader url="https://react-reader.metabits.no/files/alice.epub" />
       </div>
     </div>

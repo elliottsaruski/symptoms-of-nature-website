@@ -5,11 +5,11 @@ import AboutUsDropDown from "../components/AboutUsDropDown";
 
 function AboutPage() {
   return (
-    <div id="home-wrapper">
+    <div id="about-wrapper">
       <img src={headerIcon} id="about-icon" alt="" />
       <img src={aboutPageHeaderIMG} id="about-header-img" alt="" />
       <img src={aboutPageHeaderTEXT} id="about-header-text" alt="" />
-      
+
       {/* INTERACTIVE P DROPDOWN SECTION */}
       <AboutUsDropDown />
     </div>
