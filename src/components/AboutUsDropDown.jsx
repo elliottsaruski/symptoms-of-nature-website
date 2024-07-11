@@ -41,7 +41,7 @@ function AboutUsDropDown() {
           name="one"
           id="one"
           onChange={(e) => handleDropDownOneChange(e.target.value)}>
-          <option value="">-----------</option>
+          <option value=""></option>
           <option value="experimental">experimental</option>
           <option value="hypothetical">hypothetical</option>
           <option value="bohemian">bohemian</option>
@@ -55,7 +55,7 @@ function AboutUsDropDown() {
           name="two"
           id="two"
           onChange={(e) => handleDropDownTwoChange(e.target.value)}>
-          <option value="">-----------</option>
+          <option value=""></option>
           <option value="music">music</option>
           <option value="fashion">fashion</option>
           <option value="film">film</option>
@@ -72,7 +72,7 @@ function AboutUsDropDown() {
           name="three"
           id="three"
           onChange={(e) => handleDropDownThreeChange(e.target.value)}>
-          <option value="">-----------------------</option>
+          <option value=""></option>
           <option value="evolution">evolution</option>
           <option value="grandeur">grandeur</option>
           <option value="ableton">10k ableton hrs</option>
@@ -85,7 +85,7 @@ function AboutUsDropDown() {
           name="four"
           id="four"
           onChange={(e) => handleDropDownFourChange(e.target.value)}>
-          <option value="">------------------</option>
+          <option value=""></option>
           <option value="mindscape">mindscape</option>
           <option value="journey">creative journey</option>
           <option value="rubiks">colorless rubiks cube</option>
