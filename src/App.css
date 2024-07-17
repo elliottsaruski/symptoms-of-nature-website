@@ -27,12 +27,6 @@
     --clr-accent1: var(--GrassGreen);
     --clr-accent2: var(--LavaRed);
 
-    #about-header-img {
-      margin: 0.25rem;
-      padding-top: 2rem;
-      background-color: var(--clr-accent1);
-    }
-
     .symptoms-of-nature-logo-light {
       filter: hue-rotate(220deg);
     }
@@ -52,12 +46,6 @@
     --clr-li: var(--Charcoal);
     --clr-accent1: var(--TulipBlurple);
     --clr-accent2: var(--FireRed);
-
-    #about-header-img {
-      margin: 0.25rem;
-      padding-top: 2rem;
-      background-color: var(--clr-accent1);
-    }
   }
 
   .dark .symptoms-of-nature-logo-light {
@@ -69,11 +57,11 @@
   }
 }
 
-.light {
-  #about-icon {
-    filter: contrast(1000) grayscale(2000);
-  }
+/* .light {
 }
+
+.dark {
+} */
 
 *,
 *::before,
@@ -244,12 +232,12 @@ body {
     img {
       object-fit: contain;
       height: 100%;
-      width: 15rem;
+      width: 15rem !important;
     }
   }
   .symptoms-of-nature-logo-dark,
   .symptoms-of-nature-logo-light {
-    padding: 1rem;
+    padding: 0.25rem;
   }
 }
 nav {
@@ -445,24 +433,66 @@ nav {
   place-items: center;
   margin: auto;
   gap: 1rem;
-  padding-block: 5rem;
+  padding-block: 4rem;
   position: relative;
-  img {
-    object-fit: cover;
+  /* max-width: 100%; */
+}
+
+#about-icon {
+  height: 3rem;
+}
+
+/* .main-image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 25rem;
+} */
+#about-header-img {
+  height: 15rem;
+  max-width: 100%;
+  border: 0.15rem solid var(--clr-li);
+  position: relative;
+  object-fit: cover;
+}
+
+#about-header-img::after {
+  content: url("../src/assets/media/photos/ABOUT/stars_light_mode.png");
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  width: auto;
+  background-color: red;
+}
+
+/* #about-header-stars {
+  width: 104%;
+} */
+
+#about-header-text {
+  height: 6rem;
+  max-width: 100%;
+}
+
+.light {
+  #about-icon {
+    content: url("../src/assets/media/photos/ABOUT/top_image_light_mode.png");
+  }
+
+  #about-header-text {
+    content: url("../src/assets/media/photos/ABOUT/about_us_txt_light_mode.png");
   }
 }
 
-#about-header-img {
-  display: flex;
-  margin-bottom: -2.5rem;
-}
+/* .dark {
+  #about-icon {
+    content: url("../src/assets/media/photos/ABOUT/top_image_light_mode.png");
+  }
 
-#about-header-text {
-  display: flex;
-  margin-bottom: -0.5rem;
-}
-/* #about-icon {
-  padding-block: 1rem;
+  #about-header-text {
+    content: url("../src/assets/media/photos/ABOUT/about-us-text.png");
+  }
 } */
 
 .about-spans {
@@ -475,7 +505,7 @@ nav {
   p {
     font-family: "PPMondwest Regular";
     padding-top: 0 !important;
-    max-width: 35rem;
+    max-width: 35ch;
     text-align: justify;
     /* word-break: pretty; */
     justify-content: center;
@@ -486,18 +516,23 @@ nav {
     border: none;
     line-height: inherit;
     outline: none;
-    background-color: transparent;
+    /* background-color: transparent; */
     border-bottom: 2px dashed var(--clr-accent2);
     border-spacing: 12ch;
-    color: var(--clr-li);
+    color: var(--clr-bg);
     font-size: inherit;
   }
 
   option {
     color: var(--clr-bg);
+    background-color: var(--clr-accent1);
     /* text-align: center; */
     height: min-content;
   }
+}
+
+.light select {
+  color: var(--clr-li);
 }
 
 .drop-pic {
