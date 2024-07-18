@@ -1,10 +1,10 @@
 // import { useState } from "react";
-// import dropdownoneIMG from "../assets/media/photos/ABOUT/popups/streetlines.png";
-// import dropdowntwoIMG from "../assets/media/photos/ABOUT/popups/headscans.png";
-// import dropdownthreeIMG from "../assets/media/photos/ABOUT/popups/dafoe.png";
-// import dropdownfourIMG from "../assets/media/photos/ABOUT/popups/headexplode.png";
+import creation from "../assets/media/photos/ABOUT/popups/streetlines.png";
+import vape from "../assets/media/photos/ABOUT/popups/headscans.png";
+import thighmaster from "../assets/media/photos/ABOUT/popups/dafoe.png";
+import pinkglock from "../assets/media/photos/ABOUT/popups/headexplode.png";
 
-function AboutUsDropDown() {
+function AboutUsDropDown({ setHeaderImage }) {
   // const [dropDownOneSelected, setDropDownOneSelected] = useState(false);
   // const [dropDownTwoSelected, setDropDownTwoSelected] = useState(false);
   // const [dropDownThreeSelected, setDropDownThreeSelected] = useState(false);
@@ -31,27 +31,36 @@ function AboutUsDropDown() {
         {/* ----------------------------------TEXT--------------------------------------- */}
         Symptoms of Nature is a collective immersed in the experimental phase of{" "}
         {/* ----------------------------------DROPDOWN 1--------------------------------------- */}
-        <select
-          name="one"
-          id="one"
-          // onChange={(e) => handleDropDownOneChange(e.target.value)}
-        >
+        <select name="one" id="one" onChange={() => setHeaderImage(creation)}>
           <option value=""></option>
           <option value="creation">creation</option>
-          <option value="vape and chill">vape and chill</option>
-          <option value="receiving a thigh master">
-            receiving a thigh master
-          </option>
-          <option value="shooting a pink glock">shooting a pink glock</option>
+          <option value="vape">vape and chill</option>
+          <option value="thighmaster">receiving a thigh master</option>
+          <option value="pinkglock">shooting a pink glock</option>
           <option value="penis">penis</option>
         </select>{" "}
         {/* ----------------------------------TEXT--------------------------------------- */}
-        with media spanning from{" "}
+        with media using{" "}
         {/* ----------------------------------DROPDOWN 2--------------------------------------- */}
         <select
           name="two"
           id="two"
           // onChange={(e) => handleDropDownTwoChange(e.target.value)}
+          onChange={() => setHeaderImage(vape)}>
+          <option value=""></option>
+          <option value="plumbing textiles">plumbing textiles</option>
+          <option value="telephone archives ">telephone archives </option>
+          <option value="protein soundscapes">protein soundscapes</option>
+          <option value="identity crisis psychology">
+            identity crisis psychology
+          </option>
+          <option value=" fetus assisted coding"> fetus assisted coding</option>
+          <option value="penis">penis</option>
+        </select>{" "}
+        {/* <select
+          name="two"
+          id="two"
+          onChange={(e) => handleDropDownTwoChange(e.target.value)}
         >
           <option value=""></option>
           <option value="music">music</option>
@@ -62,7 +71,7 @@ function AboutUsDropDown() {
           <option value="zines">zines</option>
           <option value="blogs">blogs</option>
           <option value="penis">penis</option>
-        </select>{" "}
+        </select> */}
         {/* ----------------------------------TEXT--------------------------------------- */}
         . We provide a space for all to showcase their{" "}
         {/* ----------------------------------DROPDOWN 3--------------------------------------- */}
@@ -70,13 +79,15 @@ function AboutUsDropDown() {
           name="three"
           id="three"
           // onChange={(e) => handleDropDownThreeChange(e.target.value)}
-        >
+          onChange={() => setHeaderImage(thighmaster)}>
           <option value=""></option>
-          <option value="evolution">evolution</option>
           <option value="divorce ring">divorce ring</option>
+          <option value="evolution">evolution</option>
           <option value="ableton">10k hours in ableton</option>
           <option value="digital hookah">digital hookah</option>
-          <option value="libtard">libtard</option>
+          <option value="progressive neoliberalism">
+            progressive neoliberalism
+          </option>
           <option value="penis">penis</option>
         </select>{" "}
         {/* ----------------------------------TEXT--------------------------------------- */}
