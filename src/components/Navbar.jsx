@@ -3,10 +3,13 @@ import { RiInstagramLine } from "react-icons/ri";
 import ColorModeToggle from "./ColorModeToggle";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RiDiscordLine } from "react-icons/ri";
 
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
 import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
 // import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
+import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
+import BlogPostCard from "./BlogPostCard";
 
 function MobileNavbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -68,6 +71,8 @@ function MobileNavbar() {
 }
 
 function Navbar() {
+  const [blogPostIndex, setBlogPostIndex] = useState(6);
+
   return (
     <div id="LEFT-COL-WRAPPER">
       <div className="left-col--top">
@@ -104,6 +109,15 @@ function Navbar() {
       <hr />
       <div className="left-col--media-wrapper">
         {/* <video src={landingPageVideo} autoPlay muted loop></video> */}
+
+        <BlogPostCard
+          key={MOCK_DATA[`${blogPostIndex}`].postID}
+          postID={MOCK_DATA[`${blogPostIndex}`].postID}
+          post_title={MOCK_DATA[`${blogPostIndex}`].post_title}
+          post_img={MOCK_DATA[`${blogPostIndex}`].post_img}
+        />
+        {/* <button></button> */}
+        {/* <button></button> */}
       </div>
       <hr />
       <div className="SON-description">
@@ -113,11 +127,18 @@ function Navbar() {
         <hr />
         <span>A creative collective based in Miami, FL</span>
         <hr />
-        <div className="instagram-wrapper">
+        <div className="socials-wrapper">
           <a
+            id="insta-tag"
             href="https://www.instagram.com/symptoms_of_nature/"
             target="_blank">
             <RiInstagramLine />
+          </a>
+          <a
+            id="discord-tag"
+            href="https://discord.gg/dq5vns6NQp"
+            target="_blank">
+            <RiDiscordLine />
           </a>
         </div>
       </div>
