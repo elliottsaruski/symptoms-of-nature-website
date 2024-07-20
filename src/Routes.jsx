@@ -12,12 +12,16 @@ import AboutPage from "./pages/AboutPage";
 import IssuesPage from "./pages/IssuesPage";
 import IssueLayout from "./pages/IssueLayout";
 import HomePage from "./pages/HomePage";
+import BlogPostFullPage from "./pages/BlogPostFullPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<LayoutPage />}>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/home" element={<HomePage />} />
+      <Route path="/home">
+        <Route index element={<HomePage />} />
+        <Route path=":postID" element={<BlogPostFullPage />} />
+      </Route>
       <Route path="/about" element={<AboutPage />} />
       <Route path="/issues">
         <Route index element={<IssuesPage />} />

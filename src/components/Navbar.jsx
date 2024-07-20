@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
 import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
-import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
+// import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
 
 function MobileNavbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -103,7 +103,7 @@ function Navbar() {
       </div>
       <hr />
       <div className="left-col--media-wrapper">
-        <video src={landingPageVideo} autoPlay muted loop></video>
+        {/* <video src={landingPageVideo} autoPlay muted loop></video> */}
       </div>
       <hr />
       <div className="SON-description">

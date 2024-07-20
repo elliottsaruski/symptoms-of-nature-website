@@ -2,7 +2,7 @@
 import creation from "../assets/media/photos/ABOUT/popups/streetlines.png";
 import vape from "../assets/media/photos/ABOUT/popups/headscans.png";
 import thighmaster from "../assets/media/photos/ABOUT/popups/dafoe.png";
-import pinkglock from "../assets/media/photos/ABOUT/popups/headexplode.png";
+// import pinkglock from "../assets/media/photos/ABOUT/popups/headexplode.png";
 
 function AboutUsDropDown({ setHeaderImage }) {
   // const [dropDownOneSelected, setDropDownOneSelected] = useState(false);
