@@ -262,33 +262,20 @@ nav {
   }
 }
 
-.instagram-wrapper {
+.socials-wrapper {
   display: flex;
-  justify-content: center;
-  /* max-width: 100%; */
+  justify-content: space-evenly;
+  max-width: 100%;
   margin: auto;
   flex: 0.25;
+  padding: 1rem;
+  height: 100%;
+  align-items: center;
+  gap: 2rem;
   a {
     display: flex;
     place-content: center;
     padding-inline: 0.25rem;
-  }
-  a::after {
-    content: "INSTA";
-    opacity: 0%;
-    position: fixed;
-    color: var(--clr-li);
-    background-color: var(--clr-accent1);
-    height: inherit;
-    width: inherit;
-  }
-  a:hover::after {
-    display: flex;
-    opacity: 100%;
-
-    svg {
-      opacity: 0%;
-    }
   }
   svg {
     height: 2rem;
@@ -297,8 +284,44 @@ nav {
   }
 }
 
+#insta-tag::after {
+  content: "INSTA";
+  opacity: 0;
+  position: fixed;
+  color: var(--clr-li);
+  background-color: var(--clr-accent1);
+  height: inherit;
+  width: inherit;
+}
+
+#discord-tag::after {
+  content: "CORD";
+  opacity: 0;
+  position: fixed;
+  color: var(--clr-li);
+  background-color: var(--clr-accent1);
+  height: inherit;
+  width: inherit;
+}
+
+#insta-tag:hover::after {
+  display: flex;
+  opacity: 100%;
+  svg {
+    opacity: 0%;
+  }
+}
+#discord-tag:hover::after {
+  display: flex;
+  opacity: 100%;
+  svg {
+    opacity: 0%;
+  }
+}
+
 .left-col--media-wrapper {
   display: flex;
+  flex-direction: column;
   overflow: hidden;
   flex: 2;
 
@@ -309,6 +332,7 @@ nav {
   }
 
   img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
   }
@@ -320,13 +344,15 @@ nav {
   span {
     display: flex;
     height: 100%;
-    flex: 1;
-
+    /* UNCOMMENT FOR WIDER DESC TEXT */
+    /* flex: 1; */
     align-items: center;
     padding-inline: 1rem;
     font-size: 1.3em;
     font-family: "PPMondwest Regular";
     letter-spacing: 0.15ch;
+    text-align: justify;
+    width: max-content;
   }
 
   a {
@@ -430,35 +456,50 @@ nav {
 
 .blog-posts-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   align-items: start;
   padding: 1rem;
   gap: 1rem;
-  place-items: center;
+  max-width: 100%;
+  /* place-items: center; */
 }
 
 .blog-post-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  border: 1px solid var(--clr-accent1);
-  gap: 1rem;
+  max-width: 100%;
+  border: 1px solid rgba(70, 70, 70, 0.425);
+  gap: 0.5rem;
   padding: 1rem;
   text-decoration: none;
   color: var(--clr-li);
   font-family: "PPMondwest Regular";
+  /* align-items: start; */
+  place-content: start;
+
   h5 {
     opacity: 75%;
+    font-family: "PPEiko thin";
+    width: 100%;
+    background-color: rgba(70, 70, 70, 0.425);
+    padding: 0.25rem;
   }
   h4 {
     font-size: 150%;
+  }
+  p {
+    height: 100%;
+    /* min-height: max-content; */
   }
 }
 
 .img-wrapper {
   width: 100%;
   max-width: 100%;
-  height: min-content;
+  overflow: hidden;
+
   img {
     max-width: 100%;
     width: 100%;
@@ -470,16 +511,55 @@ nav {
 .post-content-wrapper {
   display: flex;
   flex-direction: column;
-  place-content: start;
+  flex: 5;
+  align-content: start;
+  gap: 1rem;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.post-content-top {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
+  flex: 2;
+  flex-grow: 1;
+  height: 100%;
+  place-content: start;
+  place-items: start;
 }
 
 .author-date-wrapper {
   display: flex;
   justify-content: space-between;
-  place-items: end;
   opacity: 75%;
-  flex: auto;
+  flex: 5;
+  height: 100%;
+  p {
+    align-content: end;
+  }
+}
+
+#blog-post-full-page-wrapper {
+  display: grid;
+  place-content: start;
+  font-family: "PPMondwest Regular";
+  max-width: 100%;
+  gap: 1rem;
+  /* padding: 1rem; */
+  img {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  h4 {
+    font-size: 250%;
+  }
+}
+
+.full-page-blog-content {
+  max-width: 75ch;
+  padding: 2rem;
 }
 
 /* --------------------------- ABOUT ---------------------- */
@@ -977,7 +1057,7 @@ nav {
   gap: 1rem;
 }
 
-/* -----------------------MOBILE  QUERY ---------------------------*/
+/* -----------------------MOBILE QUERY ---------------------------*/
 
 @media screen and (max-width: 1200px) {
   #root {
@@ -1045,6 +1125,7 @@ nav {
     }
   }
 
+  /* #home-page-wrapper, */
   #feed-wrapper,
   #artists-wrapper,
   #about-wrapper,
@@ -1064,6 +1145,9 @@ nav {
       padding: 0;
       margin-bottom: 1rem;
     }
+  }
+  .blog-posts-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   }
 
   #about-wrapper {
@@ -1174,7 +1258,7 @@ nav {
     }
   }
   .color-mode-and-theme-wrapper,
-  .instagram-wrapper {
+  .socials-wrapper {
     display: none;
   }
 
@@ -1195,7 +1279,7 @@ nav {
     .color-mode-and-theme-wrapper {
       display: flex;
     }
-    .instagram-wrapper {
+    .socials-wrapper {
       display: flex;
     }
   }

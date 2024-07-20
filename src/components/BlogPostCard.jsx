@@ -7,26 +7,27 @@ function BlogPostCard({
   post_author,
   post_type,
   post_desc,
-//   post_content,
+  //   post_content,
   post_img,
-//   post_status,
+  //   post_status,
 }) {
   return (
-    <Link to={postID} className="blog-post-card">
+    <Link to={`/home/${postID}`} className="blog-post-card">
       <div className="img-wrapper">
         {/* img */}
         <img src={post_img} alt="" />
       </div>
-
       <div className="post-content-wrapper">
-        {/* post genre/type */}
-        <h5>{post_type}</h5>
+        <div className="post-content-top">
+          <h5>{post_type}</h5>
 
-        {/* title */}
-        <h4>{post_title}</h4>
+          {/* title */}
+          <h4>{post_title}</h4>
 
-        {/* tagline short desc */}
-        <p>{post_desc}</p>
+          {/* tagline short desc */}
+          <p>{post_desc}</p>
+          {/* post genre/type */}
+        </div>
 
         <div className="author-date-wrapper">
           <p>{post_author}</p>
