@@ -5,9 +5,9 @@ function LandingPage() {
   return (
     <div id="LANDING-PAGE">
       <video
-        autoPlay="true"
-        loop="true"
-        muted="true"
+        autoPlay={true}
+        loop={true}
+        muted={true}
         src={landingPageVideo}></video>
       <NavLink to="/home">enter</NavLink>
     </div>
