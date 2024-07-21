@@ -5,8 +5,8 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiDiscordLine } from "react-icons/ri";
 
-import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode.png";
-import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode.png";
+import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode_Custom.png";
+import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode_Custom.png";
 // import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
 import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
 import BlogPostCard from "./BlogPostCard";
