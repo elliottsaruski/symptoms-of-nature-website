@@ -80,7 +80,7 @@
 }
 
 /* ----------- FONT ------------------------------------------------------ */
-@font-face {
+/* @font-face {
   font-family: "PPEiko thin";
   src: url("/fonts/PPEiko/PPEiko-Thin.otf") format("opentype");
 }
@@ -123,7 +123,7 @@
 @font-face {
   font-family: "OTBrut regularMono";
   src: url("/fonts/OTBrut/OTBrut-RegularMono.otf") format("opentype");
-}
+} */
 
 @font-face {
   font-family: "PPMondwest Regular";
@@ -137,7 +137,7 @@ body {
   width: 100dvw;
   color: var(--clr-li);
   background-color: var(--clr-bg);
-  font-family: "PPEiko heavy";
+  font-family: "PPMondwest Regular";
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -216,14 +216,14 @@ body {
 
 .left-col--top {
   display: flex;
-  flex: 0.5;
+  flex: 0.45;
   a {
     color: var(--clr-li);
     text-decoration: none;
   }
   h1 {
     font-size: clamp(400%, 7vw, 800%);
-    font-family: "OTBrut regular";
+    /* font-family: "OTBrut regular"; */
     flex: 5;
   }
 
@@ -249,7 +249,7 @@ nav {
   place-content: center end;
   /* -----------------------------------------------FONT SWITCH FOR NAVBAR---------------------------- */
   /* font-family: "OTBrut regular"; */
-  font-family: "PPMondwest Regular";
+  /* font-family: "PPMondwest Regular"; */
 
   text-transform: capitalize;
   margin-right: 5rem;
@@ -265,17 +265,19 @@ nav {
 .socials-wrapper {
   display: flex;
   justify-content: space-evenly;
+  justify-content: center;
   max-width: 100%;
   margin: auto;
   flex: 0.25;
-  padding: 1rem;
+  padding-inline: 1rem;
   height: 100%;
   align-items: center;
-  gap: 2rem;
+  gap: 0.5rem;
   a {
     display: flex;
     place-content: center;
-    padding-inline: 0.25rem;
+    padding: 0.25rem;
+    /* padding-inline: 0.25rem; */
   }
   svg {
     height: 2rem;
@@ -331,10 +333,36 @@ nav {
     /* flex: 1; */
   }
 
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  .blog-post-card {
+    border: none;
+    display: grid;
+    place-content: unset;
+    position: relative;
+    padding: 0;
+    h5 {
+      display: none;
+    }
+    .img-wrapper {
+      grid-row-start: 1;
+      grid-column-start: 1;
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .post-content-wrapper {
+      position: absolute;
+      gap: 0;
+      bottom: 0;
+      left: 1rem;
+      font-size: 250%;
+      flex: unset;
+      height: min-content;
+    }
   }
 }
 
@@ -343,16 +371,20 @@ nav {
 
   span {
     display: flex;
-    height: 100%;
     /* UNCOMMENT FOR WIDER DESC TEXT */
-    /* flex: 1; */
+    flex: 1;
     align-items: center;
-    padding-inline: 1rem;
+    justify-content: center;
+    padding: 1rem;
     font-size: 1.3em;
-    font-family: "PPMondwest Regular";
+    /* font-family: "PPMondwest Regular"; */
     letter-spacing: 0.15ch;
-    text-align: justify;
-    width: max-content;
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+    /* border: 1px solid var(--clr-accent1); */
+    /* stroke-dashoffset: 5%; */
+    /* text-decoration-thickness: 150%; */
   }
 
   a {
@@ -362,40 +394,36 @@ nav {
 
 /* ---------------------------colormode toggle---------------------- */
 .color-mode-and-theme-wrapper {
-  display: grid;
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  font-family: "PPMondwest Regular";
+
+  place-items: center;
+  /* font-family: "PPMondwest Regular"; */
+  padding: 0.5rem;
 }
 
 #colorModeToggle {
   display: flex;
   /* border: 0.01rem solid var(--clr-li); */
-  border-radius: 0.15rem;
-  /* padding: 0.15rem 0.25rem; */
-  place-content: center;
-  justify-content: center;
   overflow: hidden;
-
+  gap: 0.5rem;
   div {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
   }
   div svg {
     height: 1.5rem;
     width: 1.5rem;
-    flex: 1;
+    /* flex: auto; */
   }
 }
 
 #colorThemeSelect {
-  display: grid;
+  /* display: grid; */
   label {
     font-size: 85%;
-    font-family: "PPMondwest Regular";
+    /* font-family: "PPMondwest Regular"; */
 
     /* font-family: "OTBrut regular"; */
   }
@@ -440,11 +468,11 @@ nav {
     font-size: 400%;
     /* font-size: clamp(5rem, 7vw, 10rem); */
     font-weight: 300;
-    padding-inline: 1rem;
+    padding: 1rem;
   }
 
   span {
-    font-family: "PPMondwest Regular";
+    /* font-family: "PPMondwest Regular"; */
     display: flex;
     padding: 2rem;
     max-width: 60rem;
@@ -475,13 +503,13 @@ nav {
   padding: 1rem;
   text-decoration: none;
   color: var(--clr-li);
-  font-family: "PPMondwest Regular";
+  /* font-family: "PPMondwest Regular"; */
   /* align-items: start; */
   place-content: start;
 
   h5 {
     opacity: 75%;
-    font-family: "PPEiko thin";
+    /* font-family: "PPEiko thin"; */
     width: 100%;
     background-color: rgba(70, 70, 70, 0.425);
     padding: 0.25rem;
@@ -543,7 +571,6 @@ nav {
 #blog-post-full-page-wrapper {
   display: grid;
   place-content: start;
-  font-family: "PPMondwest Regular";
   max-width: 100%;
   gap: 1rem;
   /* padding: 1rem; */
@@ -638,7 +665,7 @@ nav {
   font-size: 1.6rem;
   text-align: justify;
   p {
-    font-family: "PPMondwest Regular";
+    /* font-family: "PPMondwest Regular"; */
     padding-top: 0 !important;
     max-width: 35ch;
     text-align: justify;
@@ -728,6 +755,7 @@ nav {
   color: var(--clr-li);
   border: 0.15rem solid var(--clr-md);
   /* width: 100%; */
+  text-decoration: none;
   gap: 1rem;
   padding: 1rem;
   position: relative;
@@ -740,11 +768,13 @@ nav {
     max-width: 100%;
     object-fit: cover;
   }
+  a {
+  }
 }
 
 .zine-card-details {
   font-size: 155%;
-  font-family: OTBrut italicMono;
+  /* font-family: OTBrut italicMono; */
   p {
     font-size: 55%;
   }
@@ -765,7 +795,7 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: var(--clr-bg);
-    font-family: PPEiko medium;
+    /* font-family: PPEiko medium; */
     position: absolute;
     right: 0;
     top: 0;
@@ -773,11 +803,11 @@ nav {
     /* width: 25%; */
     padding: 1rem;
     h5 {
-      font-family: "PPEiko blackItalic";
+      /* font-family: "PPEiko blackItalic"; */
     }
     p {
       width: auto;
-      font-family: "PPEiko lightItalic";
+      /* font-family: "PPEiko lightItalic"; */
     }
   }
 }
@@ -828,7 +858,7 @@ nav {
   max-width: 100%;
   width: fit-content;
   border: 0.15rem solid rgba(70, 70, 70, 0.425);
-  font-family: "PPMondwest Regular";
+  /* font-family: "PPMondwest Regular"; */
 
   /* width: 35rem !important; */
   img {
@@ -852,10 +882,10 @@ nav {
   flex: 1;
   align-items: start;
   gap: 1rem;
-  font-family: "PPMondwest Regular";
+  /* font-family: "PPMondwest Regular"; */
 
   p {
-    font-family: "PPMondwest Regular";
+    /* font-family: "PPMondwest Regular"; */
     max-width: 50ch;
     line-height: 1.5;
   }
@@ -864,13 +894,13 @@ nav {
 .post-title {
   font-size: 3rem;
   font-weight: 600;
-  font-family: "PPEiko medium";
+  /* font-family: "PPEiko medium"; */
 }
 
 .post-artist {
   font-size: 1.5rem;
   display: flex;
-  font-family: "PPEiko thin";
+  /* font-family: "PPEiko thin"; */
 }
 
 .post-module-outside {
@@ -992,7 +1022,7 @@ nav {
 
 .artist-card-name {
   font-size: 160%;
-  font-family: "OTBrut regularMono";
+  /* font-family: "OTBrut regularMono"; */
 }
 
 .artist-card-title {
@@ -1000,7 +1030,7 @@ nav {
   line-height: 1;
   width: 100%;
   color: var(--clr-accent2);
-  font-family: "PPEiko thin";
+  /* font-family: "PPEiko thin"; */
   a {
     text-decoration: none;
   }
@@ -1011,7 +1041,7 @@ nav {
 #artist-profile-page-wrapper {
   h2 {
     font-size: 4rem;
-    font-family: "OTBrut italicMono";
+    /* font-family: "OTBrut italicMono"; */
     padding: 0;
   }
   span {
@@ -1019,7 +1049,7 @@ nav {
     max-width: 70ch;
     line-height: 1.7;
     font-size: 110%;
-    font-family: "PPEiko thin";
+    /* font-family: "PPEiko thin"; */
   }
   .artist-profile-img {
     height: 20rem;
@@ -1047,7 +1077,7 @@ nav {
 }
 
 .artist-profile-content span {
-  font-family: "PPEiko thin";
+  /* font-family: "PPEiko thin"; */
 }
 
 .artist-posts-wrapper {
@@ -1176,16 +1206,16 @@ nav {
 
   #about-header-text {
     display: flex;
-    width: 75%;
+    /* width: 75%; */
     object-fit: cover;
     /* height: 60%; */
     margin-block: unset;
   }
 
   .about-spans {
-    text-justify: auto;
+    /* text-justify: pretty; */
     font-size: 1.3rem;
-    padding-block: 1rem;
+    padding-block: 0.5rem;
     p {
       max-width: 80%;
       margin: 0 auto;
@@ -1378,7 +1408,7 @@ nav {
     height: 75vh;
     width: 100svw;
     border-width: 0.15rem;
-    font-family: "PPMondwest Regular";
+    /* font-family: "PPMondwest Regular"; */
   }
 
   .module-header {
