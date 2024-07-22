@@ -5,7 +5,7 @@ import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
 function HomePage() {
   return (
     <div id="home-page-wrapper">
-      <h2>Home</h2>
+      <h2>Home Feed</h2>
       <hr />
       <div className="blog-posts-wrapper">
         {MOCK_DATA.map((MOCK_POST) => {

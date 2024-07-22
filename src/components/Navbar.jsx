@@ -71,7 +71,7 @@ function MobileNavbar() {
 }
 
 function Navbar() {
-  const [blogPostIndex, setBlogPostIndex] = useState(6);
+  const [blogPostIndex, setBlogPostIndex] = useState(0);
 
   return (
     <div id="LEFT-COL-WRAPPER">
