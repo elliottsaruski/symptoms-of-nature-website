@@ -243,7 +243,7 @@ body {
 nav {
   display: grid;
   flex: 2;
-  font-size: 1.5em;
+  font-size: 1.2em;
   place-items: center;
   text-align: center;
   place-content: center end;
@@ -251,8 +251,8 @@ nav {
   /* font-family: "OTBrut regular"; */
   /* font-family: "PPMondwest Regular"; */
 
-  text-transform: capitalize;
-  margin-right: 5rem;
+  /* text-transform: capitalize; */
+  margin-right: 1rem;
   line-height: 1;
   height: auto;
 
@@ -379,7 +379,7 @@ nav {
     font-size: 1.3em;
     /* font-family: "PPMondwest Regular"; */
     letter-spacing: 0.15ch;
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
     line-height: 1;
     /* border: 1px solid var(--clr-accent1); */
@@ -604,25 +604,13 @@ nav {
   height: 3rem;
 }
 
-/* #about-icon2 {
-  height: 6rem;
-} */
-
 .header-img-wrapper {
   position: relative;
-
-  svg {
-    /* height: 2rem; */
-    /* scale: 2; */
-    /* aspect-ratio: unset; */
-    /* width: 0.5rem; */
-    /* scale: 2; */
-  }
 
   #star-icon-left {
     position: absolute;
     height: 5rem;
- 
+
     left: -6px;
     bottom: -5px;
     z-index: 100;
@@ -800,8 +788,6 @@ nav {
     max-width: 100%;
     object-fit: cover;
   }
-  a {
-  }
 }
 
 .zine-card-details {
@@ -834,9 +820,9 @@ nav {
     height: 100%;
     /* width: 25%; */
     padding: 1rem;
-    h5 {
-      /* font-family: "PPEiko blackItalic"; */
-    }
+    /* h5 { */
+    /* font-family: "PPEiko blackItalic"; */
+    /* } */
     p {
       width: auto;
       /* font-family: "PPEiko lightItalic"; */
@@ -1108,9 +1094,9 @@ nav {
   display: none;
 }
 
-.artist-profile-content span {
-  /* font-family: "PPEiko thin"; */
-}
+/* .artist-profile-content span { */
+/* font-family: "PPEiko thin"; */
+/* } */
 
 .artist-posts-wrapper {
   display: grid;
