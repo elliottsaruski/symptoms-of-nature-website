@@ -30,21 +30,21 @@ function MobileNavbar() {
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>HOME</div>
+          <div>home</div>
         </NavLink>
         <NavLink
           to="/about"
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>ABOUT</div>
+          <div>about</div>
         </NavLink>
         <NavLink
           to="/issues"
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>ISSUES</div>
+          <div>issues</div>
         </NavLink>
         <NavLink
           to="/roster"
@@ -92,16 +92,16 @@ function Navbar() {
 
         <nav id="nav-full">
           <NavLink to="/home">
-            <div>HOME</div>
+            <div>home</div>
           </NavLink>
           <NavLink to="/about">
-            <div>ABOUT</div>
+            <div>about</div>
           </NavLink>
           <NavLink to="/issues">
-            <div>ISSUES</div>
+            <div>issues</div>
           </NavLink>
           <NavLink to="/roster">
-            <div>ROSTER</div>
+            <div>roster</div>
           </NavLink>
         </nav>
         <MobileNavbar />

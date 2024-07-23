@@ -56,7 +56,7 @@ function AboutUsDropDown({ setHeaderImage }) {
           </option>
           <option value=" fetus assisted coding"> fetus assisted coding</option>
           <option value="penis">penis</option>
-        </select>{" "}
+        </select>
         {/* <select
           name="two"
           id="two"
