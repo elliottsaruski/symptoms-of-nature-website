@@ -51,7 +51,7 @@ function MobileNavbar() {
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>ROSTER</div>
+          <div>roster</div>
         </NavLink>
 
         <div className="color-mode-and-theme-wrapper">

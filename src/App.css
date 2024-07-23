@@ -605,23 +605,34 @@ nav {
 }
 
 .header-img-wrapper {
+  /* display: flex; */
   position: relative;
+}
 
-  #star-icon-left {
-    position: absolute;
-    height: 5rem;
+#star-icon-left {
+  position: absolute;
+  left: -25px;
+  bottom: -26px;
+}
 
-    left: -6px;
-    bottom: -5px;
-    z-index: 100;
-  }
-  #star-icon-right {
-    position: absolute;
-    right: -6px;
-    bottom: -5px;
+#star-icon-right {
+  position: absolute;
+  right: -26px;
+  bottom: -28px;
+}
 
-    z-index: 100;
-  }
+.light #star-icon-left {
+  content: url("../src/assets/media/photos/ABOUT/starzL_BLACK.svg");
+}
+.light #star-icon-right {
+  content: url("../src/assets/media/photos/ABOUT/STARZ_R.svg");
+}
+
+.dark #star-icon-left {
+  content: url("../src/assets/media/photos/ABOUT/STARZ_L_WHITE.svg");
+}
+.dark #star-icon-right {
+  content: url("../src/assets/media/photos/ABOUT/STARZ_R_WHITE.svg");
 }
 
 /* .main-image {
