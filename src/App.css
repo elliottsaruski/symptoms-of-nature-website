@@ -604,6 +604,38 @@ nav {
   height: 3rem;
 }
 
+/* #about-icon2 {
+  height: 6rem;
+} */
+
+.header-img-wrapper {
+  position: relative;
+
+  svg {
+    /* height: 2rem; */
+    /* scale: 2; */
+    /* aspect-ratio: unset; */
+    /* width: 0.5rem; */
+    /* scale: 2; */
+  }
+
+  #star-icon-left {
+    position: absolute;
+    height: 5rem;
+ 
+    left: -6px;
+    bottom: -5px;
+    z-index: 100;
+  }
+  #star-icon-right {
+    position: absolute;
+    right: -6px;
+    bottom: -5px;
+
+    z-index: 100;
+  }
+}
+
 /* .main-image {
   position: relative;
   display: flex;
