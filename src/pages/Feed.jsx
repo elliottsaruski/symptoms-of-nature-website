@@ -5,8 +5,8 @@ import { Outlet } from "react-router-dom";
 function Feed() {
   return (
     <div id="feed-wrapper">
-      <h2>Feed</h2>
-      <hr />
+      {/* <h2>Feed</h2>
+      <hr /> */}
 
       <div id="posts-wrapper">
         {posts.map((post, index) => {

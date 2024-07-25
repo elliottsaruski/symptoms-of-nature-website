@@ -327,8 +327,10 @@ nav {
   overflow: hidden;
   flex: 2;
 
-  video {
+  video,
+  iframe {
     width: 100%;
+    height: 80%;
     object-fit: cover;
     /* flex: 1; */
   }
@@ -364,6 +366,25 @@ nav {
       height: min-content;
     }
   }
+}
+
+.wavesurfer-wrapper {
+  display: grid;
+  /* display: flex; */
+  /* place-content: center; */
+  /* place-items: center; */
+  width: 100%;
+  /* justify-content: center; */
+  /* flex: 1; */
+
+  button {
+    padding: 0.25rem;
+  }
+}
+
+.audio-controls {
+  display: flex;
+  place-items: center;
 }
 
 .SON-description {
@@ -484,7 +505,7 @@ nav {
 
 .blog-posts-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   align-items: start;
   padding: 1rem;
   gap: 1rem;
@@ -591,17 +612,15 @@ nav {
 
 /* --------------------------- ABOUT ---------------------- */
 #about-wrapper {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
+  place-content: center;
   margin: auto;
-  gap: 1rem;
+  gap: 2rem;
   padding-block: 4rem;
-  position: relative;
+  /* position: relative; */
   /* max-width: 100%; */
-}
-
-#about-icon {
-  height: 3rem;
 }
 
 .header-img-wrapper {
@@ -612,20 +631,34 @@ nav {
 #star-icon-left {
   position: absolute;
   left: -25px;
-  bottom: -26px;
+  bottom: -22px;
+  z-index: 1;
 }
 
 #star-icon-right {
   position: absolute;
-  right: -26px;
-  bottom: -28px;
+  right: -25px;
+  bottom: -23px;
+  z-index: 1;
 }
 
 .light #star-icon-left {
-  content: url("../src/assets/media/photos/ABOUT/starzL_BLACK.svg");
+  content: url("../src/assets/media/photos/ABOUT/newblackstarzL.webp");
+  /* max-width: 100%; */
+  z-index: 1;
+  left: -25px;
+  bottom: -22px;
+  /* width: 10rem; */
+  /* color: unset; */
+  /* mix-blend-mode: screen; */
+  /* background-color: transparent; */
 }
 .light #star-icon-right {
-  content: url("../src/assets/media/photos/ABOUT/STARZ_R.svg");
+  content: url("../src/assets/media/photos/ABOUT/newblackstarzR.webp");
+  /* display: none; */
+  right: -25px;
+  bottom: -23px;
+  z-index: 1;
 }
 
 .dark #star-icon-left {
@@ -692,35 +725,43 @@ nav {
   display: flex;
   /* gap: 1rem; */
   /* margin: auto; */
-  line-height: 1.55;
+  line-height: 1.45;
   font-size: 1.6rem;
   text-align: justify;
+  text-wrap: stable;
+
   p {
     /* font-family: "PPMondwest Regular"; */
     padding-top: 0 !important;
     max-width: 35ch;
-    text-align: justify;
     /* word-break: pretty; */
+    /* text-justify: none; */
     justify-content: center;
     align-items: center;
+    /* place-content: center; */
   }
   select {
     font-family: inherit;
-    border: none;
-    line-height: inherit;
+    /* border: none; */
+    /* line-height: 1; */
     outline: none;
     /* background-color: transparent; */
-    border-bottom: 2px dashed var(--clr-accent2);
-    border-spacing: 12ch;
+    border: 2px dashed var(--clr-accent2);
+    /* border-spacing: 12ch; */
     color: var(--clr-bg);
     font-size: inherit;
+    /* justify-content: baseline; */
+    /* height: min-content; */
+    padding: 0;
+    margin: 0;
+    height: inherit;
   }
 
   option {
     color: var(--clr-bg);
     background-color: var(--clr-accent1);
     /* text-align: center; */
-    height: min-content;
+    /* height: min-content; */
   }
 }
 

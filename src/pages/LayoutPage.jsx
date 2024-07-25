@@ -4,6 +4,7 @@ import IssueLayout from "./IssueLayout";
 
 function LayoutPage() {
   const { pathname } = useLocation();
+  // TODO: REMOVE 000 path and satisfy any READY zine id
   if (pathname === "/issues/000") return <IssueLayout />;
   else {
     return (
