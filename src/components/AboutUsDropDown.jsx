@@ -37,7 +37,6 @@ function AboutUsDropDown({ setHeaderImage }) {
           <option value="vape">vape and chill</option>
           <option value="thighmaster">receiving a thigh master</option>
           <option value="pinkglock">shooting a pink glock</option>
-          <option value="penis">penis</option>
         </select>{" "}
         {/* ----------------------------------TEXT--------------------------------------- */}
         with media using{" "}
@@ -55,7 +54,6 @@ function AboutUsDropDown({ setHeaderImage }) {
             identity crisis psychology
           </option>
           <option value=" fetus assisted coding"> fetus assisted coding</option>
-          <option value="penis">penis</option>
         </select>
         {/* <select
           name="two"
@@ -88,7 +86,6 @@ function AboutUsDropDown({ setHeaderImage }) {
           <option value="progressive neoliberalism">
             progressive neoliberalism
           </option>
-          <option value="penis">penis</option>
         </select>{" "}
         {/* ----------------------------------TEXT--------------------------------------- */}
         creatively and unlock the next step in our mindscape.

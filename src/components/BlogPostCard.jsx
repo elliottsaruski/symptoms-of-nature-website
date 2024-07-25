@@ -7,14 +7,14 @@ function BlogPostCard({
   post_author,
   post_type,
   post_desc,
-  //   post_content,
+  post_content,
   post_img,
-  //   post_status,
+  post_status,
 }) {
   return (
     <Link to={`/home/${postID}`} className="blog-post-card">
       <div className="img-wrapper">
-        {/* img */}
+
         <img src={post_img} alt="" />
       </div>
       <div className="post-content-wrapper">
