@@ -2,92 +2,20 @@ import { NavLink, useLocation } from "react-router-dom";
 import { RiInstagramLine } from "react-icons/ri";
 import ColorModeToggle from "./ColorModeToggle";
 import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { RiDiscordLine } from "react-icons/ri";
 
 import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode_Custom.png";
 import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode_Custom.png";
 import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
 import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
-import BlogPostCard from "./BlogPostCard";
+// import BlogPostCard from "./BlogPostCard";
 import WavesurferComponent from "./WavesurferComponent";
-
-function MobileNavbar() {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
-  return (
-    <div id="mobile-nav-wrapper">
-      <div className="hamburger-wrapper">
-        <GiHamburgerMenu
-          className="hamburger-icon"
-          onClick={() => {
-            setMobileNavOpen(!mobileNavOpen);
-          }}
-        />
-        {/* <hr /> */}
-      </div>
-      <nav className={!mobileNavOpen ? "nav-mobile-closed" : "nav-mobile-open"}>
-        <NavLink
-          to="/home"
-          onClick={() => {
-            setMobileNavOpen(false);
-          }}>
-          <div>home</div>
-        </NavLink>
-        <NavLink
-          to="/about"
-          onClick={() => {
-            setMobileNavOpen(false);
-          }}>
-          <div>about</div>
-        </NavLink>
-        <NavLink
-          to="/issues"
-          onClick={() => {
-            setMobileNavOpen(false);
-          }}>
-          <div>issues</div>
-        </NavLink>
-        <NavLink
-          to="/roster"
-          onClick={() => {
-            setMobileNavOpen(false);
-          }}>
-          <div>roster</div>
-        </NavLink>
-
-        <div className="color-mode-and-theme-wrapper">
-          <ColorModeToggle />
-        </div>
-        <hr />
-        {/* <div className="instagram-wrapper">
-          <a
-            href="https://www.instagram.com/symptoms_of_nature/"
-            target="_blank">
-            <RiInstagramLine />
-          </a>
-        </div> */}
-        <div className="socials-wrapper">
-          <a
-            id="insta-tag"
-            href="https://www.instagram.com/symptoms_of_nature/"
-            target="_blank">
-            <RiInstagramLine />
-          </a>
-          <a
-            id="discord-tag"
-            href="https://discord.gg/dq5vns6NQp"
-            target="_blank">
-            <RiDiscordLine />
-          </a>
-        </div>
-      </nav>
-    </div>
-  );
-}
+import MobileNavbar from "./MobileNavbar";
 
 function Navbar() {
-  const [blogPostIndex, setBlogPostIndex] = useState(0);
+  const [blogPostIndex] = useState(0);
+  // const [blogPostIndex, setBlogPostIndex] = useState(0);
+
   const { pathname } = useLocation();
 
   return (
@@ -121,11 +49,11 @@ function Navbar() {
             <div>roster</div>
           </NavLink>
         </nav>
+        {/*------------------------------------- MOBILE NAV BAR------------------------ */}
         <MobileNavbar />
       </div>
       <hr />
       <div className="left-col--media-wrapper">
-        {/* PLAACE HERE */}
         {pathname == "/home" ||
         pathname == `/home/${MOCK_DATA[`${blogPostIndex}`].postID}` ? (
           <video src={landingPageVideo} autoPlay muted loop></video>
