@@ -247,11 +247,6 @@ nav {
   place-items: center;
   text-align: center;
   place-content: center end;
-  /* -----------------------------------------------FONT SWITCH FOR NAVBAR---------------------------- */
-  /* font-family: "OTBrut regular"; */
-  /* font-family: "PPMondwest Regular"; */
-
-  /* text-transform: capitalize; */
   margin-right: 1rem;
   line-height: 1;
   height: auto;
@@ -330,9 +325,9 @@ nav {
   video,
   iframe {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
-    /* flex: 1; */
+    flex: auto;
   }
 
   .blog-post-card {
@@ -368,23 +363,33 @@ nav {
   }
 }
 
-.wavesurfer-wrapper {
-  display: grid;
-  /* display: flex; */
-  /* place-content: center; */
-  /* place-items: center; */
+.audio-player-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  /* justify-content: center; */
-  /* flex: 1; */
-
+  flex: 1;
+  height: min-content;
+  /* align-items: center; */
   button {
     padding: 0.25rem;
   }
 }
 
+.wavesurfer-wrapper {
+  display: grid;
+}
+
 .audio-controls {
   display: flex;
   place-items: center;
+  /* place-content: center; */
+  flex: auto;
+}
+
+.audio-title {
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
 }
 
 .SON-description {
