@@ -74,7 +74,7 @@ function Navbar() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe>
         )}
-        <hr />
+        {/* <hr /> */}
         <WavesurferComponent />
       </div>
       <hr />
