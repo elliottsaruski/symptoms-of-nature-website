@@ -46,11 +46,11 @@ function WavesurferComponent() {
     <div className="audio-player-wrapper">
       <div className="wavesurfer-wrapper">
         <WavesurferPlayer
-          height={35}
+          height={20}
           waveColor="#ef4923"
           cursorWidth={0}
-          barWidth={4}
-          barGap={0}
+          barWidth={1}
+          barGap={0.25}
           barRadius={null}
           // minPxPerSec={486}
           fillParent={true}
@@ -93,7 +93,7 @@ function WavesurferComponent() {
           />
         </div>
         <div className="audio-title">
-          <p>np:</p>
+          {/* <p>np:</p> */}
           {AudioPlayerData[nowPlaying].title} -{" "}
           {AudioPlayerData[nowPlaying].artist}
         </div>
