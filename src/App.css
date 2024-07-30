@@ -372,8 +372,8 @@ nav {
   flex-direction: column;
   width: 100%;
   /* flex: 1; */
-  gap: 1rem;
-  padding: 1rem;
+  gap: 0.25rem;
+  padding: 0.25rem;
   /* height: 100%; */
   place-content: end;
   background-color: var(--clr-accent1);
@@ -395,7 +395,7 @@ nav {
 .wavesurfer-wrapper {
   display: grid;
   background-color: var(--clr-bg);
-  padding-block: 1rem;
+  padding-block: 0.5rem;
   border-radius: 0.25rem;
 }
 
@@ -426,7 +426,6 @@ nav {
     font-size: 1.3em;
     letter-spacing: 0.15ch;
     width: 100%;
-
   }
 
   a {
