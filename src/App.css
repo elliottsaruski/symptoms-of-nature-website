@@ -330,7 +330,7 @@ nav {
     object-fit: cover;
     /* height: auto; */
     /* flex: 0.25; */
-    height: 30rem;
+    height: 12rem;
     flex: auto;
   }
 
@@ -376,7 +376,7 @@ nav {
   padding: 0.25rem;
   /* height: 100%; */
   place-content: end;
-  background-color: var(--clr-accent1);
+  /* background-color: var(--clr-accent1); */
   /* align-items: center; */
   button {
     display: flex;
@@ -403,12 +403,13 @@ nav {
   display: flex;
   place-items: center;
   gap: 1rem;
+  padding-inline: 0.25rem;
 }
 
 .audio-title {
   display: flex;
-  gap: 1rem;
-  margin: 0 auto;
+  /* gap: 1rem; */
+  /* margin: 0 auto; */
   user-select: none;
   font-size: larger;
 }
