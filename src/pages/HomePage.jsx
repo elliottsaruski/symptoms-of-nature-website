@@ -8,7 +8,7 @@ function HomePage() {
       <h2>Home Feed</h2>
       <hr />
       <div className="blog-posts-wrapper">
-        {MOCK_DATA.map((MOCK_POST) => {
+        {/* {MOCK_DATA.map((MOCK_POST) => {
           return (
             <BlogPostCard
               key={MOCK_POST.postID}
@@ -23,7 +23,7 @@ function HomePage() {
               post_status={MOCK_POST.post_status}
             />
           );
-        })}
+        })} */}
       </div>
     </div>
   );
