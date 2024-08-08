@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 
-import ultraviolet from "../assets/media/music/Zine000_GENESIS_COMP/charles nimbus - ultraviolet.wav";
-import hydra from "../assets/media/music/Zine000_GENESIS_COMP/cybashawty - hydra.mp3";
-import getdown from "../assets/media/music/Zine000_GENESIS_COMP/envi - get down.wav";
-import nightathome from "../assets/media/music/Zine000_GENESIS_COMP/Justin Scott - A night at home in palmetto.wav";
-import asdecoration from "../assets/media/music/Zine000_GENESIS_COMP/sohn jamal - as decoration.wav";
-import focalpoint from "../assets/media/music/Zine000_GENESIS_COMP/TS - Focal Point (mastering attempt 2).wav";
+// import ultraviolet from "../assets/media/music/Zine000_GENESIS_COMP/charles nimbus - ultraviolet.wav";
+// import hydra from "../assets/media/music/Zine000_GENESIS_COMP/cybashawty - hydra.mp3";
+// import getdown from "../assets/media/music/Zine000_GENESIS_COMP/envi - get down.wav";
+// import nightathome from "../assets/media/music/Zine000_GENESIS_COMP/Justin Scott - A night at home in palmetto.wav";
+// import asdecoration from "../assets/media/music/Zine000_GENESIS_COMP/sohn jamal - as decoration.wav";
+// import focalpoint from "../assets/media/music/Zine000_GENESIS_COMP/TS - Focal Point (mastering attempt 2).wav";
 
 function WebAmpComponent() {
   const webampRef = useRef(null);
@@ -23,7 +23,6 @@ function WebAmpComponent() {
       initialTracks: [
         {
           url: ultraviolet,
-          // blob: ultraviolet.blob(),
           duration: 148.2,
           metaData: {
             title: "ultraviolet",
@@ -86,7 +85,6 @@ function WebAmpComponent() {
           });
         },
         butterchurnOpen: true,
-        // willReadFrequently: true,
       },
     });
 
