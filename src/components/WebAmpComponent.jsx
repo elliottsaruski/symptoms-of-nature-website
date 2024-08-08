@@ -23,6 +23,7 @@ function WebAmpComponent() {
       initialTracks: [
         {
           url: ultraviolet,
+          // blob: ultraviolet.blob(),
           duration: 148.2,
           metaData: {
             title: "ultraviolet",
@@ -85,6 +86,7 @@ function WebAmpComponent() {
           });
         },
         butterchurnOpen: true,
+        // willReadFrequently: true,
       },
     });
 
