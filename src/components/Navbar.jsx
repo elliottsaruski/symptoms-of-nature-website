@@ -78,7 +78,7 @@ function Navbar() {
         )}
         {/* <hr /> */}
         {/* ADD WEBAMP */}
-        {/* <WebAmpComponent /> */}
+        <WebAmpComponent />
         {/* <WavesurferComponent /> */}
       </div>
       <hr />
