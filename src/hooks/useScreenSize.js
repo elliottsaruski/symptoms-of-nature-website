@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useScreenDetector = () => {
+export const useScreenSize = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
   const handleWindowSizeChange = () => {

@@ -134,9 +134,7 @@ function WebAmpComponent() {
 
   return (
     <>
-      {/* <iframe src=""> */}
       <div id="webamp-container" style={{}} ref={webampRef}></div>
-      {/* </iframe> */}
     </>
   );
 }
