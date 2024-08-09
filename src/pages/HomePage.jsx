@@ -1,6 +1,6 @@
 import BlogPostCard from "../components/BlogPostCard";
 
-import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
+// import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
 
 function HomePage() {
   return (

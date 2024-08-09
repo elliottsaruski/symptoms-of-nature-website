@@ -12,9 +12,12 @@ import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
 import MobileNavbar from "./MobileNavbar";
 import WebAmpComponent from "./WebAmpComponent";
 
+import { useScreenDetector } from "../hooks/useScreenSize";
+
 function Navbar() {
   const [blogPostIndex] = useState(0);
   // const [blogPostIndex, setBlogPostIndex] = useState(0);
+  const { isMobile, isTablet, isDesktop } = useScreenDetector();
 
   const { pathname } = useLocation();
 
@@ -55,7 +58,8 @@ function Navbar() {
       <hr />
       <div className="left-col--media-wrapper">
         {pathname == "/home" ||
-        pathname == `/home/${MOCK_DATA[`${blogPostIndex}`].postID}` ? (
+        (pathname == `/home/${MOCK_DATA[`${blogPostIndex}`].postID}` &&
+          isDesktop) ? (
           <video src={landingPageVideo} autoPlay muted loop></video>
         ) : (
           // <BlogPostCard
@@ -71,11 +75,10 @@ function Navbar() {
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-          ></iframe>
+            referrerPolicy="strict-origin-when-cross-origin"></iframe>
         )}
         {/* --------------------- WEBAMP------------------- */}
-        <WebAmpComponent />
+        {isDesktop && <WebAmpComponent />}
       </div>
       <hr />
       <div className="SON-description">
