@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 
-import ultraviolet from "../assets/media/music/Zine000_GENESIS_COMP/charles nimbus - ultraviolet.wav";
-import hydra from "../assets/media/music/Zine000_GENESIS_COMP/cybashawty - hydra.mp3";
-import getdown from "../assets/media/music/Zine000_GENESIS_COMP/envi - get down.wav";
-import nightathome from "../assets/media/music/Zine000_GENESIS_COMP/Justin Scott - A night at home in palmetto.wav";
-import asdecoration from "../assets/media/music/Zine000_GENESIS_COMP/sohn jamal - as decoration.wav";
-import focalpoint from "../assets/media/music/Zine000_GENESIS_COMP/TS - Focal Point (mastering attempt 2).wav";
+// import ultraviolet from "../assets/media/music/Zine000_GENESIS_COMP/charles nimbus - ultraviolet.wav";
+// import hydra from "../assets/media/music/Zine000_GENESIS_COMP/cybashawty - hydra.mp3";
+// import getdown from "../assets/media/music/Zine000_GENESIS_COMP/envi - get down.wav";
+// import nightathome from "../assets/media/music/Zine000_GENESIS_COMP/Justin Scott - A night at home in palmetto.wav";
+// import asdecoration from "../assets/media/music/Zine000_GENESIS_COMP/sohn jamal - as decoration.wav";
+// import focalpoint from "../assets/media/music/Zine000_GENESIS_COMP/TS - Focal Point (mastering attempt 2).wav";
 
 function WebAmpComponent() {
   const webampRef = useRef(null);
@@ -22,7 +22,7 @@ function WebAmpComponent() {
     const webamp = new Webamp({
       initialTracks: [
         {
-          url: ultraviolet,
+          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/charles%20nimbus%20-%20ultraviolet.wav",
           duration: 148.2,
           metaData: {
             title: "ultraviolet",
@@ -30,7 +30,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: hydra,
+          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/cybashawty%20-%20hydra.mp3",
           duration: 244.8,
           metaData: {
             title: "hydra",
@@ -38,7 +38,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: getdown,
+          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/envi%20-%20get%20down.wav",
           duration: 143.4,
           metaData: {
             title: "get down",
@@ -46,7 +46,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: nightathome,
+          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/Justin%20Scott%20-%20A%20night%20at%20home%20in%20palmetto.wav",
           duration: 75.6,
           metaData: {
             title: "A night at home in palmetto",
@@ -54,7 +54,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: asdecoration,
+          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/sohn%20jamal%20-%20as%20decoration.wav",
           duration: 192.6,
           metaData: {
             title: "as decoration",
@@ -62,7 +62,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: focalpoint,
+          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/TS%20-%20Focal%20Point%20(mastering%20attempt%202).wav",
           duration: 182.4,
           metaData: {
             title: "Focal Point",
