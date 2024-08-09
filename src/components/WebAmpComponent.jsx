@@ -22,7 +22,7 @@ function WebAmpComponent() {
     const webamp = new Webamp({
       initialTracks: [
         {
-          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/charles%20nimbus%20-%20ultraviolet.wav",
+          url: "https://res.cloudinary.com/elliott-dev/video/upload/v1723168595/charles_nimbus_-_ultraviolet_w0kvvv.wav",
           duration: 148.2,
           metaData: {
             title: "ultraviolet",
@@ -30,7 +30,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/cybashawty%20-%20hydra.mp3",
+          url: "https://res.cloudinary.com/elliott-dev/video/upload/v1723168585/cybashawty_-_hydra_pzxflp.mp3",
           duration: 244.8,
           metaData: {
             title: "hydra",
@@ -38,7 +38,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/envi%20-%20get%20down.wav",
+          url: "https://res.cloudinary.com/elliott-dev/video/upload/v1723168601/envi_-_get_down_exxtoi.wav",
           duration: 143.4,
           metaData: {
             title: "get down",
@@ -46,7 +46,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/Justin%20Scott%20-%20A%20night%20at%20home%20in%20palmetto.wav",
+          url: "https://res.cloudinary.com/elliott-dev/video/upload/v1723168589/Justin_Scott_-_A_night_at_home_in_palmetto_i4eziw.wav",
           duration: 75.6,
           metaData: {
             title: "A night at home in palmetto",
@@ -54,7 +54,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/sohn%20jamal%20-%20as%20decoration.wav",
+          url: "https://res.cloudinary.com/elliott-dev/video/upload/v1723168595/sohn_jamal_-_as_decoration_tty0vq.wav",
           duration: 192.6,
           metaData: {
             title: "as decoration",
@@ -62,7 +62,7 @@ function WebAmpComponent() {
           },
         },
         {
-          url: "https://github.com/elliottsaruski/symptoms-of-nature-website/blob/48f3d694897f4057bac1ba7f13161fbd60f03e46/src/assets/media/music/Zine000_GENESIS_COMP/TS%20-%20Focal%20Point%20(mastering%20attempt%202).wav",
+          url: "https://res.cloudinary.com/elliott-dev/video/upload/v1723168589/TS_-_Focal_Point_mastering_attempt_2_zuck2m.wav",
           duration: 182.4,
           metaData: {
             title: "Focal Point",
