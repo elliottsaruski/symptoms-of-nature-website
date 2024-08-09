@@ -1,5 +1,5 @@
-import stampspic from "../assets/media/photos/ZINES/janae_stampsPrint.png";
-import placeholderzinepic from "../assets/logos/SON_LOGO_darkmode.png";
+import zine000cover from "../assets/media/photos/ZINES/zine000COVER-COMPRESSED.png";
+import placeholderzinepic from "../assets/logos/SoN_ICON.png";
 const ZineData = [
   {
     _ID: 1,
@@ -7,16 +7,23 @@ const ZineData = [
     _URL: "000",
     _THEME: "genesis",
     _DATE: "August 3, 2024",
-    _IMG: stampspic,
+    _IMG: zine000cover,
     _FEATURED_ARTISTS: [
       "Xcope",
       "Chr0meC0",
       "eatbones",
       "Ruski Media",
       "Out Of Order",
-      "ITbunnI",
+      "ALLERGI",
+      "justin scott",
+      "envi",
+      "charles nimbus",
+      "cybashawty",
+      "Sohn jamal",
+      "quails",
       "TS",
       "BOUNCY DUCk",
+      "Anika Huda",
     ],
     _DESCRIPTION: "",
     _ARTLIST: {},

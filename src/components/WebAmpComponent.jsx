@@ -142,3 +142,8 @@ function WebAmpComponent() {
 }
 
 export default WebAmpComponent;
+
+
+// Error: Attempted to add a new teardown to a disposed disposable.
+//     at fl.add (webamp.bundle.min.js:24:181223)
+//     at c.renderWhenReady (

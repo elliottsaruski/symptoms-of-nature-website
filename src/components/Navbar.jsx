@@ -9,7 +9,6 @@ import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode_Custom.png";
 import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
 import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
 // import BlogPostCard from "./BlogPostCard";
-// import WavesurferComponent from "./WavesurferComponent";
 import MobileNavbar from "./MobileNavbar";
 import WebAmpComponent from "./WebAmpComponent";
 
@@ -73,13 +72,10 @@ function Navbar() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            // allowfullscreen
           ></iframe>
         )}
-        {/* <hr /> */}
-        {/* ADD WEBAMP */}
+        {/* --------------------- WEBAMP------------------- */}
         <WebAmpComponent />
-        {/* <WavesurferComponent /> */}
       </div>
       <hr />
       <div className="SON-description">

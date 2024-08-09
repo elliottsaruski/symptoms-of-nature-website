@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { ReactReader } from "react-reader";
+// import { ReactReader } from "react-reader";
 import { Link } from "react-router-dom";
 
 function IssueLayout() {
@@ -8,8 +8,11 @@ function IssueLayout() {
   return (
     <div id="issue-wrapper">
       <Link to="/issues">back</Link>
-      <div style={{ height: "80svh", width: "95vw" }}>
-        <ReactReader url="https://react-reader.metabits.no/files/alice.epub" />
+      {/*------------------------ INSERT 3D ZINE HERE--------------------------- */}
+      <div
+      // style={{ height: "80svh", width: "95vw" }}
+      >
+        {/* <ReactReader url="https://react-reader.metabits.no/files/alice.epub" /> */}
       </div>
     </div>
   );

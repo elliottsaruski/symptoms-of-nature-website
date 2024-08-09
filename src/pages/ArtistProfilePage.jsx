@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { roster } from "../data/RosterData";
-import { posts } from "../data/PostData";
-import FeedPost from "../components/FeedPost";
+// import { posts } from "../data/PostData";
+// import FeedPost from "../components/FeedPost";
 // import Filterbar from "../components/Filterbar";
 
 function ArtistProfilePage() {
   const { id } = useParams();
   const artist = roster.find((el) => el.artistID == `${id}`);
-  const artistPosts = posts.filter((el) => el.artistID == id);
+  // const artistPosts = posts.filter((el) => el.artistID == id);
 
   return (
     <div id="artist-profile-page-wrapper">
@@ -20,9 +20,9 @@ function ArtistProfilePage() {
           <span>{artist.description}</span>
         </div>
       </div>
-      <hr id="hr-important"></hr>
+      {/* <hr id="hr-important"></hr> */}
       {/* <Filterbar /> */}
-      <div className="artist-posts-wrapper">
+      {/* <div className="artist-posts-wrapper">
         <h4>featured work</h4>
         {artistPosts.map((post, index) => {
           return (
@@ -40,7 +40,7 @@ function ArtistProfilePage() {
             />
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 }

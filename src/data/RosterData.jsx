@@ -1,11 +1,17 @@
-import XcopeImg from "../assets/media/photos/ROSTER/xcope/xcope-img.jpg";
-import Chr0meC0Img from "../assets/media/photos/ROSTER/chr0mec0/chr0meC0-img.png";
-import ITbunniImg from "../assets/media/photos/ROSTER/itbunni/itbunni-img.png";
-import OOOimg from "../assets/media/photos/ROSTER/OOO/ooo.svg";
-import tsimg from "../assets/media/photos/ROSTER/TS/TS-img.png";
-import enviimg from "../assets/media/photos/ROSTER/envi/ENVI press-photo.jpg";
+import XcopeImg from "../assets/media/photos/ROSTER/xcope-img.jpg";
+import Chr0meC0Img from "../assets/media/photos/ROSTER/chr0meC0-img.jpeg";
+import AllergiImg from "../assets/media/photos/ROSTER/itbunni-img.png";
+import OOOimg from "../assets/media/photos/ROSTER/ooo.svg";
+import tsimg from "../assets/media/photos/ROSTER/TS-img.png";
+import enviimg from "../assets/media/photos/ROSTER/ENVI press-photo-min.jpg";
+import charlesImg from "../assets/media/photos/ROSTER/charlesnimbusPFP-min.jpg";
+import sohnImg from "../assets/media/photos/ROSTER/sohnjamalPFP-min.jpg";
+import cybaImg from "../assets/media/photos/ROSTER/cybashawtyPFP-min.jpg";
+import justinImg from "../assets/media/photos/ROSTER/justinscottPFP-min.jpg";
+import quailsImg from "../assets/media/photos/ROSTER/quailsPFP-min.jpg";
+import ruskiMediaImg from "../assets/media/photos/ROSTER/ruskiMediaPFP.png";
 
-import placeholderartistpic from "../assets/logos/SON_LOGO_darkmode.png";
+import placeholderartistpic from "../assets/logos/SoN_ICON.png";
 
 export const roster = [
   {
@@ -44,7 +50,7 @@ export const roster = [
   {
     name: "ALLERGi",
     artistID: "ALLERGi",
-    img: ITbunniImg,
+    img: AllergiImg,
     title: "producer / vocalist DJ duo",
     description: "",
     links: [
@@ -68,7 +74,7 @@ export const roster = [
     name: "Out Of Order",
     artistID: "OutofOrder",
     img: OOOimg,
-    title: "producer group",
+    title: "producer trio",
     description:
       "Definition: not working properly or at all; not according to the rules. Out of Order is composed of 3 musicians/producers and lifelong friends. The name serves as a reflection of the group's lack of concern for traditional sounds and rigid industry standards. In other words, OOO seeks to inspire others to create without adherence to boundaries or rules and instead promote the pursuit of artistic self-expression and independence.",
     links: [{ instagram: "" }, { soundcloud: "" }],
@@ -78,8 +84,8 @@ export const roster = [
   {
     name: "Ruski Media",
     artistID: "RuskiMedia",
-    img: placeholderartistpic,
-    title: "film / media production",
+    img: ruskiMediaImg,
+    title: "film / media producers",
     description:
       "Ruski Media consists of filmmaking duo and real-life siblings, the Saruski Brothers. Based in Miami, Elliott and Justin share a passion for writing and producing unique, offbeat short films. Gaining influence from filmmaking legends like Jordan Peele, David Cronenberg, Christopher Nolan, Quentin Dupieux, and many others, their work is characterized by enthralling scenery and environments, unconventional storytelling, and surreal special effects. Their first short film, I'm Sure It's Fine, will be released alongside Symptoms of Nature #000, Genesis.",
     links: [{ instagram: "" }],
@@ -110,7 +116,6 @@ export const roster = [
     profileType: "music",
     featured_in: ["ZINE #000"],
   },
-
   {
     name: "Bouncyduck",
     artistID: "Bouncyduck",
@@ -124,7 +129,7 @@ export const roster = [
   {
     name: "Sohn jamal",
     artistID: "Sohnjamal",
-    img: placeholderartistpic,
+    img: sohnImg,
     title: "producer",
     description:
       "“Not afraid of nostalgia and where abstract electronic music once took us, Sohn Jamal reshapes the familiar within unfamiliar channels and is very much present in the now.” - Pietro Da Sacco, Igloomag <br/> Sohn Jamal (real name John Small) stands out as an artist that consistently pushes the limits of electronic music. Renowned for his avant-garde aesthetic, he expertly combines components from numerous subgenres to produce a sound that is all his own. He creates a tapestry of captivating auditory environments by drawing inspiration from beat music, footwork, ambient, jazz and IDM. <br/> Having originally grown up in Tokyo, Japan, Small relocated to Miami in 2014 to study jazz guitar. His first album, “Suzy”, came out in 2018 on vinyl under Night Young. After releasing a series of singles and eps digitally through various Miami labels and his own imprint TY Tapes, he released his second album “Scroo Amethyst” in 2022 under Schematic Music Company. A promo single “UR21201820” was released in anticipation of the project. <br/> In 2023, Small released two collaborative EPs. The first, “Simhuman Fortitude”, was with Tokyo-based IDM/glitch pop artist Serph, which charted at number 4 on the iTunes electronic music charts in Japan. The second, “Don't Let the Body Up”, was with Low End Resorts, a newer alias of Romulo Del Castillo (Soul Oddity, Phoenecia) and Nick Forte through Schematic. <br/> As a producer, DJ and multi-instrumentalist, he has supported for artists such as Machinedrum, Flying Lotus, Vegyn, Iglooghost, Shinichiro Yokota, Deantoni Parks, Eevee, Khruangbin, and Plaid.",
@@ -135,7 +140,7 @@ export const roster = [
   {
     name: "charles nimbus",
     artistID: "CharlesNimbus",
-    img: placeholderartistpic,
+    img: charlesImg,
     title: "producer",
     description:
       "Charles Nimbus began in 2016 as a creative outlet to make music for DJing and club settings. My real name is Charles and I chose the alias 'Nimbus' because the word has two specific meanings: In nature, it's a towering raincloud ready to burst. In iconography, it's the halo that signifies divine power. My way of elaborating on this connection is to use it as a brand for my music and art, like a memento. I've released 30-40 tracks, most of them singles, with 2 EPs, 'Breach' and 'PASSAGE,' as well as an art book, 'WRECCA,' and have performed all over the U.S. at clubs and festivals.",
@@ -146,7 +151,7 @@ export const roster = [
   {
     name: "cybashawty",
     artistID: "cybashawty",
-    img: placeholderartistpic,
+    img: cybaImg,
     title: "producer",
     description:
       "Michael Taddeo AkA cybashawty is a miami native and musician who has been contributing to the local music scene for a long time. Most recently releasing electronic music on local label schematic music company. cyba's influences are eclectic and vary from IDM,EBM and minimal to jazz, freestyle and funk. Michael is devoted to pushing himself creatively on each project he releases and spreading the reach of the alternative miami music scene.",
@@ -157,7 +162,7 @@ export const roster = [
   {
     name: "justin scott",
     artistID: "justinscott",
-    img: placeholderartistpic,
+    img: justinImg,
     title: "producer / vocalist / multi-instrumentalist",
     description:
       "A 103-year-old artist/producer trapped in a 23-year-old's body. Long-lost son of Ed Sheeran. Lots of things to say yet really bad with words. Based in Miami.",
@@ -168,31 +173,10 @@ export const roster = [
   {
     name: "quails",
     artistID: "quails",
-    img: placeholderartistpic,
+    img: quailsImg,
     title: "producer",
     description:
       "quails is an experimental artist specializing in the use of MAXMSP to push the boundaries of sound and visual art. quails rejects the limitations of traditional DAWs, instead opting for a generative process that allows for the creation of complex, immersive experiences. <br/> Through meticulous programming and deliberate experimentation, quails constructs intricate audio-visual landscapes. These works are designed to challenge conventional perceptions and evoke a profound emotional response. By exploring the interplay of sound and visuals, quails seeks to create a unique artistic experience that invites deep reflection and exploration. The art is not merely a spectacle but a medium for intellectual and sensory engagement, offering a fresh perspective on the possibilities of contemporary art. <br/>  The resulting audio-visual landscapes are characterized by their complexity and depth, inviting listeners to engage with the work on multiple levels. The precise programming and intentional experimentation underscore a commitment to pushing the boundaries of contemporary art. Through these works, quails seeks to challenge the audience's preconceived notions, offering a contemplative experience that delves into the nuances of perception and emotion. The art, therefore, is not merely a passive observation but an active dialogue, encouraging a deeper exploration of the interconnections between sound, sight, and thought.",
-    links: [{ instagram: "" }, { soundcloud: "" }],
-    profileType: "music",
-    featured_in: ["ZINE #000"],
-  },
-
-  {
-    name: "Asifeh",
-    artistID: "Asifeh",
-    img: placeholderartistpic,
-    title: "producer",
-    description: "",
-    links: [{ instagram: "" }, { soundcloud: "" }],
-    profileType: "music",
-    featured_in: ["ZINE #000"],
-  },
-  {
-    name: "dj alIx.rr",
-    artistID: "djalIxrr",
-    img: placeholderartistpic,
-    title: "",
-    description: "",
     links: [{ instagram: "" }, { soundcloud: "" }],
     profileType: "music",
     featured_in: ["ZINE #000"],
@@ -201,7 +185,7 @@ export const roster = [
     name: "Anika Huda",
     artistID: "AnikaHuda",
     img: placeholderartistpic,
-    title: "",
+    title: "graphic artist",
     description: "",
     links: [{ instagram: "" }],
     profileType: "mixed-media",

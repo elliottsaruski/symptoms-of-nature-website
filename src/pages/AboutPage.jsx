@@ -1,7 +1,6 @@
 import { useState } from "react";
-import aboutPageHeaderIMG from "../assets/media/photos/ABOUT/about_us_main_image_no_frame.png";
+import aboutPageHeaderIMG from "../assets/media/photos/ABOUT/about_us_main_image_no_frame-min.png";
 import aboutPageHeaderTEXT from "../assets/media/photos/ABOUT/about-us-text.png";
-
 
 import AboutUsDropDown from "../components/AboutUsDropDown";
 
@@ -12,14 +11,13 @@ function AboutPage() {
     <div id="about-wrapper">
       <div className="header-img-wrapper">
         <img src="" id="star-icon-left" />
-
         <img src={headerImage} id="about-header-img" alt="" />
         <img src="" id="star-icon-right" />
       </div>
 
       <img src={aboutPageHeaderTEXT} id="about-header-text" alt="" />
 
-      {/* INTERACTIVE P DROPDOWN SECTION */}
+      {/* INTERACTIVE DROPDOWN SECTION */}
       <AboutUsDropDown setHeaderImage={setHeaderImage} />
     </div>
   );
