@@ -16,12 +16,12 @@ import BlogPostFullPage from "./pages/BlogPostFullPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<LayoutPage />}>
+    <Route index element={<LayoutPage />}>
       <Route path="/" element={<LandingPage />} />
-      {/* <Route path="/home"> */}
-      <Route path="/" element={<HomePage />} />
-      <Route path="/post/:postId" element={<BlogPostFullPage />} />
-      {/* </Route> */}
+      <Route path="/home">
+        <Route index element={<HomePage />} />
+        <Route path=":id" element={<BlogPostFullPage />} />
+      </Route>
       <Route path="/about" element={<AboutPage />} />
       <Route path="/issues">
         <Route index element={<IssuesPage />} />

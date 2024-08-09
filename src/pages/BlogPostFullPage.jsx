@@ -10,7 +10,7 @@ const PostPage = () => {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const response = await fetch("/.netlify/functions/fetchNotionData.js", {
+        const response = await fetch("/.netlify/functions/fetchNotionData", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ pageId: postId }),

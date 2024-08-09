@@ -39,7 +39,7 @@ const HomePage = () => {
         <div
           key={post.id}
           className="post-item"
-          onClick={() => navigate(`/post/${post.id}`)}>
+          onClick={() => navigate(`/${post.id}`)}>
           <h2>{post.properties.Name.title[0]?.text.content}</h2>
         </div>
       ))}

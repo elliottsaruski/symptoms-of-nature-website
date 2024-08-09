@@ -1,7 +1,10 @@
 /* eslint-env node */
-import { Client } from "@notionhq/client";
+import { Client, LogLevel } from "@notionhq/client";
 
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
+const notion = new Client({
+  auth: process.env.NOTION_TOKEN,
+  logLevel: LogLevel.DEBUG,
+});
 
 export async function handler() {
   try {
