@@ -1,32 +1,50 @@
-import BlogPostCard from "../components/BlogPostCard";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-// import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
+const HomePage = () => {
+  const [posts, setPosts] = useState([]);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-function HomePage() {
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const response = await fetch("/.netlify/functions/fetchNotionPosts");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch posts");
+        }
+
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        setError(error.message);
+      }
+    }
+
+    fetchPosts();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!posts.length) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div id="home-page-wrapper">
-      <h2>Home Feed</h2>
-      <hr />
-      <div className="blog-posts-wrapper">
-        {/* {MOCK_DATA.map((MOCK_POST) => {
-          return (
-            <BlogPostCard
-              key={MOCK_POST.postID}
-              postID={MOCK_POST.postID}
-              post_title={MOCK_POST.post_title}
-              post_date={MOCK_POST.post_date}
-              post_author={MOCK_POST.post_author}
-              post_type={MOCK_POST.post_type}
-              post_desc={MOCK_POST.post_desc}
-              post_content={MOCK_POST.post_content}
-              post_img={MOCK_POST.post_img}
-              post_status={MOCK_POST.post_status}
-            />
-          );
-        })} */}
-      </div>
+    <div className="post-grid">
+      {posts.map((post) => (
+        <div
+          key={post.id}
+          className="post-item"
+          onClick={() => navigate(`/post/${post.id}`)}>
+          <h2>{post.properties.Name.title[0]?.text.content}</h2>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 export default HomePage;

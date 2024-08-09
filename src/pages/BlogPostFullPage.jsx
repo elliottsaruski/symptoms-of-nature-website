@@ -1,24 +1,43 @@
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { NotionRenderer } from 'react-notion-x';
 
-import MOCK_DATA from "../data/MOCK_BLOGPOST_DATA.json";
+const PostPage = () => {
+  const { postId } = useParams();
+  const [recordMap, setRecordMap] = useState(null);
+  const [error, setError] = useState(null);
 
-function BlogPostFullPage() {
-  const { id } = useParams();
-  const blogpost_SELECTED = MOCK_DATA.find((blog) => blog.postID === `${id}`);
+  useEffect(() => {
+    async function fetchPost() {
+      try {
+        const response = await fetch('/.netlify/functions/fetchNotionData', {
+          method: 'POST',
+          body: JSON.stringify({ pageId: postId }),
+        });
 
-  return (
-    <div id="blog-post-full-page-wrapper">
-      <img src={blogpost_SELECTED.post_img} alt="" />
-      <div className="full-page-blog-content">
-        <h5>{blogpost_SELECTED.post_type}</h5>
-        <h4>{blogpost_SELECTED.post_title}</h4>
-        <p>{blogpost_SELECTED.post_desc}</p>
-        <p>{blogpost_SELECTED.post_author}</p>
-        <p>{blogpost_SELECTED.post_date}</p>
-        <p>{blogpost_SELECTED.post_content}</p>
-      </div>
-    </div>
-  );
-}
+        if (!response.ok) {
+          throw new Error('Failed to fetch post content');
+        }
 
-export default BlogPostFullPage;
+        const data = await response.json();
+        setRecordMap(data);
+      } catch (error) {
+        setError(error.message);
+      }
+    }
+
+    fetchPost();
+  }, [postId]);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!recordMap) {
+    return <div>Loading...</div>;
+  }
+
+  return <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />;
+};
+
+export default PostPage;

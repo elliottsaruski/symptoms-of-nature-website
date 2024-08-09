@@ -8,7 +8,7 @@ import { useState } from "react";
 
 function MediaWrapperDesktop() {
   const { pathname } = useLocation();
-  const { isMobile, isTablet, isDesktop } = useScreenSize();
+  const { isDesktop } = useScreenSize();
   const [blogPostIndex] = useState(0);
 
   return (
