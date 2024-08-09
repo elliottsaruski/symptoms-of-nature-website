@@ -9,7 +9,7 @@ const HomePage = () => {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await fetch("/.netlify/functions/fetchNotionPosts");
+        const response = await fetch("/.netlify/functions/fetchNotionData");
 
         if (!response.ok) {
           throw new Error("Failed to fetch posts");

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { NotionRenderer } from 'react-notion-x';
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { NotionRenderer } from "react-notion-x";
 
 const PostPage = () => {
   const { postId } = useParams();
@@ -10,18 +10,20 @@ const PostPage = () => {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const response = await fetch('/.netlify/functions/fetchNotionData', {
-          method: 'POST',
+        const response = await fetch("/.netlify/functions/fetchNotionData.js", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ pageId: postId }),
         });
 
         if (!response.ok) {
-          throw new Error('Failed to fetch post content');
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
         setRecordMap(data);
       } catch (error) {
+        console.error("Fetch error:", error); // Debugging line
         setError(error.message);
       }
     }
@@ -37,7 +39,9 @@ const PostPage = () => {
     return <div>Loading...</div>;
   }
 
-  return <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />;
+  return (
+    <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
+  );
 };
 
 export default PostPage;
