@@ -14,7 +14,10 @@ export async function handler(event, context) {
 
   try {
     const databaseId = process.env.NOTION_DATABASE_ID;
-
+    const database = await notion.databases.retrieve({
+      database_id: databaseId,
+    });
+    console.log(JSON.stringify(database.properties, null, 2));
     if (!databaseId) {
       throw new Error("NOTION_DATABASE_ID is not set");
     }
@@ -23,7 +26,7 @@ export async function handler(event, context) {
       database_id: databaseId,
       filter: {
         property: "Status",
-        select: {
+        status: {
           equals: "LIVE",
         },
       },

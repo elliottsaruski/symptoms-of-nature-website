@@ -34,7 +34,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className="post-grid">
+    <div id="home-page-wrapper">
       {posts.map((post) => (
         <div
           key={post.id}
