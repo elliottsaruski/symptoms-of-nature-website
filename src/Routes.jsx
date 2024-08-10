@@ -16,7 +16,7 @@ import BlogPostFullPage from "./pages/BlogPostFullPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route index element={<LayoutPage />}>
+    <Route path="/" element={<LayoutPage />}>
       <Route path="/" element={<LandingPage />} />
       <Route path="/home">
         <Route index element={<HomePage />} />
