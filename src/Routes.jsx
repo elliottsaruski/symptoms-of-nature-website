@@ -19,7 +19,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<LayoutPage />}>
       <Route path="/" element={<LandingPage />} />
       <Route path="/home">
-        <Route index element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path=":id" element={<BlogPostFullPage />} />
       </Route>
       <Route path="/about" element={<AboutPage />} />
