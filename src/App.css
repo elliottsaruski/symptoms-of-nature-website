@@ -541,10 +541,9 @@ nav {
   padding: 1rem;
   gap: 1rem;
   max-width: 100%;
-  /* place-items: center; */
 }
 
-.blog-post-card {
+/* .blog-post-card {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -555,13 +554,10 @@ nav {
   padding: 1rem;
   text-decoration: none;
   color: var(--clr-li);
-  /* font-family: "PPMondwest Regular"; */
-  /* align-items: start; */
   place-content: start;
 
   h5 {
     opacity: 75%;
-    /* font-family: "PPEiko thin"; */
     width: 100%;
     background-color: rgba(70, 70, 70, 0.425);
     padding: 0.25rem;
@@ -571,7 +567,6 @@ nav {
   }
   p {
     height: 100%;
-    /* min-height: max-content; */
   }
 }
 
@@ -625,7 +620,6 @@ nav {
   place-content: start;
   max-width: 100%;
   gap: 1rem;
-  /* padding: 1rem; */
   img {
     height: 100%;
     width: 100%;
@@ -639,6 +633,81 @@ nav {
 .full-page-blog-content {
   max-width: 75ch;
   padding: 2rem;
+} */
+
+/* ----------------------NEW POST BLOGS CSS---------------------- */
+
+.post-item {
+  height: auto;
+  display: grid;
+  color: var(--clr-li);
+  text-decoration: none;
+  border: 0.015rem solid var(--clr-li);
+  padding: 1rem;
+  margin: 2rem;
+  place-content: center;
+  max-width: 100%;
+  width: fit-content;
+  gap: 0.5rem;
+  grid-template-areas:
+    "IMAGES IMAGES IMAGES"
+    "TITLE TITLE NAME_DATE"
+    "TAGS TAGS NAME_DATE"
+    "DESCRIPTION DESCRIPTION DESCRIPTION";
+  h4 {
+    grid-area: TITLE;
+    font-size: 2rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+    opacity: 75%;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  p {
+    grid-area: DESCRIPTION;
+    max-width: 75ch;
+    line-height: 1.5;
+    /* border: 0.15rem solid var(--clr-accent1); */
+    padding-block: 1rem;
+  }
+  img {
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+  }
+
+  .descriptors-post {
+    grid-area: TAGS;
+    display: flex;
+    gap: 1rem;
+    h6 {
+      background-color: var(--clr-accent1);
+      padding: 0.25rem;
+      /* opacity: 25%; */
+    }
+  }
+  .name-date-post {
+    grid-area: NAME_DATE;
+    color: var(--clr-accent2);
+  }
+  .img-group-wrapper {
+    grid-area: IMAGES;
+    /* grid-row: span 1; */
+  }
+}
+
+.post-item:hover,
+.post-item:focus-visible {
+  border-color: var(--clr-accent1);
+}
+
+/* ---------------------------FULL BLOG PAGE--------------------------- */
+#blog-post-full-page-wrapper {
+  img {
+    height: 25rem;
+  }
 }
 
 /* --------------------------- ABOUT ---------------------- */
