@@ -48,11 +48,11 @@ function Navbar() {
           </nav>
         )}
         {/*------------------------------------- MOBILE NAV BAR------------------------ */}
-        {!isDesktop && <MobileNavbar />}
+        {(isMobile || isTablet) && <MobileNavbar />}
       </div>
       <hr />
       {/*------------------------------------- DESKTOP ONLY MEDIA WRAPPER ------------------------ */}
-      {isDesktop && <MediaWrapperDesktop />}
+      <MediaWrapperDesktop />
       <hr />
       {/*------------------------------------- DESKTOP ONLY BOTTOM BAR ------------------------ */}
       {isDesktop && (

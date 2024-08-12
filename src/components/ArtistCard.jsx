@@ -6,7 +6,7 @@ function ArtistCard({ name, img, artistID, title }) {
     <Link to={artistID}>
       <div className="artist-card">
         <img className="artist-card-img" src={img}></img>
-        <hr />
+        {/* <hr /> */}
         <div className="artist-card-context">
           <h3 className="artist-card-name">{name}</h3>
           <p className="artist-card-title">{title}</p>

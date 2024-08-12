@@ -22,48 +22,53 @@ function HomePage() {
     fetchPosts();
   }, []);
 
-  if (error) return <div>Error: {error}</div>;
-  if (!posts.length) return <div>Loading...</div>;
+  if (error) return <div id="home-page-wrapper">Error: {error}</div>;
+  if (!posts.length) return <div id="home-page-wrapper">Loading...</div>;
 
   return (
     <div id="home-page-wrapper">
-      <h2>Home / Blog</h2>
-      <hr />
-      {posts.map((post) => (
-        <Link to={post.id} key={post.id} className="post-item">
-          <div className="img-group-wrapper">
-            <img
-              src={post.properties["Files & media"].files[0].file.url}
-              className="post-img-thumbnail"
-              alt="blog-post-img-thumbnail"
-            />
-            {/* <img
-              src={post.properties["Files & media"].files[0].file.url}
-              className="post-img-thumbnail"
-              alt="blog-post-img-thumbnail"
-            />
-            <img
-              src={post.properties["Files & media"].files[0].file.url}
-              className="post-img-thumbnail"
-              alt="blog-post-img-thumbnail"
-            /> */}
-            <hr />
-          </div>
-          <h4>{post.properties.Name.title[0]?.plain_text}</h4>
-          <div className="name-date-post">
-            <h5>by: {post.properties.Author.select.name}</h5>
-            {/* <h5>{post.created_time}</h5> */}
-          </div>
+      {/* <h2>Home / Blog</h2>
+      <hr /> */}
+      <div className="blog-posts-wrapper">
+        {posts.map((post) => (
+          <Link to={post.id} key={post.id} className="post-item">
+            <div className="img-group-wrapper">
+              <img
+                src={post.properties["Files & media"].files[0].file.url}
+                className="post-img-thumbnail"
+                alt="blog-post-img-thumbnail"
+              />
+              {/* <img
+                src={post.properties["Files & media"].files[0].file.url}
+                className="post-img-thumbnail"
+                alt="blog-post-img-thumbnail"
+              />
+              <img
+                src={post.properties["Files & media"].files[0].file.url}
+                className="post-img-thumbnail"
+                alt="blog-post-img-thumbnail"
+              /> */}
+            </div>
+            <div className="blog-post-card-content">
+              <h4>{post.properties.Name.title[0]?.plain_text}</h4>
+              <div className="descriptors-post">
+                <h6>
+                  {post.properties["Tags - descriptors"].multi_select[0].name}
+                </h6>
+                <hr />
+                <h6>{post.properties["TYPE OF POST"].multi_select[0].name}</h6>
+                {/* <hr /> */}
+              </div>
+              <div className="name-date-post">
+                <h5>author: {post.properties.Author.select.name}</h5>
+                <h6>{post.created_time.slice(0, 10)}</h6>
+              </div>
 
-          <div className="descriptors-post">
-            <h6>
-              {post.properties["Tags - descriptors"].multi_select[0].name}
-            </h6>
-            <h6>{post.properties["TYPE OF POST"].multi_select[0].name}</h6>
-          </div>
-          <p>{post.properties.Description.rich_text[0]?.text.content}</p>
-        </Link>
-      ))}
+              <p>{post.properties.Description.rich_text[0]?.text.content}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

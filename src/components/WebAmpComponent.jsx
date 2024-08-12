@@ -1,14 +1,9 @@
 import { useEffect, useRef } from "react";
-
-// import ultraviolet from "../assets/media/music/Zine000_GENESIS_COMP/charles nimbus - ultraviolet.wav";
-// import hydra from "../assets/media/music/Zine000_GENESIS_COMP/cybashawty - hydra.mp3";
-// import getdown from "../assets/media/music/Zine000_GENESIS_COMP/envi - get down.wav";
-// import nightathome from "../assets/media/music/Zine000_GENESIS_COMP/Justin Scott - A night at home in palmetto.wav";
-// import asdecoration from "../assets/media/music/Zine000_GENESIS_COMP/sohn jamal - as decoration.wav";
-// import focalpoint from "../assets/media/music/Zine000_GENESIS_COMP/TS - Focal Point (mastering attempt 2).wav";
+import { useScreenSize } from "../hooks/useScreenSize";
 
 function WebAmpComponent() {
   const webampRef = useRef(null);
+  const { isDesktop } = useScreenSize();
 
   useEffect(() => {
     // Ensure Webamp is available on the global window object
@@ -90,47 +85,82 @@ function WebAmpComponent() {
 
     //LAYOUT FOR WEBAMP------------------------------------------------------------------
 
-    // webamp.store.dispatch({ type: "CLOSE_WINDOW", windowId: "playlist" });
     webamp.store.dispatch({ type: "CLOSE_WINDOW", windowId: "equalizer" });
-    webamp.store.dispatch({
-      size: [6.75, 4.75],
-      type: "WINDOW_SIZE_CHANGED",
-      windowId: "milkdrop",
-    });
-    webamp.store.dispatch({
-      size: [0, 0.85],
-      type: "WINDOW_SIZE_CHANGED",
-      windowId: "playlist",
-    });
-    webamp.store.dispatch({
-      absolute: true,
-      positions: {
-        main: {
-          x: 25,
-          y: 625,
-        },
-        milkdrop: {
-          x: 300,
-          y: 625,
-        },
-        playlist: {
-          x: 25,
-          y: 740,
-        },
-      },
 
-      type: "UPDATE_WINDOW_POSITIONS",
-    });
+    // -----------DESKTOP WEBAMP POSITION------------------
+    {
+      isDesktop &&
+        webamp.store.dispatch({
+          size: [1, 0.85],
+          type: "WINDOW_SIZE_CHANGED",
+          windowId: "milkdrop",
+        });
+      webamp.store.dispatch({
+        size: [0, 0.85],
+        type: "WINDOW_SIZE_CHANGED",
+        windowId: "playlist",
+      });
+      webamp.store.dispatch({
+        absolute: true,
+        positions: {
+          main: {
+            x: 25,
+            y: 625,
+          },
+          milkdrop: {
+            x: 300,
+            y: 625,
+          },
+          playlist: {
+            x: 25,
+            y: 740,
+          },
+        },
+
+        type: "UPDATE_WINDOW_POSITIONS",
+      });
+    }
+
+    console.log(webamp.store);
+    // const windowH = `${window.innerHeight}`;
+    // const windowW = `${window.innerWidth}`;
+
+    // -----------DESKTOP MOBILE POSITION------------------
+    // {
+    //   isMobile &&
+    //     webamp.store.dispatch({ type: "CLOSE_WINDOW", windowId: "milkdrop" });
+
+    //   webamp.store.dispatch({
+    //     size: [0, 0],
+    //     type: "WINDOW_SIZE_CHANGED",
+    //     windowId: "playlist",
+    //   });
+    //   webamp.store.dispatch({
+    //     absolute: true,
+    //     positions: {
+    //       main: {
+    //         x: 0,
+    //         y: 845,
+    //       },
+    //       playlist: {
+    //         x: 150,
+    //         y: 845,
+    //       },
+    //     },
+
+    //     type: "UPDATE_WINDOW_POSITIONS",
+    //   });
+    // }
 
     webamp.renderWhenReady(webampRef.current);
-
+    // console.log(`${windowSize}`);
     return () => {
       // Cleanup Webamp instance on component unmount
       if (webamp) {
         webamp.dispose();
       }
     };
-  }, []);
+  }, [isDesktop]);
 
   return (
     <>
@@ -140,7 +170,6 @@ function WebAmpComponent() {
 }
 
 export default WebAmpComponent;
-
 
 // Error: Attempted to add a new teardown to a disposed disposable.
 //     at fl.add (webamp.bundle.min.js:24:181223)

@@ -1,19 +1,8 @@
-// import { useState } from "react";
-// import { ReactReader } from "react-reader";
-import { Link } from "react-router-dom";
-
 function IssueLayout() {
-  // const [location, setLocation] = useState(0);
-
   return (
     <div id="issue-wrapper">
-      <Link to="/issues">back</Link>
       {/*------------------------ INSERT 3D ZINE HERE--------------------------- */}
-      <div
-      // style={{ height: "80svh", width: "95vw" }}
-      >
-        {/* <ReactReader url="https://react-reader.metabits.no/files/alice.epub" /> */}
-      </div>
+      <p>3d zine incoming</p>
     </div>
   );
 }
