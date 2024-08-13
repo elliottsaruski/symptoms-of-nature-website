@@ -337,6 +337,7 @@ nav {
 #webamp-container {
   width: 100%;
   flex: auto;
+  margin-top: 2rem;
 }
 
 .SON-description {
@@ -435,6 +436,9 @@ nav {
 }
 
 /* ----------------------NEW POST BLOGS CSS---------------------- */
+#home-page-wrapper {
+  padding-block: 7rem;
+}
 
 .blog-posts-wrapper {
   display: grid;
@@ -534,6 +538,7 @@ nav {
 }
 
 /* ---------------------------FULL BLOG PAGE--------------------------- */
+
 #blog-post-full-page-wrapper {
   max-width: 100%;
   img {
@@ -803,7 +808,9 @@ nav {
   /* border: 0.15rem solid transparent; */
   position: relative;
   box-shadow: 0 0 1rem rgba(150, 150, 150, 0.5);
-
+  img {
+    scale: 1.1;
+  }
   .zine-card-details {
     display: grid;
     color: var(--clr-accent1);

@@ -64,7 +64,7 @@ export const roster = [
     name: "eatbones",
     artistID: "eatbones",
     img: placeholderartistpic,
-    title: "graphic artist / ZINE designer",
+    title: "designer",
     description: "",
     links: [{ website: "" }, { instagram: "" }],
     profileType: "mixed-media",
@@ -97,7 +97,8 @@ export const roster = [
     artistID: "TS",
     img: tsimg,
     title: "producer / DJ / photographer",
-    description: "",
+    description:
+      " TS is a multifaceted artist, blending roles as a producer, DJ, and photographer. Born and raised in Miami, TS's artistry is deeply influenced by the city's dynamic music scene and the continuous flow of talented DJs. This diverse exposure has cultivated TS's distinctive sound, characterized by a fusion of rhythmic innovation and atmospheric depth.",
     links: [
       { instagram: "https://www.instagram.com/t.sanch_/" },
       { soundcloud: "https://soundcloud.com/tristan-sanchez-1" },

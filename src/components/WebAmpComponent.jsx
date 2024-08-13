@@ -15,6 +15,18 @@ function WebAmpComponent() {
     }
 
     const webamp = new Webamp({
+      __initialWindowLayout: {
+        absolute: true,
+        main: {
+          position: { x: 0, y: 100 },
+        },
+        playlist: {
+          position: { x: 0, y: 216 },
+        },
+        milkdrop: {
+          position: { x: 275, y: 100 },
+        },
+      },
       initialTracks: [
         {
           url: "https://res.cloudinary.com/elliott-dev/video/upload/v1723168595/charles_nimbus_-_ultraviolet_w0kvvv.wav",
@@ -91,7 +103,7 @@ function WebAmpComponent() {
     {
       isDesktop &&
         webamp.store.dispatch({
-          size: [1, 0.85],
+          size: [0.25, 4.8],
           type: "WINDOW_SIZE_CHANGED",
           windowId: "milkdrop",
         });
@@ -100,30 +112,28 @@ function WebAmpComponent() {
         type: "WINDOW_SIZE_CHANGED",
         windowId: "playlist",
       });
-      webamp.store.dispatch({
-        absolute: true,
-        positions: {
-          main: {
-            x: 25,
-            y: 625,
-          },
-          milkdrop: {
-            x: 300,
-            y: 625,
-          },
-          playlist: {
-            x: 25,
-            y: 740,
-          },
-        },
+      // webamp.store.dispatch({
+      //   absolute: true,
+      //   positions: {
+      //     main: {
+      //       x: 25,
+      //       y: 650,
+      //     },
+      //     milkdrop: {
+      //       x: 300,
+      //       y: 625,
+      //     },
+      //     playlist: {
+      //       x: 25,
+      //       y: 740,
+      //     },
+      //   },
 
-        type: "UPDATE_WINDOW_POSITIONS",
-      });
+      //   type: "UPDATE_WINDOW_POSITIONS",
+      // });
     }
 
     console.log(webamp.store);
-    // const windowH = `${window.innerHeight}`;
-    // const windowW = `${window.innerWidth}`;
 
     // -----------DESKTOP MOBILE POSITION------------------
     // {
