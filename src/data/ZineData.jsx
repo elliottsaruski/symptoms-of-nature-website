@@ -22,15 +22,14 @@ const ZineData = [
       "Sohn jamal",
       "quails",
       "TS",
-      "BOUNCY DUCk",
-      "Anika Huda",
+      // "BOUNCY DUCk",
+      "anika huda",
     ],
     _DESCRIPTION: "",
     _ARTLIST: {},
     _STATUS: "READY",
     _PDF_PRINT: {},
   },
-
 ];
 
 export default ZineData;

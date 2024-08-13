@@ -29,7 +29,6 @@ function IssuesPage() {
       <h2>Issues</h2>
       <hr />
       <div className="issues">{issues}</div>
-      {/* <Outlet /> */}
     </div>
   );
 }

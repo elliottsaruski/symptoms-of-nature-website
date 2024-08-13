@@ -16,11 +16,11 @@ function isCacheValid() {
   }
   const now = new Date();
   const cacheAge = now - cache.lastFetched;
-  const oneHour = 1 * 60 * 1000; // in milliseconds
+  const oneHour = 60 * 60 * 1000; // in milliseconds
   return cacheAge < oneHour;
 }
 
-export async function handler(event, context) {
+export async function handler(event) {
   const forceRefresh =
     event.queryStringParameters &&
     event.queryStringParameters.refresh === "true";
