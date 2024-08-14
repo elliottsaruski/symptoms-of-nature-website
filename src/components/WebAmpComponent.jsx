@@ -206,7 +206,10 @@ function WebAmpComponent() {
 
   return (
     <>
-      <div id="webamp-container" style={{}} ref={webampRef}></div>
+      <div
+        id="webamp-container"
+        style={{ position: "absolute" }}
+        ref={webampRef}></div>
     </>
   );
 }

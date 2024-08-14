@@ -19,7 +19,7 @@ const ZineData = [
       "envi",
       "charles nimbus",
       "cybashawty",
-      "Sohn jamal",
+      "Sohn Jamal",
       "quails",
       "TS",
       // "BOUNCY DUCk",
