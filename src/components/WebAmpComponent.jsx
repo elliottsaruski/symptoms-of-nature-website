@@ -18,13 +18,13 @@ function WebAmpComponent() {
       __initialWindowLayout: {
         absolute: true,
         main: {
-          position: { x: 0, y: 100 },
+          position: { x: 0, y: 500 },
         },
         playlist: {
-          position: { x: 0, y: 216 },
+          position: { x: 0, y: 616 },
         },
         milkdrop: {
-          position: { x: 275, y: 100 },
+          position: { x: 275, y: 500 },
         },
       },
       initialTracks: [
@@ -208,7 +208,7 @@ function WebAmpComponent() {
     <>
       <div
         id="webamp-container"
-        style={{ position: "absolute" }}
+        // style={{ position: "static" }}
         ref={webampRef}></div>
     </>
   );

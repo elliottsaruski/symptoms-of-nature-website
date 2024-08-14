@@ -1,7 +1,8 @@
 import WebAmpComponent from "./WebAmpComponent";
 import { useScreenSize } from "../hooks/useScreenSize";
 
-import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
+// import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
+import comp000Cover from "../assets/media/photos/MUSIC/genesis_cover_compressed.jpg";
 
 function MediaWrapperDesktop() {
   const { isDesktop } = useScreenSize();
@@ -11,7 +12,8 @@ function MediaWrapperDesktop() {
     <>
       <div className="left-col--media-wrapper">
         {isDesktop && (
-          <video src={landingPageVideo} autoPlay muted loop></video>
+          // <video src={landingPageVideo} autoPlay muted loop></video>
+          <img src={comp000Cover} alt="compilation 000 album cover"></img>
         )}
 
         {/* --------------------- WEBAMP------------------- */}
