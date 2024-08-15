@@ -22,7 +22,6 @@ const ZineData = [
       "Sohn Jamal",
       "quails",
       "TS",
-      // "BOUNCY DUCk",
       "anika huda",
     ],
     _DESCRIPTION: "",

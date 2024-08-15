@@ -1,12 +1,11 @@
 import { roster } from "../data/RosterData.jsx";
 import ArtistCard from "../components/ArtistCard";
-// import { Outlet } from "react-router-dom";
 
 function Artists() {
   return (
     <div id="artists-wrapper">
       <div className="artists-header">
-        <h2>Roster</h2>
+        <h2>artists</h2>
         <hr />
       </div>
       <div className="artist-cards">
@@ -21,7 +20,6 @@ function Artists() {
             />
           );
         })}
-        {/* <Outlet /> */}
       </div>
     </div>
   );

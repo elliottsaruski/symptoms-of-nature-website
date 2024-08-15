@@ -42,8 +42,8 @@ function Navbar() {
             <NavLink to="/issues">
               <div>issues</div>
             </NavLink>
-            <NavLink to="/roster">
-              <div>roster</div>
+            <NavLink to="/artists">
+              <div>artists</div>
             </NavLink>
           </nav>
         )}

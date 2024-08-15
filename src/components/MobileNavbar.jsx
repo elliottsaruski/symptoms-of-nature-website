@@ -42,11 +42,11 @@ function MobileNavbar() {
           <div>issues</div>
         </NavLink>
         <NavLink
-          to="/roster"
+          to="/artists"
           onClick={() => {
             setMobileNavOpen(false);
           }}>
-          <div>roster</div>
+          <div>artists</div>
         </NavLink>
 
         <div className="color-mode-and-theme-wrapper">

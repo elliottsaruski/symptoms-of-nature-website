@@ -27,7 +27,7 @@ const router = createBrowserRouter(
         <Route index element={<IssuesPage />} />
         <Route path=":id" element={<IssueLayout />} />
       </Route>
-      <Route path="/roster">
+      <Route path="/artists">
         <Route index element={<Artists />} />
         <Route path=":id" element={<ArtistProfilePage />} />
       </Route>

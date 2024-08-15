@@ -1,4 +1,4 @@
-import XcopeImg from "../assets/media/photos/ROSTER/xcope-img.jpg";
+import XcopeImg from "../assets/media/photos/ROSTER/XcopePFP.jpg";
 import Chr0meC0Img from "../assets/media/photos/ROSTER/chr0meC0-img.jpeg";
 import AllergiImg from "../assets/media/photos/ROSTER/itbunni-img.png";
 import OOOimg from "../assets/media/photos/ROSTER/ooo.svg";
@@ -75,8 +75,8 @@ export const roster = [
     title: "film / media producers",
     description:
       "Ruski Media consists of filmmaking duo and real-life siblings, the Saruski Brothers. Based in Miami, Elliott and Justin share a passion for writing and producing unique, offbeat short films. Gaining influence from filmmaking legends like Jordan Peele, David Cronenberg, Christopher Nolan, Quentin Dupieux, and many others, their work is characterized by enthralling scenery and environments, unconventional storytelling, and surreal special effects. Their first short film, I'm Sure It's Fine, will be released alongside Symptoms of Nature #000, Genesis.",
-    links: [{ instagram: "" }],
-    profileType: "mixed-media",
+      links: [{ instagram: "https://www.instagram.com/ruskimedia/" }],
+      profileType: "mixed-media",
     featured_in: ["ZINE #000"],
   },
   {
@@ -101,16 +101,6 @@ export const roster = [
     profileType: "music",
     featured_in: ["ZINE #000"],
   },
-  // {
-  //   name: "Bouncyduck",
-  //   artistID: "Bouncyduck",
-  //   img: placeholderartistpic,
-  //   title: "producer",
-  //   description: "",
-  //   links: [{ instagram: "" }],
-  //   profileType: "music",
-  //   featured_in: ["ZINE #000"],
-  // },
   {
     name: "Sohn Jamal",
     artistID: "SohnJamal",
