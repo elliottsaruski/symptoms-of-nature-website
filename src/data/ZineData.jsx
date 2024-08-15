@@ -1,4 +1,4 @@
-import zine000cover from "../assets/media/photos/ZINES/zine000COVER-COMPRESSED.png";
+import zine000cover from "../assets/media/photos/ZINES/zine000COVER-COMPRESSED.jpg";
 
 const ZineData = [
   {
@@ -27,7 +27,24 @@ const ZineData = [
     _DESCRIPTION: "",
     _ARTLIST: {},
     _STATUS: "READY",
-    _PDF_PRINT: {},
+    _PDF_PRINT: [
+      "zine000_page1",
+      "zine000_page2",
+      "zine000_page3",
+      "zine000_page4",
+      "zine000_page5",
+      "zine000_page6",
+      "zine000_page7",
+      "zine000_page8",
+      "zine000_page9",
+      "zine000_page10",
+      "zine000_page11",
+      "zine000_page12",
+      "zine000_page13",
+      "zine000_page14",
+      "zine000_page15",
+      "zine000_page16",
+    ],
   },
 ];
 

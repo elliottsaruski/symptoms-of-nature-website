@@ -42,7 +42,8 @@ export const roster = [
     artistID: "ALLERGi",
     img: AllergiImg,
     title: "producer / vocalist DJ duo",
-    description: "",
+    description:
+      "ALLERGi, FKA ITBunnI, is a producer duo consisting of a vegan hardcore fetus and a wannabe homeschooled lutheran. Their music captures the essence of driving your BMW 8/corolla 97 through 5 feet of water, or walking around in Walmart for hours. Having both obtained doctorates from soundcloud ALLERGi taps into nostalgic tropes and current cringes throughout their creative process.",
     links: [{ instagram: "https://www.instagram.com/allergi_meds/" }],
     profileType: "music",
     featured_in: ["ZINE #000"],
@@ -75,8 +76,8 @@ export const roster = [
     title: "film / media producers",
     description:
       "Ruski Media consists of filmmaking duo and real-life siblings, the Saruski Brothers. Based in Miami, Elliott and Justin share a passion for writing and producing unique, offbeat short films. Gaining influence from filmmaking legends like Jordan Peele, David Cronenberg, Christopher Nolan, Quentin Dupieux, and many others, their work is characterized by enthralling scenery and environments, unconventional storytelling, and surreal special effects. Their first short film, I'm Sure It's Fine, will be released alongside Symptoms of Nature #000, Genesis.",
-      links: [{ instagram: "https://www.instagram.com/ruskimedia/" }],
-      profileType: "mixed-media",
+    links: [{ instagram: "https://www.instagram.com/ruskimedia/" }],
+    profileType: "mixed-media",
     featured_in: ["ZINE #000"],
   },
   {
@@ -138,7 +139,7 @@ export const roster = [
     name: "justin scott",
     artistID: "justinscott",
     img: justinImg,
-    title: "producer / vocalist / multi-instrumentalist",
+    title: "producer / vocalist",
     description:
       "A 103-year-old artist/producer trapped in a 23-year-old's body. Long-lost son of Ed Sheeran. Lots of things to say yet really bad with words. Based in Miami.",
     links: [{ instagram: "https://www.instagram.com/justinsaruski/" }],

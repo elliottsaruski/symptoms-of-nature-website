@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import landingPageVideo from "../assets/media/vids/placeholder video for son landing.mov";
+import landingPageVideo from "../assets/media/vids/SoN_landingpage_vid_compressed.mp4";
 import { useRef } from "react";
 
 function LandingPage() {
@@ -7,8 +7,8 @@ function LandingPage() {
   return (
     <div id="LANDING-PAGE">
       <video
-        autoPlay
         muted
+        autoPlay
         loop
         src={landingPageVideo}
         ref={landingPageRef}></video>

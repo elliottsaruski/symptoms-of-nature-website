@@ -449,7 +449,7 @@ nav {
 .blog-posts-wrapper {
   display: grid;
   gap: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   margin: 0 auto;
 }
 
@@ -785,6 +785,7 @@ nav {
   border-radius: 0.25rem;
   overflow: hidden;
   img {
+    transition: all 1s ease-in-out;
     width: 25rem;
 
     max-width: 100%;
@@ -795,17 +796,36 @@ nav {
 .zine-card-details {
   font-size: 155%;
   position: absolute;
-  display: none;
-  border-radius: 0.15rem;
-
+  bottom: 0.5rem;
+  left: 0.5rem;
+  opacity: 0;
+  /* border-radius: 0.15rem; */
+  transition: opacity 1s ease-in-out;
+  text-align: center;
   p {
     font-size: 55%;
   }
 }
 
 .artists-featured-wrapper {
-  display: none;
+  opacity: 0;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-li);
+  color: var(--clr-bg);
+  position: absolute;
+  gap: 0.5rem;
+  right: 0;
+  top: 0;
+  height: 100%;
+
+  font-size: larger;
+  transition: all 0.5s ease-in;
+
+  p {
+    width: auto;
+  }
 }
 
 #zine-card:hover,
@@ -813,32 +833,24 @@ nav {
   background-color: var(--clr-accent1);
   /* border: 0.15rem solid transparent; */
   position: relative;
-  box-shadow: 0 0 1rem rgba(150, 150, 150, 0.5);
+  box-shadow: 0 0 1rem rgba(117, 117, 117, 0.425);
+  transition: all 0.5s ease-in-out;
+
   img {
-    scale: 1.1;
+    scale: 1.05;
   }
   .zine-card-details {
     display: grid;
+    opacity: 1;
     color: var(--clr-accent1);
+    font-size: 150%;
     background-color: var(--clr-bg);
     padding: 1rem;
+    border-radius: 1rem;
   }
   .artists-featured-wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--clr-li);
-    color: var(--clr-bg);
-    position: absolute;
-    gap: 0.5rem;
-    right: 0;
-    top: 0;
-    height: 100%;
+    opacity: 1;
     padding: 1rem;
-    font-size: larger;
-
-    p {
-      width: auto;
-    }
   }
 }
 
@@ -846,7 +858,7 @@ nav {
 
 /* ------------------------------ POSTS ----------------------- */
 
-#posts-wrapper {
+/* #posts-wrapper {
   display: grid;
   gap: 2rem;
 }
@@ -855,13 +867,10 @@ nav {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  /* outline: 1px solid var(--clr-accent2); */
   max-width: 100%;
   width: fit-content;
   border: 0.15rem solid rgba(70, 70, 70, 0.425);
-  /* font-family: "PPMondwest Regular"; */
 
-  /* width: 35rem !important; */
   img {
     height: 15rem;
     aspect-ratio: 1;
@@ -883,10 +892,8 @@ nav {
   flex: 1;
   align-items: start;
   gap: 1rem;
-  /* font-family: "PPMondwest Regular"; */
 
   p {
-    /* font-family: "PPMondwest Regular"; */
     max-width: 50ch;
     line-height: 1.5;
   }
@@ -895,13 +902,11 @@ nav {
 .post-title {
   font-size: 3rem;
   font-weight: 600;
-  /* font-family: "PPEiko medium"; */
 }
 
 .post-artist {
   font-size: 1.5rem;
   display: flex;
-  /* font-family: "PPEiko thin"; */
 }
 
 .post-module-outside {
@@ -959,7 +964,7 @@ nav {
   display: grid;
   place-content: start;
   gap: 1rem;
-}
+} */
 /* ------------------------------ ROSTER ----------------------- */
 .artist-profile-header {
   display: flex !important;
@@ -991,6 +996,7 @@ nav {
   border: 0.15rem solid rgba(70, 70, 70, 0.425);
   border-radius: 0.15rem;
   padding: 1rem;
+  transition: all 0.25s ease-in;
 
   h3 {
     text-decoration: none;
@@ -1001,6 +1007,7 @@ nav {
 }
 .artist-card:hover {
   border: 0.15rem solid var(--clr-accent1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   .artist-card-title {
     color: var(--clr-accent1);
   }
@@ -1012,6 +1019,8 @@ nav {
   max-width: 100%;
   object-fit: cover;
   aspect-ratio: 1;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 .artist-card-context {
@@ -1024,7 +1033,6 @@ nav {
 
 .artist-card-name {
   font-size: 200%;
-  /* font-family: "OTBrut regularMono"; */
 }
 
 .artist-card-title {
@@ -1032,7 +1040,6 @@ nav {
   line-height: 1;
   width: 100%;
   color: var(--clr-accent2);
-  /* font-family: "PPEiko thin"; */
   a {
     text-decoration: none;
   }
@@ -1043,15 +1050,18 @@ nav {
 #artist-profile-page-wrapper {
   h2 {
     font-size: 4rem;
-    /* font-family: "OTBrut italicMono"; */
     padding: 0;
+  }
+  h3 {
+    font-size: 1.5rem;
+    color: var(--clr-accent2);
+    font-weight: 100;
   }
   span {
     padding: 0;
-    max-width: 70ch;
+    max-width: 65ch;
     line-height: 1.7;
-    font-size: 110%;
-    /* font-family: "PPEiko thin"; */
+    font-size: 140%;
   }
   .artist-profile-img {
     height: 20rem;
@@ -1062,9 +1072,9 @@ nav {
 }
 
 .artist-profile-header {
-  /* display: grid !important; */
   padding: 1rem;
-  gap: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .artist-profile-content {
@@ -1074,18 +1084,12 @@ nav {
 }
 
 #mobile-nav-wrapper {
-  /* visibility: unset; */
   display: none;
 }
-
-/* .artist-profile-content span { */
-/* font-family: "PPEiko thin"; */
-/* } */
 
 .artist-posts-wrapper {
   display: grid;
   padding: 1rem;
-  /* border-top: 0.15rem solid var(--clr-accent2); */
   gap: 1rem;
 }
 
@@ -1377,6 +1381,7 @@ nav {
     place-items: center;
     /* max-width: 90vw; */
     /* margin: 0 auto; */
+    font-size: 150%;
     a {
       text-decoration: none;
     }
@@ -1393,7 +1398,7 @@ nav {
   .artist-card-img {
     height: 100%;
     width: 20rem;
-    object-fit: cover;
+    object-fit: contain;
     max-width: 100%;
   }
 

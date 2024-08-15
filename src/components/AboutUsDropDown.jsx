@@ -1,19 +1,19 @@
 import creation from "../assets/media/photos/ABOUT/popups/headexplodeblender-min-min.jpg";
-import vape from "../assets/media/photos/ABOUT/popups/wavymirror-min-min.jpg";
+import vape from "../assets/media/photos/ABOUT/popups/halogf.jpg";
 import thighmaster from "../assets/media/photos/ABOUT/popups/skrillexmothership-min.jpg";
 import pinkglock from "../assets/media/photos/ABOUT/popups/shattered-min.jpg";
 
 import plumbing from "../assets/media/photos/ABOUT/popups/shrooms-min.jpg";
 import telephone from "../assets/media/photos/ABOUT/popups/janae_stampsPrint-Medium-min.png";
-import soundscapes from "../assets/media/photos/ABOUT/popups/headscans-min.png";
+import soundscapes from "../assets/media/photos/ABOUT/popups/fruityloopsds.jpg";
 import psychology from "../assets/media/photos/ABOUT/popups/issue000_mylien-min.png";
 import coding from "../assets/media/photos/ABOUT/popups/sphinxandpyramid-min.jpg";
 
-import divorcering from "../assets/media/photos/ABOUT/popups/sphinxandpyramid-min.jpg";
-import evolution from "../assets/media/photos/ABOUT/popups/sphinxandpyramid-min.jpg";
+import divorcering from "../assets/media/photos/ABOUT/popups/animescream.jpg";
+import evolution from "../assets/media/photos/ABOUT/popups/alienturnip.jpg";
 import ableton from "../assets/media/photos/ABOUT/popups/pikamidiableton-min-min.png";
-import digitalhookah from "../assets/media/photos/ABOUT/popups/sphinxandpyramid-min.jpg";
-import neolib from "../assets/media/photos/ABOUT/popups/sphinxandpyramid-min.jpg";
+import digitalhookah from "../assets/media/photos/ABOUT/popups/youtubememe.jpg";
+import neolib from "../assets/media/photos/ABOUT/popups/ufohollywood.jpg";
 import { useRef } from "react";
 
 function AboutUsDropDown({ setHeaderImage }) {
@@ -50,7 +50,6 @@ function AboutUsDropDown({ setHeaderImage }) {
       setHeaderImage(selectedImage);
     }
   };
-
   const handleThirdImageChange = () => {
     const selectedImage = imageMap[thirdDropRef.current.value];
     if (selectedImage) {

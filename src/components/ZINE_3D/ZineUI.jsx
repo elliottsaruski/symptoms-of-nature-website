@@ -39,7 +39,7 @@
 //   back: "book-back",
 // });
 
-// export const UI = () => {
+// export const ZineUI = () => {
 //   const [page, setPage] = useAtom(pageAtom);
 //   return (
 //     <>

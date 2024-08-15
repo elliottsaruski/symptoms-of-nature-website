@@ -135,12 +135,12 @@ function WebAmpComponent() {
     {
       isDesktop &&
         webamp.store.dispatch({
-          size: [0.25, 4.8],
+          size: [0.25, 5.8],
           type: "WINDOW_SIZE_CHANGED",
           windowId: "milkdrop",
         });
       webamp.store.dispatch({
-        size: [0, 0.85],
+        size: [0, 1.8],
         type: "WINDOW_SIZE_CHANGED",
         windowId: "playlist",
       });
@@ -165,7 +165,7 @@ function WebAmpComponent() {
       // });
     }
 
-    console.log(webamp.store);
+    // console.log(webamp.store);
 
     // -----------DESKTOP MOBILE POSITION------------------
     // {

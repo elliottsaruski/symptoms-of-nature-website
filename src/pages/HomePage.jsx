@@ -14,7 +14,7 @@ function HomePage() {
         }
         const data = await response.json();
         setPosts(data);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         setError(error.message);
       }
@@ -38,16 +38,6 @@ function HomePage() {
                 className="post-img-thumbnail"
                 alt="blog-post-img-thumbnail"
               />
-              {/* <img
-                src={post.properties["Files & media"].files[0].file.url}
-                className="post-img-thumbnail"
-                alt="blog-post-img-thumbnail"
-              />
-              <img
-                src={post.properties["Files & media"].files[0].file.url}
-                className="post-img-thumbnail"
-                alt="blog-post-img-thumbnail"
-              /> */}
             </div>
             <div className="blog-post-card-content">
               <h4>{post.properties.Name.title[0]?.plain_text}</h4>

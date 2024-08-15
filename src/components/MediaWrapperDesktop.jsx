@@ -1,44 +1,25 @@
 import WebAmpComponent from "./WebAmpComponent";
 import { useScreenSize } from "../hooks/useScreenSize";
+import { useLocation } from "react-router-dom";
 
-// import landingPageVideo from "../assets/media/vids/son_nav_videoNEW.mov";
 import comp000Cover from "../assets/media/photos/MUSIC/genesis_cover_compressed.jpg";
 
 function MediaWrapperDesktop() {
   const { isDesktop } = useScreenSize();
-  // const [blogPostIndex] = useState(0);
+  let location = useLocation();
 
   return (
     <>
       <div className="left-col--media-wrapper">
         {isDesktop && (
-          // <video src={landingPageVideo} autoPlay muted loop></video>
           <img src={comp000Cover} alt="compilation 000 album cover"></img>
         )}
 
         {/* --------------------- WEBAMP------------------- */}
-        {/* {isDesktop && <WebAmpComponent />} */}
-        <WebAmpComponent />
+        {location.pathname !== "/" && <WebAmpComponent />}
       </div>
     </>
   );
 }
 
 export default MediaWrapperDesktop;
-
-{
-  /* <div className="left-col--media-wrapper">
-{pathname == "/home" ||
-pathname == `/home/${MOCK_DATA[`${blogPostIndex}`].postID}` ? (
-  <video src={landingPageVideo} autoPlay muted loop></video>
-) : (
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/b5qEEkf6Vus?si=cOmk2u1-crYjvXjd"
-    title="YouTube video player"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"></iframe>
-)} */
-}

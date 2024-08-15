@@ -1,6 +1,7 @@
 // import { Environment, Float, OrbitControls } from "@react-three/drei";
-// import { Book } from "./Book";
-// export const Experience = () => {
+// import { Zine } from "./Zine.jsx";
+
+// export const ZineExperience = () => {
 //   return (
 //     <>
 //       <Float
@@ -9,7 +10,7 @@
 //         speed={2}
 //         rotationIntensity={2}
 //       >
-//         <Book />
+//         <Zine />
 //       </Float>
 //       <OrbitControls />
 //       <Environment preset="studio"></Environment>

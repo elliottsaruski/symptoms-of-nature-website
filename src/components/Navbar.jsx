@@ -8,10 +8,8 @@ import sonLogoDarkMode from "../assets/logos/SON_LOGO_darkmode_Custom.png";
 import sonLogoLightMode from "../assets/logos/SON_LOGO_lightmode_Custom.png";
 import MobileNavbar from "./MobileNavbar";
 import MediaWrapperDesktop from "./MediaWrapperDesktop";
-// import BlogPostCard from "./BlogPostCard";
 
 function Navbar() {
-  // const [blogPostIndex, setBlogPostIndex] = useState(0);
   const { isMobile, isTablet, isDesktop } = useScreenSize();
 
   return (
