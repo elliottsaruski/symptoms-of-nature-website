@@ -637,8 +637,10 @@ nav {
 
   .post-content {
     line-height: 1.8;
-    font-size: 1rem;
-    max-width: 60ch;
+    font-size: 0.85rem;
+    /* max-width: 45ch; */
+    /* max-width: 100%; */
+    margin-right: 6rem;
   }
 }
 
