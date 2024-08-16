@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import ZineData from "../data/ZineData";
 
 function IssuesPage() {
   const issues = ZineData.map((issue) => {
     return (
-      <Link
-        to={issue._URL}
+      <div
+        // to={issue._URL}
         id="zine-card"
         key={issue._ID}
         className="zine-card-READY">
@@ -21,7 +21,7 @@ function IssuesPage() {
             return <p key={index}>{artist}</p>;
           })}
         </div>
-      </Link>
+      </div>
     );
   });
   return (
