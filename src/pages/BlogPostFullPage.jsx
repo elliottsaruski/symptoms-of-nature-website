@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import { NotionRenderer } from "react-notion-x";
 
 function BlogPostFullPage() {
   const { id } = useParams();
@@ -26,6 +25,8 @@ function BlogPostFullPage() {
           throw new Error("Page not found");
         }
         setPageData(page);
+        // -----------------------------------------------LOG PAGE DATA ------------------------
+        console.log(page);
       } catch (error) {
         console.error("Fetch error:", error);
         setError(error.message);
@@ -42,8 +43,66 @@ function BlogPostFullPage() {
     return <div id="blog-post-full-page-wrapper">No data available</div>;
 
   // Render the page content
+  // Function to render rich text content
+  const renderRichText = (richTextArray) => {
+    return richTextArray.map((item, index) => {
+      const { annotations, text, href, type } = item;
+      let content = text.content;
+
+      if (type === "text") {
+        if (annotations.bold) content = <strong key={index}>{content}</strong>;
+        if (annotations.italic) content = <em key={index}>{content}</em>;
+        if (annotations.strikethrough)
+          content = <del key={index}>{content}</del>;
+        if (annotations.underline) content = <u key={index}>{content}</u>;
+        if (annotations.code) content = <code key={index}>{content}</code>;
+
+        if (href) {
+          content = (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer">
+              {content}
+            </a>
+          );
+        }
+      } else if (type === "image") {
+        content = (
+          <img
+            key={index}
+            src={item.file.url}
+            alt={item.caption || "Embedded image"}
+          />
+        );
+      }
+
+      return content;
+    });
+  };
+
+  // Function to render embedded content
+  const renderEmbeds = (embedArray) => {
+    return embedArray.map((embed, index) => {
+      if (embed.type === "external") {
+        return (
+          <div key={index} className="embed-container">
+            <iframe
+              src={embed.external.url}
+              frameBorder="0"
+              allowFullScreen
+              title={`Embedded content ${index}`}></iframe>
+          </div>
+        );
+      }
+      return null;
+    });
+  };
+
   return (
     <div id="blog-post-full-page-wrapper">
+      {/* Render Notion content */}
       {/* --------------------------POST IMAGE------------------- */}
       <img
         src={pageData.properties["Files & media"].files[0].file.url}
@@ -70,13 +129,17 @@ function BlogPostFullPage() {
         </div>
 
         {/* --------------------------POST CONTENT------------------- */}
-        <p>{pageData.properties.Content.rich_text[0]?.text.content}</p>
-        {/* <p>
-        {pageData.properties.Content.rich_text.map((section) => {
-          return pageData.properties.Content.rich_text[`${section}`]?.text
-            .content;
-        })}
-      </p> */}
+        {/* Render post content as HTML */}
+        <div className="post-content">
+          {renderRichText(pageData.properties.Content.rich_text)}
+          {pageData.embeds && (
+            <div className="embedded-content">
+              {renderEmbeds(pageData.embeds)}
+            </div>
+          )}
+        </div>
+
+        {/* Render embedded content */}
       </div>
     </div>
   );

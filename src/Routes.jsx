@@ -16,18 +16,18 @@ import BlogPostFullPage from "./pages/BlogPostFullPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<LayoutPage />}>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/home">
+    <Route path="" element={<LayoutPage />}>
+      <Route path="" element={<LandingPage />} />
+      <Route path="home">
         <Route index element={<HomePage />} />
         <Route path=":id" element={<BlogPostFullPage />} />
       </Route>
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/issues">
+      <Route path="about" element={<AboutPage />} />
+      <Route path="issues">
         <Route index element={<IssuesPage />} />
         <Route path=":id" element={<IssueLayout />} />
       </Route>
-      <Route path="/artists">
+      <Route path="artists">
         <Route index element={<Artists />} />
         <Route path=":id" element={<ArtistProfilePage />} />
       </Route>

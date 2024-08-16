@@ -583,6 +583,7 @@ nav {
 .post-content-wrapper {
   display: grid;
   padding: 2rem;
+  /* max-width: 50%; */
   grid-template-areas:
     "TAGS TITLE TITLE"
     "AUTHDATE POSTCONTENT POSTCONTENT"
@@ -632,6 +633,12 @@ nav {
     padding-inline-start: 1rem;
     border-left: 1px dashed var(--clr-accent1);
     /* border-spacing: 5rem; */
+  }
+
+  .post-content {
+    line-height: 1.8;
+    font-size: 1rem;
+    max-width: 60ch;
   }
 }
 
