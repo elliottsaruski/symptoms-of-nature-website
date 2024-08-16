@@ -640,7 +640,7 @@ nav {
     font-size: 0.85rem;
     /* max-width: 45ch; */
     /* max-width: 100%; */
-    margin-right: 6rem;
+    /* margin-right: 6rem; */
   }
 }
 
@@ -1213,6 +1213,9 @@ nav {
       "AUTHDATE AUTHDATE"
       "POSTCONTENT POSTCONTENT";
     gap: 1rem;
+    :not(img) {
+      max-width: 40ch;
+    }
     #tags {
       display: flex;
       h6 {

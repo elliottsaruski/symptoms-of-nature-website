@@ -88,11 +88,9 @@ function BlogPostFullPage() {
       if (embed.type === "external") {
         return (
           <div key={index} className="embed-container">
-            <iframe
-              src={embed.external.url}
-              frameBorder="0"
-              allowFullScreen
-              title={`Embedded content ${index}`}></iframe>
+            <a src={embed.external.url} title={`Embedded content ${index}`}>
+              link
+            </a>
           </div>
         );
       }
