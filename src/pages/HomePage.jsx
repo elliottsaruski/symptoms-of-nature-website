@@ -32,14 +32,12 @@ function HomePage() {
       <div className="blog-posts-wrapper">
         {posts.map((post) => (
           <Link to={post.id} key={post.id} className="post-item">
-            <div className="img-group-wrapper">
+            <div className="blog-post-card-content">
               <img
                 src={post.properties["Files & media"].files[0].file.url}
                 className="post-img-thumbnail"
                 alt="blog-post-img-thumbnail"
               />
-            </div>
-            <div className="blog-post-card-content">
               <h4>{post.properties.Name.title[0]?.plain_text}</h4>
               <div className="descriptors-post">
                 <h6>
@@ -49,10 +47,10 @@ function HomePage() {
                 <h6>{post.properties["TYPE OF POST"].multi_select[0].name}</h6>
                 {/* <hr /> */}
               </div>
-              <div className="name-date-post">
-                <h5>author: {post.properties.Author.select.name}</h5>
-                <h6>{post.created_time.slice(0, 10)}</h6>
-              </div>
+              <h5 className="post-author">
+                by: <strong>{post.properties.Author.select.name}</strong>
+              </h5>
+              <h6 className="post-time">{post.created_time.slice(0, 10)}</h6>
 
               <p>{post.properties.Description.rich_text[0]?.text.content}</p>
             </div>

@@ -261,10 +261,10 @@ nav {
 
 .socials-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   max-width: 100%;
   margin: auto;
-  flex: 0.25;
+  flex: 1;
   padding-inline: 1rem;
   height: 100%;
   align-items: center;
@@ -349,12 +349,15 @@ nav {
 .SON-description {
   display: flex;
   span {
-    display: flex;
     /* UNCOMMENT FOR WIDER DESC TEXT */
-    flex: 1;
+    flex: auto;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    place-self: center;
+    text-align: justify;
+    text-justify: newspaper;
+    padding: 0.25rem;
+    margin-inline: 0.5rem;
     font-size: 1.3em;
     letter-spacing: 0.15ch;
     width: 100%;
@@ -442,14 +445,13 @@ nav {
 }
 
 /* ----------------------NEW POST BLOGS CSS---------------------- */
-#home-page-wrapper {
-  padding-block: 4rem;
-}
+/* #home-page-wrapper {
+} */
 
 .blog-posts-wrapper {
   display: grid;
+  padding-block: 4rem;
   gap: 1rem;
-  /* padding: 1rem; */
   margin: 0 auto;
 }
 
@@ -459,31 +461,38 @@ nav {
   text-decoration: none;
   border: 0.15rem rgba(114, 114, 114, 0.438);
   border-style: solid;
-  max-width: 100%;
+  max-width: 40%;
+  min-width: 60%;
   border-radius: 0.15rem;
-  width: fit-content;
+  width: 100%;
+  margin: 0 auto;
 
   .blog-post-card-content {
-    /* padding: 0.75rem; */
     /* padding-left: 0.5rem; */
     padding-bottom: 0;
     display: grid;
+    width: 100%;
     /* place-items: start; */
+    gap: 0.5rem;
+
     grid-template-areas:
-      "TAGS NAME_DATE"
+      "TAGS TIME"
+      "IMAGE IMAGE"
       "TITLE TITLE"
+      "AUTHOR AUTHOR"
       "DESCRIPTION DESCRIPTION"
       "DESCRIPTION DESCRIPTION"
       "DESCRIPTION DESCRIPTION";
     /* gap: 1rem; */
+    padding-block-start: 0.5rem;
   }
 
   h4 {
     grid-area: TITLE;
-    font-size: 1.6rem;
-
+    font-size: 1.4rem;
     align-self: center;
     padding-inline-start: 0.5rem;
+    margin: 0.5rem 0;
   }
 
   h5 {
@@ -498,18 +507,15 @@ nav {
     opacity: 90%;
     font-weight: 100;
     background-color: rgba(70, 70, 70, 0.11);
-    /* align-self: justify; */
-    /* text-indent: 10%; */
     padding: 0.5rem;
     border-top: 0.015rem solid rgba(70, 70, 70, 0.377);
-    padding-inline-end: 2rem;
-    max-width: 60ch;
+    /* padding-inline-end: 2rem; */
+    /* max-width: 60ch; */
   }
   img {
     display: flex;
-
-    height: 20rem;
-    width: 20rem;
+    height: 25rem;
+    width: 100%;
     object-fit: cover;
     grid-area: IMAGE;
   }
@@ -523,17 +529,37 @@ nav {
 
     h6 {
       border: 0.05rem solid var(--clr-accent1);
-      /* place-self: start; */
+      font-weight: 100;
+      width: max-content;
       color: var(--clr-li);
       padding: 0.15rem;
       text-transform: uppercase;
+      line-height: 1;
+      place-content: center;
+      align-self: center;
     }
   }
-  .name-date-post {
-    grid-area: NAME_DATE;
-    color: var(--clr-li);
-    place-self: center;
+  .post-author {
+    display: flex;
+    gap: 0.25rem;
+    grid-area: AUTHOR;
+    place-self: center left;
+    font-weight: 100;
+    padding-inline-start: 0.5rem;
+    strong {
+      color: var(--clr-accent1);
+    }
   }
+  .post-time {
+    grid-area: TIME;
+    /* align-self: center; */
+    place-self: center right;
+    padding-inline-end: 1rem;
+    font-weight: 100;
+    opacity: 75%;
+  }
+  /* .post-img-thumbnail {
+  } */
 }
 
 .post-item:hover,
@@ -574,12 +600,16 @@ nav {
     /* border-left: 1px dashed var(--clr-accent1); */
   }
   #tags {
+    display: grid;
     grid-area: TAGS;
     font-size: larger;
+    gap: 0.25rem;
+    align-content: center;
 
     h6 {
       border: 0.05rem solid var(--clr-accent1);
       /* opacity: 50%; */
+      width: max-content;
       padding: 0.25rem;
       letter-spacing: 0.5ch;
       text-transform: uppercase;
@@ -596,6 +626,9 @@ nav {
     padding: 0;
     line-height: 1.8;
     max-width: 80ch;
+    font-weight: 100;
+    font-size: 1rem;
+
     padding-inline-start: 1rem;
     border-left: 1px dashed var(--clr-accent1);
     /* border-spacing: 5rem; */
@@ -1008,6 +1041,7 @@ nav {
 .artist-card:hover {
   border: 0.15rem solid var(--clr-accent1);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease-in;
   .artist-card-title {
     color: var(--clr-accent1);
   }
@@ -1183,7 +1217,7 @@ nav {
     }
   }
 
-  /* #home-page-wrapper, */
+  #home-page-wrapper,
   #feed-wrapper,
   #artists-wrapper,
   #about-wrapper,
@@ -1198,32 +1232,40 @@ nav {
     gap: 0.5rem;
     h2 {
       /* UNCOMMENT FOR UNCENTERED TEXT ON MOBILE */
-      /* text-align: start; */
+      text-align: center;
       font-size: 205%;
       padding: 0;
       margin-bottom: 1rem;
     }
   }
   .blog-posts-wrapper {
+    /* display: grid; */
+    padding-block: 1rem;
+    justify-content: center;
+
     .post-item {
       display: grid;
-      max-width: 100%;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 90%;
       gap: 1rem;
       img {
-        width: 100%;
-        /* height: 25%; */
+        max-width: 100%;
       }
       h4 {
         margin-bottom: 0.25rem;
       }
       p {
         padding: unset;
-        padding: 1rem;
+        /* padding: 1rem; */
+        max-width: unset;
+        font-size: 1.05rem;
+        padding-inline: 0.5rem;
+        padding-block: 1rem;
       }
     }
     .blog-post-card-content {
-      gap: 1rem;
-      /* padding-top: 1rem; */
+      gap: 0.5rem;
     }
   }
 
@@ -1374,7 +1416,7 @@ nav {
   }
 
   .artist-cards {
-    gap: 3rem;
+    gap: 2rem;
     padding: 0;
     padding-block: 0;
     margin-bottom: 10rem;
@@ -1393,12 +1435,13 @@ nav {
     width: auto;
     /* width: 10rem; */
     flex: auto;
+    gap: 0.5rem;
   }
 
   .artist-card-img {
     height: 100%;
     width: 20rem;
-    object-fit: contain;
+    object-fit: cover;
     max-width: 100%;
   }
 
