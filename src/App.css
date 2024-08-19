@@ -637,7 +637,7 @@ nav {
 
   .post-content {
     line-height: 1.8;
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     /* max-width: 45ch; */
     /* max-width: 100%; */
     /* margin-right: 6rem; */
@@ -1125,6 +1125,9 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  #artist-insta-link {
+    color: var(--clr-accent1);
+  }
 }
 
 #mobile-nav-wrapper {

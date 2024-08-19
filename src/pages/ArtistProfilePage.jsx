@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { roster } from "../data/RosterData";
 
-
 function ArtistProfilePage() {
   const { id } = useParams();
   const artist = roster.find((el) => el.artistID == `${id}`);
@@ -13,12 +12,13 @@ function ArtistProfilePage() {
         <div className="artist-profile-content">
           <h2>{artist.name}</h2>
           <h3>{artist.title}</h3>
-          <a href={artist.links.instagram}>insta</a>
+          <a href={artist.links[0].instagram} target="_blank" id="artist-insta-link">
+            insta
+          </a>
           <hr id="hr-important"></hr>
           <span>{artist.description}</span>
         </div>
       </div>
-     
     </div>
   );
 }

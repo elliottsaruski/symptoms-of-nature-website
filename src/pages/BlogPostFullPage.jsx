@@ -26,7 +26,6 @@ function BlogPostFullPage() {
         }
         setPageData(page);
         // -----------------------------------------------LOG PAGE DATA ------------------------
-        console.log(page);
       } catch (error) {
         console.error("Fetch error:", error);
         setError(error.message);
@@ -59,13 +58,13 @@ function BlogPostFullPage() {
 
         if (href) {
           content = (
-            <a
+            <iframe
               key={index}
-              href={href}
+              src={href}
               target="_blank"
               rel="noopener noreferrer">
               {content}
-            </a>
+            </iframe>
           );
         }
       } else if (type === "image") {
