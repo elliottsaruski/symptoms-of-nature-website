@@ -17,16 +17,20 @@ function Navbar() {
       <div className="left-col--top">
         {/*------------------------------------- TOP NAV BAR------------------------ */}
         <div className="symptoms-of-nature-logo-wrapper">
-          <img
-            src={sonLogoDarkMode}
-            className="symptoms-of-nature-logo-dark"
-            alt="symptoms-of-nature-logo"
-          />
-          <img
-            src={sonLogoLightMode}
-            className="symptoms-of-nature-logo-light"
-            alt="symptoms-of-nature-logo"
-          />
+          <NavLink to="/home">
+            <img
+              src={sonLogoDarkMode}
+              className="symptoms-of-nature-logo-dark"
+              alt="symptoms-of-nature-logo"
+            />
+          </NavLink>
+          <NavLink to="/home">
+            <img
+              src={sonLogoLightMode}
+              className="symptoms-of-nature-logo-light"
+              alt="symptoms-of-nature-logo"
+            />
+          </NavLink>
         </div>
         {/*------------------------------------- DESKTOP NAV BAR------------------------ */}
         {isDesktop && (
