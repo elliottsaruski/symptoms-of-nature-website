@@ -578,6 +578,11 @@ nav {
     object-fit: cover;
     max-width: 100%;
   }
+  iframe {
+    max-width: 80%;
+    width: 100%;
+    height: 200%;
+  }
 }
 
 .post-content-wrapper {
@@ -638,7 +643,8 @@ nav {
   .post-content {
     line-height: 1.8;
     font-size: 1.5rem;
-    /* max-width: 45ch; */
+    display: grid;
+    max-width: 45ch;
     /* max-width: 100%; */
     /* margin-right: 6rem; */
   }

@@ -41,7 +41,6 @@ function BlogPostFullPage() {
   if (!pageData)
     return <div id="blog-post-full-page-wrapper">No data available</div>;
 
-  // Render the page content
   // Function to render rich text content
   const renderRichText = (richTextArray) => {
     return richTextArray.map((item, index) => {
@@ -129,6 +128,7 @@ function BlogPostFullPage() {
         {/* Render post content as HTML */}
         <div className="post-content">
           {renderRichText(pageData.properties.Content.rich_text)}
+          <br></br>
           {pageData.embeds && (
             <div className="embedded-content">
               {renderEmbeds(pageData.embeds)}
